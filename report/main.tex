@@ -4,7 +4,7 @@
 \usepackage[bottom]{footmisc}
 \usepackage{pdfpages}
 \usepackage{graphicx}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{listings}
 \usepackage{color}
 \usepackage{blindtext} %Lorem Ipsum package
@@ -23,6 +23,17 @@
 	identifierstyle=\color{blue},
 	stringstyle=\color{orange},
 }
+
+% Citation macros
+% Example:	\citeawesome{Friedenthal2014}
+\newcommand{\citeawesome}[1]{
+	\citep{#1} \citeyear{#1} - \citefullauthor{#1}.
+}
+% Example:	\citepawesome{Friedenthal2014}{103}
+\newcommand{\citepawesome}[2] {
+	\citep{#1} \citeyear{#1} - \citefullauthor{#1}. $|$Page #2$|$
+}
+
 \title{Particle Swarm Optimization - Final Project \newline Group 1}
 \author{Henrik Bagger Jensen, David Jensen}
 \date{\today}
