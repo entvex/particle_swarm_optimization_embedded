@@ -1,0 +1,34 @@
+%-------------------- UC3 --------------------
+\begin{table}[h]
+\begin{tabularx}{\textwidth}{| >{\raggedright\arraybackslash}p{3.3 cm} | >{\raggedright\arraybackslash}X |} \hline
+
+\textbf{Navn:} 						& UC1: Start\\ \hline
+\textbf{Mål:}						& At starte systemet helt eller delvist. \\ \hline
+\textbf{Initering:}					& Bruger \\ \hline
+\textbf{Aktører:} 					& Bruger (primær) \\ \hline
+\textbf{Reference:} 					& UC10: Monitorering, UC11: Regulering \\ \hline
+\textbf{Antal samtidige forekomster:} & Én \\ \hline
+\textbf{Forudsætning:} 				& Systemet er stoppet helt, er operationelt og viser hovedmenuen.\\ \hline
+\textbf{Resultat:}					& UC10: Monitorering og evt. UC11: Regulering er startet, systemet viser Hovedmenuen. \\ \hline
+\textbf{Hovedscenarie:}				& 
+
+\begin{packed_enum}
+\item Bruger trykker på "Monitorering". 
+\item System aktiverer UC10: Monitorering. 
+\item Bruger trykker på "Regulering". 
+	\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
+	\item {[}Ext 3.a : Bruger trykker ikke "Regulering".{]}
+	\end{packed_item}
+\item Systemet aktiverer UC11: Regulering.
+\item UC1 afsluttes.
+\end{packed_enum} \\ \hline
+\textbf{Udvidelser:}				&  
+\textbf{{[}Ext 3.a : Bruger vælger kun monitorering.{]}}
+	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
+	\item Systemet fortsætter ved pkt. 5 i hovedscenariet.
+	\end{packed_enum}
+\\ \hline
+\end{tabularx}
+\caption{UC3: Start}
+\label{tbl:uc3}
+\end{table}

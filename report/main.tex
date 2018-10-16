@@ -8,18 +8,12 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{blindtext} %Lorem Ipsum package
+\usepackage[hidelinks]{hyperref}
 
 %%All this so for the use cases.
 \usepackage{tabularx} %Med dynamisk bredter
 \usepackage[shortlabels]{enumitem}
 
-\newenvironment{packed_enum}{
-	\begin{enumerate}[1., topsep=0pt, nosep, partopsep=0pt, itemsep=0pt, parsep=0pt]
-	}{\end{enumerate}}
-
-\newenvironment{packed_item}{
-	\begin{itemize}[•, topsep=0pt, nosep, partopsep=0pt, itemsep=0pt, parsep=0pt]
-	}{\end{itemize}}
 
 \lstdefinestyle{customc++}{
 	belowcaptionskip=1\baselineskip,
@@ -44,6 +38,15 @@
 % Example:	\citepawesome{Friedenthal2014}{103}
 \newcommand{\citepawesome}[2]{\footnote{\citep{#1} \citeyear{#1} - \citefullauthor{#1}. $|$Page #2$|$}}
 
+
+\newenvironment{packed_enum}{
+	\begin{enumerate}[1., topsep=0pt, nosep, partopsep=0pt, itemsep=0pt, parsep=0pt]
+	}{\end{enumerate}}
+
+\newenvironment{packed_item}{
+	\begin{itemize}[•, topsep=0pt, nosep, partopsep=0pt, itemsep=0pt, parsep=0pt]
+	}{\end{itemize}}
+
 \title{Particle Swarm Optimization - Final Project \newline Group 1}
 \author{Henrik Bagger Jensen, David Jensen}
 \date{\today}
@@ -53,14 +56,14 @@
 \newpage
 \tableofcontents
 \newpage
-\include{introduction}
-\include{description}
-\include{methodology}
-\include{requirementspecification}
-\include{designmethodology}
-\include{designpatterns}
-\include{implementandtest}
-\include{conclusion}
+\include{introduction/introduction}
+\include{description/description}
+\include{methodology/methodology}
+\include{requirementspecification/requirementspecification}
+\include{designmethodology/designmethodology}
+\include{designpatterns/designpatterns}
+\include{implementandtest/implementandtest}
+\include{conclusion/conclusion}
 %TODO IN BIBLIOGRAPHY - make links clickable, remove escapes in bibTex file
-\include{bibliography}
+\include{bibliography/bibliography}
 \end{document}
