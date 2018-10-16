@@ -10,17 +10,7 @@
 \usepackage{blindtext} %Lorem Ipsum package
 
 %%All this so for the use cases.
-%Fancy tabeller.
-%\usepackage[table]{xcolor}
-\usepackage{multirow}
-\usepackage{rotating} %sidewaystables!
-\usepackage{longtable} %tables spanning multible pages.
-\usepackage{tablefootnote} %for at indstætte fornoter i tabeller.
-\usepackage{hhline} %Fixer farvede felter
-\usepackage{ltxtable} %Longtabular X
-\usepackage{tabularx} %Med dynamisk bredte
-
-%Forsøg på nice lister i tabeller
+\usepackage{tabularx} %Med dynamisk bredter
 \usepackage[shortlabels]{enumitem}
 
 \newenvironment{packed_enum}{
@@ -30,8 +20,6 @@
 \newenvironment{packed_item}{
 	\begin{itemize}[•, topsep=0pt, nosep, partopsep=0pt, itemsep=0pt, parsep=0pt]
 	}{\end{itemize}}
-
-
 
 \lstdefinestyle{customc++}{
 	belowcaptionskip=1\baselineskip,
