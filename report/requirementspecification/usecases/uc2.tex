@@ -1,34 +1,34 @@
 %-------------------- UC2 --------------------
 \begin{table}[h]
-\begin{tabularx}{\textwidth}{| >{\raggedright\arraybackslash}p{3.3 cm} | >{\raggedright\arraybackslash}X |} \hline
-
-\textbf{Navn:} 						& UC1: Start\\ \hline
-\textbf{Mål:}						& At starte systemet helt eller delvist. \\ \hline
-\textbf{Initering:}					& Bruger \\ \hline
-\textbf{Aktører:} 					& Bruger (primær) \\ \hline
-\textbf{Reference:} 					& UC10: Monitorering, UC11: Regulering \\ \hline
-\textbf{Antal samtidige forekomster:} & Én \\ \hline
-\textbf{Forudsætning:} 				& Systemet er stoppet helt, er operationelt og viser hovedmenuen.\\ \hline
-\textbf{Resultat:}					& UC10: Monitorering og evt. UC11: Regulering er startet, systemet viser Hovedmenuen. \\ \hline
-\textbf{Hovedscenarie:}				& 
-
-\begin{packed_enum}
-\item Bruger trykker på "Monitorering". 
-\item System aktiverer UC10: Monitorering. 
-\item Bruger trykker på "Regulering". 
-	\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
-	\item {[}Ext 3.a : Bruger trykker ikke "Regulering".{]}
-	\end{packed_item}
-\item Systemet aktiverer UC11: Regulering.
-\item UC1 afsluttes.
-\end{packed_enum} \\ \hline
-\textbf{Udvidelser:}				&  
-\textbf{{[}Ext 3.a : Bruger vælger kun monitorering.{]}}
-	\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
-	\item Systemet fortsætter ved pkt. 5 i hovedscenariet.
-	\end{packed_enum}
-\\ \hline
-\end{tabularx}
+	\begin{tabularx}{\textwidth}{| >{\raggedright\arraybackslash}p{3.3 cm} | >{\raggedright\arraybackslash}X |} \hline
+		
+		\textbf{Name:} 						& UC2: Find minima\\ \hline
+		\textbf{Goal:}						& Find the minima of a function \\ \hline
+		\textbf{Initering:}					& Researcher \\ \hline
+		\textbf{Actor:} 					& Researcher (primary) \\ \hline
+		\textbf{Reference:} 				& UC1: Setup \\ \hline
+		\textbf{Number of simultaneous occurrences:} & One \\ \hline
+		\textbf{Pre-condition:} 				& UC1 has been done \\ \hline
+		\textbf{Result:}					& Found the minima of a function \\ \hline
+		\textbf{Main scenario:}				& 
+		
+		\begin{packed_enum}
+			\item allaa
+			\item allala
+			\item alllaa
+			\begin{packed_item}\itemsep1pt \parskip0pt \parsep0pt
+				\item {[}Ext 3.a : User does not press "Regulation".{]}
+			\end{packed_item}
+			\item Systemet aktiverer UC11: Regulering.
+			\item UC1 afsluttes.
+		\end{packed_enum} \\ \hline
+		\textbf{extensions:}				&  
+		\textbf{{[}Ext 3.a :User selects only monitoring.{]}}
+		\begin{packed_enum}\itemsep1pt \parskip0pt \parsep0pt
+			\item The system continues at point. 5 in the main scenario.
+		\end{packed_enum}
+		\\ \hline
+	\end{tabularx}
 \caption{UC2: Start}
 \label{tbl:uc2}
 \end{table}
