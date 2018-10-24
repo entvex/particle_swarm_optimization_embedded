@@ -1,0 +1,57 @@
+/*
+ * Empty C++ Application
+ */
+
+/*
+ * main.cpp
+ *
+ *  Created on: 20. July 2018
+ *      Author: Kim Bjerge
+ */
+#include "UserThread.h"
+#include "math.h"
+#include "random"
+
+	double equation(double x1, double x2){
+		return 3*pow((1-x1),2)*exp( -pow(x1,2) - pow( x2+1 ,2 ) ) - 10*( x1*0.2 - pow(x1,3) - pow(x2,5) )*exp( -pow(x1,2) -pow( x2,2 ) ) -exp( -pow(x1+1,2) - pow(x2,2) ) / 3;
+	}
+
+	double random_position(double xi,double a){
+		double r = ((double) rand() / (RAND_MAX));
+		return ( xi-a ) + 2*a*r;
+	}
+
+	double random_velocity(double a){
+		double r = ((double) rand() / (RAND_MAX));
+		return - a + 2*a*r;
+	}
+
+int main()
+{
+
+	//UserThread mUserThread(Thread::PRIORITY_NORMAL, "UserControlThread");
+
+	/* Start FreeRTOS, the tasks running. */
+	//vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	//for( ;; );
+
+	double res = equation(-10,-10);
+	int i = 1;
+
+	d = 1; //
+
+
+
+
+
+
+}
+
+
+
