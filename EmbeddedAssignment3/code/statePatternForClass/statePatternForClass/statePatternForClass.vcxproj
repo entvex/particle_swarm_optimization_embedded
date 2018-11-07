@@ -19,21 +19,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="EmbbededSystemX.cpp" />
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Initializing.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OperatingState.cpp" />
     <ClCompile Include="Operational.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
+    <ClCompile Include="Ready.cpp" />
     <ClCompile Include="StateEmbeddedSystemX.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Configuration.h" />
     <ClInclude Include="EmbbededSystemX.h" />
     <ClInclude Include="Failure.h" />
     <ClInclude Include="Initializing.h" />
+    <ClInclude Include="OperatingState.h" />
     <ClInclude Include="Operational.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
+    <ClInclude Include="Ready.h" />
     <ClInclude Include="StateEmbeddedSystemX.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -93,7 +102,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

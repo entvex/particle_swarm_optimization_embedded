@@ -7,7 +7,8 @@ class StateEmbeddedSystemX {
 		virtual void restart(embbeded_system_xx*);
 		virtual void SelftestOk(embbeded_system_xx*);
 	    virtual void Initalized(embbeded_system_xx*);
-		virtual void ready(embbeded_system_xx*);
+		virtual void Configure(embbeded_system_xx*);
+		virtual void ConfigurationEnded(embbeded_system_xx*);
 	protected:
-	static void ChangeState(embbeded_system_xx*, StateEmbeddedSystemX*);
+		static void ChangeState(embbeded_system_xx*, StateEmbeddedSystemX*);
 	};

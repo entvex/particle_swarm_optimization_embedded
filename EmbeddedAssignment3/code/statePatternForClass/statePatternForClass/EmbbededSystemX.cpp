@@ -25,6 +25,16 @@ void embbeded_system_xx::Initalized()
 	_state->Initalized(this);
 }
 
+void embbeded_system_xx::Configure()
+{
+	_state->Configure(this);
+}
+
+void embbeded_system_xx::ConfigurationEnded()
+{
+	_state->ConfigurationEnded(this);
+}
+
 embbeded_system_xx::embbeded_system_xx() {
 	_state = PowerOnSelfTest::Instance();
 }

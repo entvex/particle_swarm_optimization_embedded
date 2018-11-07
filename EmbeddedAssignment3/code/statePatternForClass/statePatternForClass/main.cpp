@@ -15,8 +15,10 @@ int main(int argc, char* argv[])
 	std::cout << "Cmd 4" << std::endl;
 	embbeded_system_xx.Initalized();
 	std::cout << "Handle nested states" << std::endl;
-
-
+	std::cout << "Cmd 4.1" << std::endl;
+	embbeded_system_xx.Configure();
+	std::cout << "Cmd 4.2" << std::endl;
+	embbeded_system_xx.ConfigurationEnded();
 	std::cout << "end nested states" << std::endl;
 	std::cout << "Cmd 5" << std::endl;
 	embbeded_system_xx.restart();

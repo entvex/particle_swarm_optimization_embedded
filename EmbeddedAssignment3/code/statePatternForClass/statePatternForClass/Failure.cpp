@@ -46,3 +46,13 @@ void Failure::Initalized(embbeded_system_xx*)
 {
 	std::cout << "I am in Failure and Initalized can't be used here" << std::endl;
 }
+
+void Failure::Configure(embbeded_system_xx*)
+{
+	std::cout << "I am in Failure and Configure can't be used here" << std::endl;
+}
+
+void Failure::ConfigurationEnded(embbeded_system_xx*)
+{
+	std::cout << "I am in Failure and ConfigurationEnded can't be used here" << std::endl;
+}

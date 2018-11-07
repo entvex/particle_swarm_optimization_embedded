@@ -2,6 +2,7 @@
 #include <ostream>
 #include <iostream>
 #include "PowerOnSelfTest.h"
+#include "Ready.h"
 
 //Singleton
 Operational* Operational::_instance = 0;
@@ -16,7 +17,8 @@ Operational* Operational::Instance()
 
 Operational::Operational()
 {
-	std::cout << "Entering Operational" << std::endl;
+	_state = Ready::Instance();
+	std::cout << "Entering Operational, Ready State" << std::endl;
 }
 
 void Operational::SelfTestFailed(embbeded_system_xx*, int ErrorNo)
@@ -38,4 +40,19 @@ void Operational::SelftestOk(embbeded_system_xx*)
 void Operational::Initalized(embbeded_system_xx*)
 {
 	std::cout << "I am in Operational and Initalized can't be used here" << std::endl;
+}
+
+void Operational::Configure(embbeded_system_xx*)
+{
+	_state->Configure(this);
+}
+
+void Operational::ConfigurationEnded(embbeded_system_xx*)
+{
+	_state->ConfigurationEnded(this);
+}
+
+void Operational::change_state(OperatingState* operatingState)
+{
+	_state = operatingState;
 }

@@ -14,5 +14,6 @@ public:
 	void SelftestOk(embbeded_system_xx*) override;
 	void Initalized(embbeded_system_xx*) override;
 	void SelfTestFailed(embbeded_system_xx*, int ErrorNo) override;
-	void ready(embbeded_system_xx*) override;
+	void Configure(embbeded_system_xx*) override;
+	void ConfigurationEnded(embbeded_system_xx*) override;
 };

@@ -8,6 +8,8 @@ public:
 	void SelfTestFailed();
 	void SelftestOk();
 	void Initalized();
+	void Configure();
+	void ConfigurationEnded();
 	//
 private:
 	friend class StateEmbeddedSystemX;

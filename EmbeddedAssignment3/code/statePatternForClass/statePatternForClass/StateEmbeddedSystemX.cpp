@@ -22,9 +22,12 @@ void StateEmbeddedSystemX::Initalized(embbeded_system_xx*)
 
 }
 
-void StateEmbeddedSystemX::ready(embbeded_system_xx*)
+void StateEmbeddedSystemX::Configure(embbeded_system_xx*)
 {
+}
 
+void StateEmbeddedSystemX::ConfigurationEnded(embbeded_system_xx*)
+{
 }
 
 void StateEmbeddedSystemX::ChangeState(embbeded_system_xx* t, StateEmbeddedSystemX* s) {

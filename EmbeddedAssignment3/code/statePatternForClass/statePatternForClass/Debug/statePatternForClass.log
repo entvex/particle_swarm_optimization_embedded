@@ -1,9 +1,12 @@
-﻿  EmbbededSystemX.cpp
+﻿  Configuration.cpp
+  EmbbededSystemX.cpp
   Failure.cpp
   Initializing.cpp
+  main.cpp
+  OperatingState.cpp
   Operational.cpp
   PowerOnSelfTest.cpp
+  Ready.cpp
   StateEmbeddedSystemX.cpp
-  main.cpp
   Generating Code...
   statePatternForClass.vcxproj -> C:\Users\Entvex\Desktop\statePatternForClass\Debug\statePatternForClass.exe

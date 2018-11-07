@@ -39,3 +39,13 @@ void Initializing::Initalized(embbeded_system_xx* t)
 	std::cout << "Changing to Operational" << std::endl;
 	ChangeState(t, Operational::Instance());
 }
+
+void Initializing::Configure(embbeded_system_xx*)
+{
+	std::cout << "I am in Initializing and Configure can't be used here" << std::endl;
+}
+
+void Initializing::ConfigurationEnded(embbeded_system_xx*)
+{
+	std::cout << "I am in Initializing and ConfigurationEnded can't be used here" << std::endl;
+}

@@ -19,9 +19,14 @@ void PowerOnSelfTest::SelfTestFailed(embbeded_system_xx* t, int ErrorNo)
 	ChangeState(t, Failure::Instance());
 }
 
-void PowerOnSelfTest::ready(embbeded_system_xx*)
+void PowerOnSelfTest::Configure(embbeded_system_xx*)
 {
-	std::cout << "I am in PowerOnSelfTest and can't ready from here" << std::endl;
+	std::cout << "I am in PowerOnSelfTest and can't Configure from here" << std::endl;
+}
+
+void PowerOnSelfTest::ConfigurationEnded(embbeded_system_xx*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't ConfigurationEnded from here" << std::endl;
 }
 
 PowerOnSelfTest::PowerOnSelfTest()
