@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov  2 12:19:05 2018
+# Process ID: 16632
+# Current directory: D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9568 D:\git\particle_swarm_optimization_embedded\EmbeddedAssignment3\Assignment3_HW\lab1\lab1.xpr
+# Log file: D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/vivado.log
+# Journal file: D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1'
+INFO: [Project 1-313] Project file moved from 'C:/XilinxProjects/lab1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 829.559 ; gain = 129.664
+update_compile_order -fileset sources_1
+launch_sdk -workspace D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/EmbeddedAssignment3/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  2 12:38:39 2018...

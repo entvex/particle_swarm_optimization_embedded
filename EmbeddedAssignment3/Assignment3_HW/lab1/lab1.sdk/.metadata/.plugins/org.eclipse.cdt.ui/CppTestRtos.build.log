@@ -1,0 +1,23 @@
+12:24:07 **** Auto Build of configuration Debug for project CppTestRtos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\EmbeddedAssignment3\Assignment3_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: CppTestRtos.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/lib -o "CppTestRtos.elf"  ./src/os/Mutex.o ./src/os/Semaphore.o ./src/os/Thread.o  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: CppTestRtos.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CppTestRtos.elf  |tee "CppTestRtos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 755362	   4420	  94016	 853798	  d0726	CppTestRtos.elf
+'Finished building: CppTestRtos.elf.size'
+' '
+
+12:24:19 Build Finished (took 12s.66ms)
+

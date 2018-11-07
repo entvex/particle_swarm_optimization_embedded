@@ -1,0 +1,15 @@
+﻿  main.cpp
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\state.h(7): error C2061: syntax error: identifier 'EmbeddedSystemX'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\state.h(11): error C2061: syntax error: identifier 'EmbeddedSystemX'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\poweronselftest.h(15): error C2061: syntax error: identifier 'EmbeddedSystemX'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\poweronselftest.h(18): error C2065: 'm': undeclared identifier
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\poweronselftest.h(18): error C2061: syntax error: identifier 'Failure'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\failure.h(14): error C2061: syntax error: identifier 'EmbeddedSystemX'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\failure.h(18): error C2065: 'm': undeclared identifier
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\embeddedsystemx.h(22): error C2660: 'State::selfTestFailed': function does not take 1 arguments
+  d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\state.h(7): note: see declaration of 'State::selfTestFailed'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\embeddedsystemx.h(26): error C2660: 'State::restart': function does not take 1 arguments
+  d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\state.h(11): note: see declaration of 'State::restart'
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\main.cpp(7): error C3867: 'EmbeddedSystemX::selfTestFailed': non-standard syntax; use '&' to create a pointer to member
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\main.cpp(8): error C3867: 'EmbeddedSystemX::restart': non-standard syntax; use '&' to create a pointer to member
+d:\git\particle_swarm_optimization_embedded\embeddedassignment3\code\embedded_assignment\embedded_assignment\main.cpp(5): error C2466: cannot allocate an array of constant size 0
