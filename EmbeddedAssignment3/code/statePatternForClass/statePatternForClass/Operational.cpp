@@ -21,35 +21,75 @@ Operational::Operational()
 	std::cout << "Entering Operational, Ready State" << std::endl;
 }
 
-void Operational::SelfTestFailed(embbeded_system_xx*, int ErrorNo)
+void Operational::SelfTestFailed(EmbeddedSystemX*, int ErrorNo)
 {
 	std::cout << "I am in Operational and SelfTestFailed can't be used here" << std::endl;
 }
 
-void Operational::restart(embbeded_system_xx* t)
+void Operational::restart(EmbeddedSystemX* t)
 {
-	std::cout << "Change to PowerOnSelfTest by input restart" << std::endl;
+	std::cout << "Change to PowerOnSelfTest by input Restart" << std::endl;
 	ChangeState(t, PowerOnSelfTest::Instance());
 }
 
-void Operational::SelftestOk(embbeded_system_xx*)
+void Operational::SelftestOk(EmbeddedSystemX*)
 {
 	std::cout << "I am in Operational and SelftestOk can't be used here" << std::endl;
 }
 
-void Operational::Initalized(embbeded_system_xx*)
+void Operational::Initalized(EmbeddedSystemX*)
 {
 	std::cout << "I am in Operational and Initalized can't be used here" << std::endl;
 }
 
-void Operational::Configure(embbeded_system_xx*)
+void Operational::Configure(EmbeddedSystemX*)
 {
 	_state->Configure(this);
 }
 
-void Operational::ConfigurationEnded(embbeded_system_xx*)
+void Operational::ConfigurationEnded(EmbeddedSystemX*)
 {
 	_state->ConfigurationEnded(this);
+}
+
+void Operational::Start(EmbeddedSystemX*)
+{
+	_state->Start(this);
+}
+
+void Operational::Stop(EmbeddedSystemX*)
+{
+	_state->Stop(this);
+}
+
+void Operational::Suspend(EmbeddedSystemX*)
+{
+	_state->Suspend(this);
+}
+
+void Operational::Resume(EmbeddedSystemX*)
+{
+	_state->Resume(this);
+}
+
+void Operational::chMode(EmbeddedSystemX*)
+{
+	_state->chMode(this);
+}
+
+void Operational::ConfigX()
+{
+	_state->ConfigX();
+}
+
+void Operational::EventX()
+{
+	_state->EventX();
+}
+
+void Operational::EventY()
+{
+	_state->EventY();
 }
 
 void Operational::change_state(OperatingState* operatingState)

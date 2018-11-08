@@ -1,21 +1,35 @@
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\vc141.pdb
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\vc141.idb
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\stateembeddedsystemx.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\ready.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\poweronselftest.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\operational.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\operatingstate.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\main.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\initializing.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\failure.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\embbededsystemx.obj
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\configuration.obj
-c:\users\entvex\desktop\statepatternforclass\debug\statepatternforclass.exe
-c:\users\entvex\desktop\statepatternforclass\debug\statepatternforclass.ilk
-c:\users\entvex\desktop\statepatternforclass\debug\statepatternforclass.pdb
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.command.1.tlog
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.read.1.tlog
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.write.1.tlog
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.command.1.tlog
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.read.1.tlog
-c:\users\entvex\desktop\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.write.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\vc141.pdb
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\vc141.idb
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\configuration.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\embeddedsystemx.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\failure.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\initializing.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\main.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operatingstate.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operational.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\poweronselftest.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\ready.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\stateembeddedsystemx.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\stateembeddedsystemx.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\ready.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\poweronselftest.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operational.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operatingstate.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\main.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\initializing.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\failure.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\configuration.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\embeddedsystemx.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.ilk
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.exe
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.pdb
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.bsc
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\bscmake.command.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\bscmake.read.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.command.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.read.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\cl.write.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.command.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.read.1.tlog
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\statepat.bce6d25f.tlog\link.write.1.tlog

@@ -13,20 +13,60 @@ PowerOnSelfTest* PowerOnSelfTest::Instance()
 	} return _instance;
 }
 
-void PowerOnSelfTest::SelfTestFailed(embbeded_system_xx* t, int ErrorNo)
+void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* t, int ErrorNo)
 {
 	std::cout << "Change to Failure by input SelfTestFailed" << std::endl;
-	ChangeState(t, Failure::Instance());
+	ChangeState(t, Failure::Instance(ErrorNo));
 }
 
-void PowerOnSelfTest::Configure(embbeded_system_xx*)
+void PowerOnSelfTest::Configure(EmbeddedSystemX*)
 {
 	std::cout << "I am in PowerOnSelfTest and can't Configure from here" << std::endl;
 }
 
-void PowerOnSelfTest::ConfigurationEnded(embbeded_system_xx*)
+void PowerOnSelfTest::ConfigurationEnded(EmbeddedSystemX*)
 {
 	std::cout << "I am in PowerOnSelfTest and can't ConfigurationEnded from here" << std::endl;
+}
+
+void PowerOnSelfTest::Start(EmbeddedSystemX*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't Start from here" << std::endl;
+}
+
+void PowerOnSelfTest::Stop(EmbeddedSystemX*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't Stop from here" << std::endl;
+}
+
+void PowerOnSelfTest::Suspend(EmbeddedSystemX*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't Suspend from here" << std::endl;
+}
+
+void PowerOnSelfTest::Resume(EmbeddedSystemX*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't Resume from here" << std::endl;
+}
+
+void PowerOnSelfTest::chMode(EmbeddedSystemX*)
+{
+	std::cout << "I am in PowerOnSelfTest and can't chMode from here" << std::endl;
+}
+
+void PowerOnSelfTest::ConfigX()
+{
+	std::cout << "I am in PowerOnSelfTest and can't ConfigX from here" << std::endl;
+}
+
+void PowerOnSelfTest::EventX()
+{
+	std::cout << "I am in PowerOnSelfTest and can't EventX from here" << std::endl;
+}
+
+void PowerOnSelfTest::EventY()
+{
+	std::cout << "I am in PowerOnSelfTest and can't EventY from here" << std::endl;
 }
 
 PowerOnSelfTest::PowerOnSelfTest()
@@ -34,18 +74,18 @@ PowerOnSelfTest::PowerOnSelfTest()
 	std::cout << "I am now in PowerOnSelfTest" << std::endl;
 }
 
-void PowerOnSelfTest::restart(embbeded_system_xx*)
+void PowerOnSelfTest::restart(EmbeddedSystemX*)
 {
-	std::cout << "I am in PowerOnSelfTest and  can't restart from here" << std::endl;
+	std::cout << "I am in PowerOnSelfTest and  can't Restart from here" << std::endl;
 }
 
-void PowerOnSelfTest::SelftestOk(embbeded_system_xx* t)
+void PowerOnSelfTest::SelftestOk(EmbeddedSystemX* t)
 {
 	std::cout << "Change to Initializing by input SelftestOk" << std::endl;
 	ChangeState(t, Initializing::Instance());
 }
 
-void PowerOnSelfTest::Initalized(embbeded_system_xx*)
+void PowerOnSelfTest::Initalized(EmbeddedSystemX*)
 {
 	std::cout << "I am in PowerOnSelfTest and  can't Initalized from here" << std::endl;
 }

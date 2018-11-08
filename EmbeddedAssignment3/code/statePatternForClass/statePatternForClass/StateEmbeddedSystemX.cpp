@@ -1,35 +1,63 @@
 #pragma once
 #include "StateEmbeddedSystemX.h"
-#include "EmbbededSystemX.h"
+#include "EmbeddedSystemX.h"
 
-void StateEmbeddedSystemX::SelfTestFailed(embbeded_system_xx*, int ErrorNo)
-{
-	
-}
-
-void StateEmbeddedSystemX::restart(embbeded_system_xx*)
-{
-	
-}
-
-void StateEmbeddedSystemX::SelftestOk(embbeded_system_xx*)
-{
-
-}
-
-void StateEmbeddedSystemX::Initalized(embbeded_system_xx*)
-{
-
-}
-
-void StateEmbeddedSystemX::Configure(embbeded_system_xx*)
+void StateEmbeddedSystemX::SelfTestFailed(EmbeddedSystemX*, int ErrorNo)
 {
 }
 
-void StateEmbeddedSystemX::ConfigurationEnded(embbeded_system_xx*)
+void StateEmbeddedSystemX::restart(EmbeddedSystemX*)
 {
 }
 
-void StateEmbeddedSystemX::ChangeState(embbeded_system_xx* t, StateEmbeddedSystemX* s) {
+void StateEmbeddedSystemX::SelftestOk(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Initalized(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Configure(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::ConfigurationEnded(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Start(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Stop(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Suspend(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::Resume(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::chMode(EmbeddedSystemX*)
+{
+}
+
+void StateEmbeddedSystemX::ConfigX()
+{
+}
+
+void StateEmbeddedSystemX::EventX()
+{
+}
+
+void StateEmbeddedSystemX::EventY()
+{
+}
+
+void StateEmbeddedSystemX::ChangeState(EmbeddedSystemX* t, StateEmbeddedSystemX* s) {
 	t->change_state(s);
 }

@@ -8,15 +8,23 @@ private:
 public:
 
 	static int ErrorNo;
-	static Failure* Instance();
+	static Failure* Instance(int);
 
 
 	Failure();
 	void display(int ErrorNo);
-	void SelfTestFailed(embbeded_system_xx*, int ErrorNo) override;
-	void restart(embbeded_system_xx*) override;
-	void SelftestOk(embbeded_system_xx*) override;
-	void Initalized(embbeded_system_xx*) override;
-	void Configure(embbeded_system_xx*) override;
-	void ConfigurationEnded(embbeded_system_xx*) override;
+	void SelfTestFailed(EmbeddedSystemX*, int ErrorNo) override;
+	void restart(EmbeddedSystemX*) override;
+	void SelftestOk(EmbeddedSystemX*) override;
+	void Initalized(EmbeddedSystemX*) override;
+	void Configure(EmbeddedSystemX*) override;
+	void ConfigurationEnded(EmbeddedSystemX*) override;
+	void Start(EmbeddedSystemX*) override;
+	void Stop(EmbeddedSystemX*) override;
+	void Suspend(EmbeddedSystemX*) override;
+	void Resume(EmbeddedSystemX*) override;
+	void chMode(EmbeddedSystemX*) override;
+	void ConfigX() override;
+	void EventX() override;
+	void EventY() override;
 };

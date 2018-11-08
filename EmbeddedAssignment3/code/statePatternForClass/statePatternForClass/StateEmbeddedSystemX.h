@@ -1,14 +1,22 @@
 #pragma once
-class embbeded_system_xx;
+class EmbeddedSystemX;
 
 class StateEmbeddedSystemX {
 	public:
-		virtual void SelfTestFailed(embbeded_system_xx*, int ErrorNo);
-		virtual void restart(embbeded_system_xx*);
-		virtual void SelftestOk(embbeded_system_xx*);
-	    virtual void Initalized(embbeded_system_xx*);
-		virtual void Configure(embbeded_system_xx*);
-		virtual void ConfigurationEnded(embbeded_system_xx*);
+		virtual void SelfTestFailed(EmbeddedSystemX*, int ErrorNo);
+		virtual void restart(EmbeddedSystemX*);
+		virtual void SelftestOk(EmbeddedSystemX*);
+	    virtual void Initalized(EmbeddedSystemX*);
+		virtual void Configure(EmbeddedSystemX*);
+		virtual void ConfigurationEnded(EmbeddedSystemX*);
+		virtual void Start(EmbeddedSystemX*);
+		virtual void Stop(EmbeddedSystemX*);
+		virtual void Suspend(EmbeddedSystemX*);
+		virtual void Resume(EmbeddedSystemX*);
+		virtual void chMode(EmbeddedSystemX*);
+		virtual void ConfigX();
+		virtual void EventX();
+		virtual void EventY();
 	protected:
-		static void ChangeState(embbeded_system_xx*, StateEmbeddedSystemX*);
+		static void ChangeState(EmbeddedSystemX*, StateEmbeddedSystemX*);
 	};
