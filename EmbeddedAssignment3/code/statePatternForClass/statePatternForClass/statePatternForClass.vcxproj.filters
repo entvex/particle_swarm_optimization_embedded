@@ -112,7 +112,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="Overview.cd" />
+    <None Include="EmbeddedSystemX.cd" />
+    <None Include="StateEmbeddedSystemX.cd" />
+    <None Include="OperatingState.cd" />
+    <None Include="TimeLoopState.cd" />
   </ItemGroup>
 </Project>

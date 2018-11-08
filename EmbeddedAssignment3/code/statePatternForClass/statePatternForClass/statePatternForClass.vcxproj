@@ -54,8 +54,11 @@
     <ClInclude Include="TimeLoopState.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="EmbeddedSystemX.cd" />
+    <None Include="OperatingState.cd" />
+    <None Include="Overview.cd" />
+    <None Include="StateEmbeddedSystemX.cd" />
+    <None Include="TimeLoopState.cd" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
