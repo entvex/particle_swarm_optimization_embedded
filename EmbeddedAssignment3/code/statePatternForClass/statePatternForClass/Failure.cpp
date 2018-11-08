@@ -23,7 +23,7 @@ Failure::Failure()
 
 void Failure::display(int ErrorNo)
 {
-	std::cout << "Displaying Error Number: " << ErrorNo << std::endl;
+	std::cout << "Entry: Displaying Error Number: " << ErrorNo << std::endl;
 }
 
 void Failure::SelfTestFailed(EmbeddedSystemX*, int ErrorNo)

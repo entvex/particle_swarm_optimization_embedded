@@ -10,7 +10,9 @@ Initializing* Initializing::Instance()
 {
 	if (_instance == 0) {
 		_instance = new Initializing();
-	} return _instance;
+	}
+	_instance->startInitializing();
+	return _instance;
 }
 //Singleton
 
@@ -88,4 +90,9 @@ void Initializing::EventX()
 void Initializing::EventY()
 {
 	std::cout << "I am in Initializing and EventY can't be used here" << std::endl;
+}
+
+void Initializing::startInitializing()
+{
+	std::cout << "Entry: calling startInitializing" << std::endl;
 }

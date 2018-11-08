@@ -11,14 +11,15 @@ Operational* Operational::Instance()
 {
 	if (_instance == 0) {
 		_instance = new Operational();
-	} return _instance;
+	}
+	_instance->_state = Ready::Instance();
+	std::cout << "Entering Operational, Ready State" << std::endl;
+	return _instance;
 }
 //Singleton
 
 Operational::Operational()
 {
-	_state = Ready::Instance();
-	std::cout << "Entering Operational, Ready State" << std::endl;
 }
 
 void Operational::SelfTestFailed(EmbeddedSystemX*, int ErrorNo)

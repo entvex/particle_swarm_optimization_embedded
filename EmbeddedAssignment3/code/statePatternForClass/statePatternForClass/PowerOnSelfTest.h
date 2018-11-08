@@ -24,4 +24,5 @@ public:
 	void ConfigX() override;
 	void EventX() override;
 	void EventY() override;
+	void systemSelfTest();
 };

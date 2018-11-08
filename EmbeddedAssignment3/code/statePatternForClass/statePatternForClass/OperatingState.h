@@ -1,5 +1,4 @@
 #pragma once
-#include "EmbeddedSystemX.h"
 #include "Operational.h"
 class Operational;
 

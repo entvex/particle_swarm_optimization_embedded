@@ -10,7 +10,9 @@ PowerOnSelfTest* PowerOnSelfTest::Instance()
 {
 	if (_instance == 0) {
 		_instance = new PowerOnSelfTest();
-	} return _instance;
+	}
+	_instance->systemSelfTest();
+	return _instance;
 }
 
 void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* t, int ErrorNo)
@@ -67,6 +69,11 @@ void PowerOnSelfTest::EventX()
 void PowerOnSelfTest::EventY()
 {
 	std::cout << "I am in PowerOnSelfTest and can't EventY from here" << std::endl;
+}
+
+void PowerOnSelfTest::systemSelfTest()
+{
+	std::cout << "Entry: calling systemSelfTest" << std::endl;
 }
 
 PowerOnSelfTest::PowerOnSelfTest()

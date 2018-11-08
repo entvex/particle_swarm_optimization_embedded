@@ -9,8 +9,14 @@ c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepattern
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operational.sbr
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\poweronselftest.sbr
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\ready.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\realtimeloop.sbr
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\stateembeddedsystemx.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\suspended.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\timeloopstate.sbr
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\timeloopstate.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\suspended.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\stateembeddedsystemx.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\realtimeloop.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\ready.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\poweronselftest.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\operational.obj
@@ -18,9 +24,8 @@ c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepattern
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\main.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\initializing.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\failure.obj
-c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\configuration.obj
-c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\embeddedsystemx.obj
+c:\iha\embedded real time systems\assignment_3\statepatternforclass\statepatternforclass\debug\configuration.obj
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.ilk
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.exe
 c:\iha\embedded real time systems\assignment_3\statepatternforclass\debug\statepatternforclass.pdb

@@ -20,15 +20,38 @@ int main(int argc, char* argv[])
 	embeddedSystem.Initalized();
 
 	std::cout << "\nCmd 4.1: Configure" << std::endl;
-	std::cout << "Handle nested states" << std::endl;
 	embeddedSystem.Configure();
+	embeddedSystem.ConfigX();
 
 	std::cout << "\nCmd 4.2: ConfigurationEnded" << std::endl;
 	embeddedSystem.ConfigurationEnded();
 
+	std::cout << "\nCmd 4.3: Start" << std::endl;
+	embeddedSystem.Start();
+	embeddedSystem.EventX();
+
+	std::cout << "\nCmd 4.3.1: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+	embeddedSystem.EventY();
+
+	std::cout << "\nCmd 4.3.2: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+	embeddedSystem.EventY();
+
+	std::cout << "\nCmd 4.3.3: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+
+	std::cout << "\nCmd 4.4: Suspend" << std::endl;
+	embeddedSystem.Suspend();
+
+	std::cout << "\nCmd 4.5: Resume" << std::endl;
+	embeddedSystem.Resume();
+
 	std::cout << "\nCmd 5: Restart" << std::endl;
-	std::cout << "end nested states" << std::endl;
 	embeddedSystem.Restart();
 
-	getchar();
+	std::cin.get();
 }

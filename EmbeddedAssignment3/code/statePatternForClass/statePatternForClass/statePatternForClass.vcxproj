@@ -24,6 +24,9 @@
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Initializing.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mode1.cpp" />
+    <ClCompile Include="Mode2.cpp" />
+    <ClCompile Include="Mode3.cpp" />
     <ClCompile Include="OperatingState.cpp" />
     <ClCompile Include="Operational.cpp" />
     <ClCompile Include="PowerOnSelfTest.cpp" />
@@ -31,12 +34,16 @@
     <ClCompile Include="RealTimeLoop.cpp" />
     <ClCompile Include="StateEmbeddedSystemX.cpp" />
     <ClCompile Include="Suspended.cpp" />
+    <ClCompile Include="TimeLoopState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Configuration.h" />
     <ClInclude Include="EmbeddedSystemX.h" />
     <ClInclude Include="Failure.h" />
     <ClInclude Include="Initializing.h" />
+    <ClInclude Include="Mode1.h" />
+    <ClInclude Include="Mode2.h" />
+    <ClInclude Include="Mode3.h" />
     <ClInclude Include="OperatingState.h" />
     <ClInclude Include="Operational.h" />
     <ClInclude Include="PowerOnSelfTest.h" />
@@ -44,6 +51,7 @@
     <ClInclude Include="RealTimeLoop.h" />
     <ClInclude Include="StateEmbeddedSystemX.h" />
     <ClInclude Include="Suspended.h" />
+    <ClInclude Include="TimeLoopState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
