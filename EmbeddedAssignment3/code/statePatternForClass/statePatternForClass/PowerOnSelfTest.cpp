@@ -14,6 +14,7 @@ PowerOnSelfTest* PowerOnSelfTest::Instance()
 	_instance->systemSelfTest();
 	return _instance;
 }
+//Singleton
 
 void PowerOnSelfTest::SelfTestFailed(EmbeddedSystemX* t, int ErrorNo)
 {
