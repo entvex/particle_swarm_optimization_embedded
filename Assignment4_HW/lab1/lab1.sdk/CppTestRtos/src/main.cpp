@@ -3,13 +3,14 @@
  */
 
 #include "UserThread.h"
+#include "EmbeddedSystemX.h"
 
 int main()
 {
 
 	EmbeddedSystemX em;
-	em.ConfigurationEnded();
 
+	em.SelfTestFailed(29);
 
 	UserThread mUserThread(Thread::PRIORITY_NORMAL, "UserControlThread");
 

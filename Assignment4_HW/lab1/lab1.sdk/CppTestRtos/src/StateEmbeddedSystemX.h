@@ -17,6 +17,8 @@ class StateEmbeddedSystemX {
 		virtual void ConfigX();
 		virtual void EventX();
 		virtual void EventY();
+		virtual void RunRealTime(EmbeddedSystemX*);
+		virtual void Simulate(EmbeddedSystemX*);
 	protected:
 		static void ChangeState(EmbeddedSystemX*, StateEmbeddedSystemX*);
 	};

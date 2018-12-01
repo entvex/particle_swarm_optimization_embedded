@@ -1,0 +1,17 @@
+/*
+ * ApplicationModeSetting.h
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_APPLICATIONMODESETTING_H_
+#define SRC_APPLICATIONMODESETTING_H_
+
+class ApplicationModeSetting {
+public:
+	ApplicationModeSetting();
+	virtual ~ApplicationModeSetting();
+};
+
+#endif /* SRC_APPLICATIONMODESETTING_H_ */

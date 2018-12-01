@@ -1,0 +1,27 @@
+/*
+ * SimulateRealTimeState.h
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+
+#pragma once
+
+#include "RealTimeLoop.h"
+#include "RealTimeLoopState.h"
+class RealTimeLoopState;
+class RealTimeLoop;
+
+
+class SimulateRealTimeState :public RealTimeLoopState
+{
+public:
+	void chMode(RealTimeLoop*) override;
+	void EventX() override;
+	void EventY() override;
+	void RunRealTime(RealTimeLoop*) override;
+	void Simulate(RealTimeLoop*) override;
+protected:
+	static void ChangeState(RealTimeLoop*, RealTimeLoopState*);
+};

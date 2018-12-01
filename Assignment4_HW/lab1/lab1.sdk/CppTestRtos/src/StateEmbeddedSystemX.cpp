@@ -58,6 +58,16 @@ void StateEmbeddedSystemX::EventY()
 {
 }
 
+void StateEmbeddedSystemX::RunRealTime(EmbeddedSystemX*)
+{
+
+}
+
+void StateEmbeddedSystemX::Simulate(EmbeddedSystemX*)
+{
+
+}
+
 void StateEmbeddedSystemX::ChangeState(EmbeddedSystemX* t, StateEmbeddedSystemX* s) {
 	t->change_state(s);
 }

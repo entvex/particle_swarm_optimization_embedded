@@ -2,7 +2,6 @@
 #include <iostream>
 #include "Ready.h"
 #include "Suspended.h"
-#include "Mode1.h"
 
 //Singleton
 RealTimeLoop* RealTimeLoop::_instance = 0;
@@ -12,7 +11,6 @@ RealTimeLoop* RealTimeLoop::Instance()
 	if (_instance == 0) {
 		_instance = new RealTimeLoop();
 	}
-	_instance->_state = Mode1::Instance();
 	std::cout << "Entering RealTimeLoop, Mode1 State" << std::endl;
 	return _instance;
 }
@@ -75,7 +73,17 @@ void RealTimeLoop::EventY()
 	_state->EventY();
 }
 
-void RealTimeLoop::change_state(TimeLoopState* timeLoopState)
+void RealTimeLoop::change_state(RealTimeLoopState* realTimeLoopState)
 {
-	_state = timeLoopState;
+	_state = realTimeLoopState;
+}
+
+void RealTimeLoop::RunRealTime(Operational*)
+{
+	_state->RunRealTime(this);
+}
+
+void RealTimeLoop::Simulate(Operational*)
+{
+	_state->Simulate(this);
 }

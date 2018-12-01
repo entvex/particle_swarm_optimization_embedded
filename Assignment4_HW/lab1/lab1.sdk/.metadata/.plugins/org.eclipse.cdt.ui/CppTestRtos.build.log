@@ -1,18 +1,46 @@
-20:34:04 **** Incremental Build of configuration Debug for project CppTestRtos ****
+13:56:47 **** Auto Build of configuration Debug for project CppTestRtos ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/EmbbededSystemX.cpp'
+'Building file: ../src/RealTimeLoop.cpp'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Entvex\Desktop\Assignment3_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/EmbbededSystemX.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/EmbbededSystemX.d" -MT"src/EmbbededSystemX.o" -o "src/EmbbededSystemX.o" "../src/EmbbededSystemX.cpp"
-../src/EmbbededSystemX.cpp: In member function 'void embbeded_system_xx::ConfigurationEnded()':
-../src/EmbbededSystemX.cpp:35:47: error: expected primary-expression before '*' token
-  (*_state).ConfigurationEnded(EmbeddedSystemX *);
-                                               ^
-../src/EmbbededSystemX.cpp:35:48: error: expected primary-expression before ')' token
-  (*_state).ConfigurationEnded(EmbeddedSystemX *);
-                                                ^
-make: *** [src/EmbbededSystemX.o] Error 1
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/RealTimeLoop.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/RealTimeLoop.d" -MT"src/RealTimeLoop.o" -o "src/RealTimeLoop.o" "../src/RealTimeLoop.cpp"
+'Finished building: ../src/RealTimeLoop.cpp'
+' '
+'Building file: ../src/RealTimeLoopState.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/RealTimeLoopState.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/RealTimeLoopState.d" -MT"src/RealTimeLoopState.o" -o "src/RealTimeLoopState.o" "../src/RealTimeLoopState.cpp"
+'Finished building: ../src/RealTimeLoopState.cpp'
+' '
+'Building file: ../src/StateEmbeddedSystemX.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/StateEmbeddedSystemX.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/StateEmbeddedSystemX.d" -MT"src/StateEmbeddedSystemX.o" -o "src/StateEmbeddedSystemX.o" "../src/StateEmbeddedSystemX.cpp"
+../src/StateEmbeddedSystemX.cpp:1:9: warning: #pragma once in main file
+ #pragma once
+         ^~~~
+'Finished building: ../src/StateEmbeddedSystemX.cpp'
+' '
+'Building file: ../src/Suspended.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/Suspended.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/Suspended.d" -MT"src/Suspended.o" -o "src/Suspended.o" "../src/Suspended.cpp"
+'Finished building: ../src/Suspended.cpp'
+' '
+'Building file: ../src/main.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: CppTestRtos.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/lib -o "CppTestRtos.elf"  ./src/os/Mutex.o ./src/os/Semaphore.o ./src/os/Thread.o  ./src/Configuration.o ./src/EmbeddedSystemX.o ./src/Failure.o ./src/Initializing.o ./src/OperatingState.o ./src/Operational.o ./src/PowerOnSelfTest.o ./src/Ready.o ./src/RealTimeLoop.o ./src/RealTimeLoopState.o ./src/StateEmbeddedSystemX.o ./src/Suspended.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: CppTestRtos.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size CppTestRtos.elf  |tee "CppTestRtos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 836237	   4452	  96168	 936857	  e4b99	CppTestRtos.elf
+'Finished building: CppTestRtos.elf.size'
+' '
 
-20:34:08 Build Finished (took 3s.723ms)
+13:56:54 Build Finished (took 7s.332ms)
 

@@ -15,6 +15,8 @@ public:
 	virtual void ConfigX();
 	virtual void EventX();
 	virtual void EventY();
+	virtual void RunRealTime(Operational*);
+	virtual void Simulate(Operational*);
 protected:
 	static void ChangeState(Operational*, OperatingState*);
 };

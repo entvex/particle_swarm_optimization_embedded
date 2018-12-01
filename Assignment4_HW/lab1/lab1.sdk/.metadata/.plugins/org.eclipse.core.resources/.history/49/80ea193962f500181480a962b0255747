@@ -1,0 +1,23 @@
+/*
+ * SimulateRealTimeState.cpp
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "SimulateRealTimeState.h"
+
+void SimulateRealTimeState::RunRealTime(RealTimeLoop*)
+{
+
+}
+
+void SimulateRealTimeState::Simulate(RealTimeLoop*)
+{
+
+}
+
+void SimulateRealTimeState::ChangeState(RealTimeLoop* t, SimulateRealTimeState* s)
+{
+	t->change_state(s);
+}

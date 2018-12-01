@@ -1,0 +1,18 @@
+/*
+ * ApplicationModeSetting.cpp
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "ApplicationModeSetting.h"
+
+ApplicationModeSetting::ApplicationModeSetting() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ApplicationModeSetting::~ApplicationModeSetting() {
+	// TODO Auto-generated destructor stub
+}
+

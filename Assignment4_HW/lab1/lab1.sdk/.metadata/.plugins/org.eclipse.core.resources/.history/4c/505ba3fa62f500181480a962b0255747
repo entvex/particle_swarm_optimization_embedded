@@ -1,0 +1,22 @@
+#include "ApplicationModeSetting.h"
+
+
+void ApplicationModeSetting::chMode(RealTimeLoop*)
+{
+
+}
+
+void ApplicationModeSetting::EventX()
+{
+
+}
+
+void ApplicationModeSetting::EventY()
+{
+
+}
+
+void ApplicationModeSetting::ChangeState(RealTimeLoop* t, ApplicationModeSetting* s)
+{
+	t->change_state(s);
+}

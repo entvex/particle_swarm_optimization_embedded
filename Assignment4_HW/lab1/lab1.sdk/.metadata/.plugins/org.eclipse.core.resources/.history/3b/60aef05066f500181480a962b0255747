@@ -1,0 +1,17 @@
+#pragma once
+#include "RealTimeLoop.h"
+#include "RealTimeLoopState.h"
+class RealTimeLoopState;
+
+class ApplicationModeSetting : public RealTimeLoopState
+{
+public:
+	virtual void chMode(RealTimeLoop*);
+	virtual void EventX();
+	virtual void EventY();
+	virtual void RunRealTime(RealTimeLoop*);
+	virtual void Simulate(RealTimeLoop*);
+protected:
+	static void ChangeState(RealTimeLoop*, RealTimeLoopState*);
+};
+

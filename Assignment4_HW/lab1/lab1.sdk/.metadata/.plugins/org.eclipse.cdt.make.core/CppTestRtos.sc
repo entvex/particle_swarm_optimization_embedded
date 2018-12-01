@@ -4,10 +4,13 @@
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="#undef __ARM_FP" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1"/>
+<includePath path="#undef __thumb__" removed="true"/>
 <includePath path="#undef __ARM_FP16_FORMAT_IEEE" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1/arm-none-eabi"/>
+<includePath path="#undef __thumb2__" removed="true"/>
 <includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1/backward"/>
+<includePath path="#undef __THUMBEL__" removed="true"/>
 <includePath path="#undef __ARM_FP16_ARGS" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include"/>
 <includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
@@ -775,23 +778,15 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.76444933;xilinx.gnu.armv7.exe.debug.76444933.;xilinx.gnu.armv7.cxx.toolchain.compiler.debug.247897830;xilinx.gnu.armv7.cxx.compiler.input.59283658">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
-<includePath path="#undef __ARM_FP16_ARGS" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1"/>
-<includePath path="#undef __ARM_ARCH_EXT_IDIV__" removed="true"/>
-<includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1/arm-none-eabi"/>
-<includePath path="#undef __ARM_FEATURE_IDIV" removed="true"/>
-<includePath path="#undef __ARM_FEATURE_FP16_VECTOR_ARITHMETIC" removed="true"/>
+<includePath path="#undef __ARM_ARCH_EXT_IDIV__" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include/c++/6.2.1/backward"/>
-<includePath path="#undef __ARM_ASM_SYNTAX_UNIFIED__" removed="true"/>
-<includePath path="#undef __ARM_FEATURE_FMA" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_IDIV" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include"/>
-<includePath path="#undef __ARM_NEON__" removed="true"/>
+<includePath path="#undef __ARM_ASM_SYNTAX_UNIFIED__" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/include-fixed"/>
-<includePath path="#undef __ARM_NEON" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/include"/>
-<includePath path="#undef __ARM_NEON_FP" removed="true"/>
 <includePath path="d:\xilinx\sdk\2017.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=201402L"/>

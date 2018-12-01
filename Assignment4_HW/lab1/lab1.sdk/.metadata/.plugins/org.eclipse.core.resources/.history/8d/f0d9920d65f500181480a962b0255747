@@ -1,0 +1,18 @@
+/*
+ * RealTimeLoopState.cpp
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "RealTimeLoopState.h"
+
+RealTimeLoopState::RealTimeLoopState() {
+	// TODO Auto-generated constructor stub
+
+}
+
+RealTimeLoopState::~RealTimeLoopState() {
+	// TODO Auto-generated destructor stub
+}
+

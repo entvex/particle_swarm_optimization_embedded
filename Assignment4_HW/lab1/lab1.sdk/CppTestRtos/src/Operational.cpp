@@ -97,3 +97,13 @@ void Operational::change_state(OperatingState* operatingState)
 {
 	_state = operatingState;
 }
+
+void Operational::RunRealTime(EmbeddedSystemX*)
+{
+	_state->RunRealTime(this);
+}
+
+void Operational::Simulate(EmbeddedSystemX*)
+{
+	_state->Simulate(this);
+}

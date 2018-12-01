@@ -1,0 +1,14 @@
+#pragma once
+#include "ApplicationModeSetting.h"
+class Mode2 : public ApplicationModeSetting
+{
+private:
+	Mode2();
+	static Mode2* _instance;
+public:
+	static Mode2* Instance();
+	void chMode(RealTimeLoop*) override;
+	void EventX() override;
+	void EventY() override;
+};
+

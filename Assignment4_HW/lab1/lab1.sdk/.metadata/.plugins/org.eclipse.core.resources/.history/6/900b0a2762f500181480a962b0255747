@@ -1,0 +1,25 @@
+/*
+ * SimulateRealTimeState.h
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_SIMULATEREALTIMESTATE_H_
+#define SRC_SIMULATEREALTIMESTATE_H_
+
+#include "RealTimeLoop.h"
+class RealTimeLoop;
+
+class SimulateRealTimeState :public RealTimeLoopState
+{
+public:
+	SimulateRealTimeState();
+	virtual void RunRealTime(RealTimeLoop*);
+	virtual void Simulate(RealTimeLoop*);
+	virtual ~SimulateRealTimeState();
+private:
+	static void ChangeState(RealTimeLoop*, SimulateRealTimeState*);
+};
+
+#endif /* SRC_SIMULATEREALTIMESTATE_H_ */

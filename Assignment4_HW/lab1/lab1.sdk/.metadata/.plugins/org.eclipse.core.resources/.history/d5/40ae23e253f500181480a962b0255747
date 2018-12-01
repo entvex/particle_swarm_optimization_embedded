@@ -1,0 +1,34 @@
+#pragma once
+#include "OperatingState.h"
+#include "ApplicationModeSetting.h"
+#include "SimulateRealTimeState.h"
+
+class ApplicationModeSetting;
+
+class RealTimeLoop :
+	public OperatingState
+{
+private: 
+	RealTimeLoop();
+	static RealTimeLoop* _instance;
+	ApplicationModeSetting _applicationModeSetting;
+	SimulateRealTimeState  _simulateRealTimeState;
+public:
+	static RealTimeLoop* Instance();
+	void Configure(Operational*) override;
+	void ConfigurationEnded(Operational*) override;
+	void Start(Operational*) override;
+	void Stop(Operational*) override;
+	void Suspend(Operational*) override;
+	void Resume(Operational*) override;
+	void chMode(Operational*) override;
+	void ConfigX() override;
+	void EventX() override;
+	void EventY() override;
+
+protected:
+	friend class TimeLoopState;
+	void change_state(TimeLoopState*);
+	TimeLoopState* _state;
+};
+

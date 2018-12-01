@@ -1,0 +1,18 @@
+/*
+ * RealTimeLoopState.h
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_REALTIMELOOPSTATE_H_
+#define SRC_REALTIMELOOPSTATE_H_
+
+class RealTimeLoopState {
+public:
+	RealTimeLoopState();
+	virtual ~RealTimeLoopState();
+
+};
+
+#endif /* SRC_REALTIMELOOPSTATE_H_ */

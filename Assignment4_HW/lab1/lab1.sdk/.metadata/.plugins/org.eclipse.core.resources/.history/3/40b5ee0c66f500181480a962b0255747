@@ -1,0 +1,30 @@
+/*
+ * RealTimeLoopState.cpp
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "RealTimeLoop.h"
+
+void RealTimeLoopState::chMode(RealTimeLoop*)
+{
+
+}
+
+void RealTimeLoopState::eventX()
+{
+
+}
+void RealTimeLoopState::eventY()
+{
+
+}
+void RealTimeLoopState::RunRealTime(RealTimeLoop*)
+{
+
+}
+void RealTimeLoopState::Simulate(RealTimeLoop*)
+{
+
+}

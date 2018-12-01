@@ -1,8 +1,12 @@
 #pragma once
 #include "OperatingState.h"
-#include "TimeLoopState.h"
-class RealTimeLoop :
-	public OperatingState
+#include "RealTimeLoopState.h"
+
+//class ApplicationModeSetting;
+//class SimulateRealTimeState;
+class RealTimeLoopState;
+
+class RealTimeLoop : public OperatingState
 {
 private: 
 	RealTimeLoop();
@@ -19,10 +23,14 @@ public:
 	void ConfigX() override;
 	void EventX() override;
 	void EventY() override;
+	void RunRealTime(Operational*) override;
+	void Simulate(Operational*) override;
 
 protected:
-	friend class TimeLoopState;
-	void change_state(TimeLoopState*);
-	TimeLoopState* _state;
+	friend class RealTimeLoopState;
+	friend class ApplicationModeSetting;
+	friend class SimulateRealTimeState;
+	void change_state(RealTimeLoopState*);
+	RealTimeLoopState* _state;
 };
 

@@ -43,6 +43,16 @@ void OperatingState::EventY()
 {
 }
 
+void OperatingState::RunRealTime(Operational* )
+{
+
+}
+
+void OperatingState::Simulate(Operational* )
+{
+
+}
+
 void OperatingState::ChangeState(Operational* t, OperatingState* s)
 {
 	t->change_state(s);

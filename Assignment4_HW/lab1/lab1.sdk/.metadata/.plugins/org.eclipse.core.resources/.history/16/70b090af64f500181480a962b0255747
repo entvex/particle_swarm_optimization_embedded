@@ -1,0 +1,27 @@
+/*
+ * RealTimeLoopState.h
+ *
+ *  Created on: 1 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_REALTIMELOOPSTATE_H_
+#define SRC_REALTIMELOOPSTATE_H_
+#include "RealTimeLoop.h"
+
+class RealTimeLoop;
+
+class RealTimeLoopState
+{
+public:
+	virtual void chMode(RealTimeLoop*);
+	virtual void EventX();
+	virtual void EventY();
+	virtual void RunRealTime();
+	virtual void Simulate();
+protected:
+	static void ChangeState(RealTimeLoop*, RealTimeLoopState*);
+};
+
+
+#endif /* SRC_REALTIMELOOPSTATE_H_ */
