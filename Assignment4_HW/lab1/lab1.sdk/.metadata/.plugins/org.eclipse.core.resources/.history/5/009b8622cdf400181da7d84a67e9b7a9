@@ -1,0 +1,49 @@
+#include "OperatingState.h"
+#include "StateEmbeddedSystemX.h"
+#include "EmbeddedSystemX.h"
+#include "Operational.h"
+
+void OperatingState::Configure(Operational* operational)
+{
+}
+
+void OperatingState::ConfigurationEnded(Operational* operational)
+{
+}
+
+void OperatingState::Start(Operational* operational)
+{
+}
+
+void OperatingState::Stop(Operational* operational)
+{
+}
+
+void OperatingState::Suspend(Operational* operational)
+{
+}
+
+void OperatingState::Resume(Operational* operational)
+{
+}
+
+void OperatingState::chMode(Operational* operational)
+{
+}
+
+void OperatingState::ConfigX()
+{
+}
+
+void OperatingState::EventX()
+{
+}
+
+void OperatingState::EventY()
+{
+}
+
+void OperatingState::ChangeState(Operational* t, OperatingState* s)
+{
+	t->change_state(s);
+}

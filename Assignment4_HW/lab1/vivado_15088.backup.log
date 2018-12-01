@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov 30 18:55:36 2018
+# Process ID: 15088
+# Current directory: C:/Users/Entvex/Desktop/Assignment3_HW/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15200 C:\Users\Entvex\Desktop\Assignment3_HW\lab1\lab1.xpr
+# Log file: C:/Users/Entvex/Desktop/Assignment3_HW/lab1/vivado.log
+# Journal file: C:/Users/Entvex/Desktop/Assignment3_HW/lab1\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/XilinxProjects/lab1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.oopen_project: Time (s): cpu = 00:00:52 ; elapsed = 00:00:29 . Memory (MB): peak = 821.074 ; gain = 41.953updateINFO: [Common 17-206] Exiting Vivalaunch_runs impl_1 -to_step write_bitstream -jobs 8
+[Fri Nov 30 18:57:10 2018] Launched impl_1...
+Run output will be captured here: C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.runs/impl_1/runme.log
+launch_sdk -workspace C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk -hwspec C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk -hwspec C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 30 20:36:22 2018...

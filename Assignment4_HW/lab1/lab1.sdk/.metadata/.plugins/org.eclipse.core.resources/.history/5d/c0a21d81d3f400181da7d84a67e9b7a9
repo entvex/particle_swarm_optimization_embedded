@@ -1,0 +1,19 @@
+#pragma once
+#include "StateEmbeddedSystemX.h"
+
+class embbeded_system_xx {
+public:
+	embbeded_system_xx();
+	void restart(StateEmbeddedSystemX*);
+	void SelfTestFailed(StateEmbeddedSystemX*);
+	void SelftestOk(StateEmbeddedSystemX*);
+	void Initalized(StateEmbeddedSystemX*);
+	void Configure(StateEmbeddedSystemX*);
+	void ConfigurationEnded(StateEmbeddedSystemX*);
+	//
+private:
+	friend class StateEmbeddedSystemX;
+	void change_state(StateEmbeddedSystemX*);
+
+	StateEmbeddedSystemX* _state;
+};

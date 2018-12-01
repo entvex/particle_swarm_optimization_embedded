@@ -1,0 +1,18 @@
+20:34:04 **** Incremental Build of configuration Debug for project CppTestRtos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/EmbbededSystemX.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Entvex\Desktop\Assignment3_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/EmbbededSystemX.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/EmbbededSystemX.d" -MT"src/EmbbededSystemX.o" -o "src/EmbbededSystemX.o" "../src/EmbbededSystemX.cpp"
+../src/EmbbededSystemX.cpp: In member function 'void embbeded_system_xx::ConfigurationEnded()':
+../src/EmbbededSystemX.cpp:35:47: error: expected primary-expression before '*' token
+  (*_state).ConfigurationEnded(EmbeddedSystemX *);
+                                               ^
+../src/EmbbededSystemX.cpp:35:48: error: expected primary-expression before ')' token
+  (*_state).ConfigurationEnded(EmbeddedSystemX *);
+                                                ^
+make: *** [src/EmbbededSystemX.o] Error 1
+
+20:34:08 Build Finished (took 3s.723ms)
+

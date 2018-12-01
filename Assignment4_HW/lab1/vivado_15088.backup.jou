@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Nov 30 18:55:36 2018
+# Process ID: 15088
+# Current directory: C:/Users/Entvex/Desktop/Assignment3_HW/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15200 C:\Users\Entvex\Desktop\Assignment3_HW\lab1\lab1.xpr
+# Log file: C:/Users/Entvex/Desktop/Assignment3_HW/lab1/vivado.log
+# Journal file: C:/Users/Entvex/Desktop/Assignment3_HW/lab1\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.xprupdate_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+launch_sdk -workspace C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk -hwspec C:/Users/Entvex/Desktop/Assignment3_HW/lab1/lab1.sdk/system_wrapper.hdf
