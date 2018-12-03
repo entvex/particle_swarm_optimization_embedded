@@ -1,0 +1,18 @@
+/*
+ * SimulateRealTimeState.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "SimulateRealTimeState.h"
+
+SimulateRealTimeState::SimulateRealTimeState() {
+	// TODO Auto-generated constructor stub
+
+}
+
+SimulateRealTimeState::~SimulateRealTimeState() {
+	// TODO Auto-generated destructor stub
+}
+

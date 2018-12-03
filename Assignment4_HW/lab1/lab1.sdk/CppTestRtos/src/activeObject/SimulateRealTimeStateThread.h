@@ -1,0 +1,20 @@
+/*
+ * SimulateRealTimeStateThread.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_SIMULATEREALTIMESTATETHREAD_H_
+#define SRC_ACTIVEOBJECT_SIMULATEREALTIMESTATETHREAD_H_
+
+#include "../os/Thread.h"
+
+class SimulateRealTimeStateThread: public AbstractOS::Thread {
+public:
+	SimulateRealTimeStateThread();
+	virtual void run();
+	void RunRealTime();
+};
+
+#endif /* SRC_ACTIVEOBJECT_SIMULATEREALTIMESTATETHREAD_H_ */

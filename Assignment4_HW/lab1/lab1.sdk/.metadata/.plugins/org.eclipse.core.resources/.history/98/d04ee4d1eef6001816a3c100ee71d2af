@@ -1,0 +1,21 @@
+/*
+ * ActiveObject.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_ACTIVEOBJECT_H_
+#define SRC_ACTIVEOBJECT_ACTIVEOBJECT_H_
+
+class ActiveObject {
+public:
+	ActiveObject();
+	virtual ~ActiveObject();
+	void simulate();
+private:
+	
+
+};
+
+#endif /* SRC_ACTIVEOBJECT_ACTIVEOBJECT_H_ */

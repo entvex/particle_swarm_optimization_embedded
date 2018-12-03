@@ -1,0 +1,8 @@
+#pragma once
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put( Command );
+	Command take();
+	virtual ~QueueScheduler();
+};

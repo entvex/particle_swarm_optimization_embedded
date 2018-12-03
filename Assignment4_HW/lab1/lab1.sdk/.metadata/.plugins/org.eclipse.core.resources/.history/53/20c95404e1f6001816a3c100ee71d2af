@@ -1,0 +1,18 @@
+#pragma once
+//#include "../Command.h"
+#include <queue>
+#include <thread>
+#include <mutex>
+#include <future>
+typedef std::function<void()> Command;
+
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put( Command );
+	Command take();
+	virtual ~QueueScheduler();
+
+private:
+	std::queue<Command> cmd_queue;
+};

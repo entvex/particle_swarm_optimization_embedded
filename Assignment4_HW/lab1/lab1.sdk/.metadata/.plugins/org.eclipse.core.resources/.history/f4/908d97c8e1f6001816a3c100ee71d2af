@@ -1,0 +1,17 @@
+#pragma once
+#include <queue>
+#include <thread>
+#include <mutex>
+#include <future>
+#include <string>
+
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put(std::string);
+	std::string take();
+	virtual ~QueueScheduler();
+
+private:
+	std::queue<std::string> sim_queue;
+};

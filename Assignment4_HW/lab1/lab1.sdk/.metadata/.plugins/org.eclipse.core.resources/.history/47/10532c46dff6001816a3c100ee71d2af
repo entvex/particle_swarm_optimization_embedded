@@ -1,0 +1,10 @@
+#pragma once
+#include "../Command.h"
+
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put( Command );
+	Command take();
+	virtual ~QueueScheduler();
+};

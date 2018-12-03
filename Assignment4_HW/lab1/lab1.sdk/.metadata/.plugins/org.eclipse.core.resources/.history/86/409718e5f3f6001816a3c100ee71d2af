@@ -1,0 +1,20 @@
+#pragma once
+#include <queue>
+#include <string>
+#include "../os/Mutex.h"
+#include "../os/Thread.h"
+
+using namespace AbstractOS;
+
+class QueueScheduler :public Thread {
+public:
+	QueueScheduler();
+	void put(std::string);
+	std::string take();
+	void Run();
+	virtual ~QueueScheduler();
+
+private:
+	Mutex my_mut;
+	std::queue<std::string> sim_queue;
+};

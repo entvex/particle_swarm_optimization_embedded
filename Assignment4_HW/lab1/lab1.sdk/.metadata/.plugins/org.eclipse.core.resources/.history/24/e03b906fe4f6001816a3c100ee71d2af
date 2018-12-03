@@ -1,0 +1,18 @@
+/*
+ * SimulateRealTimeStateThread.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "SimulateRealTimeStateThread.h"
+
+SimulateRealTimeStateThread::SimulateRealTimeStateThread() {
+	// TODO Auto-generated constructor stub
+
+}
+
+SimulateRealTimeStateThread::~SimulateRealTimeStateThread() {
+	// TODO Auto-generated destructor stub
+}
+

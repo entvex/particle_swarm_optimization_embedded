@@ -1,0 +1,19 @@
+/*
+ * ApplicationModeSettingThread.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "ApplicationModeSettingThread.h"
+
+
+ApplicationModeSettingThread::ApplicationModeSettingThread(ThreadPriority pri, string name) : Thread(pri, name)
+{
+
+}
+
+void ApplicationModeSettingThread::run()
+{
+
+}

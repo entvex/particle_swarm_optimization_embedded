@@ -2,10 +2,10 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Sat Dec  1 09:27:44 2018
-# Process ID: 1328
+# Start of session at: Mon Dec  3 09:20:33 2018
+# Process ID: 6956
 # Current directory: D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13988 D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6812 D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.xpr
 # Log file: D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1/vivado.log
 # Journal file: D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1\vivado.jou
 #-----------------------------------------------------------
@@ -17,11 +17,11 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 826.477 ; gain = 53.004
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 772.727 ; gain = 28.219
 update_compile_order -fileset sources_1
 launch_sdk -workspace D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/Assignment4_HW/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Dec  1 14:42:40 2018...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  3 14:46:50 2018...

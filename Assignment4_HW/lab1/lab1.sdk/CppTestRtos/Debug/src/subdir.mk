@@ -7,6 +7,7 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 CPP_SRCS += \
+../src/Command.cpp \
 ../src/Configuration.cpp \
 ../src/EmbeddedSystemX.cpp \
 ../src/Failure.cpp \
@@ -15,13 +16,14 @@ CPP_SRCS += \
 ../src/Operational.cpp \
 ../src/PowerOnSelfTest.cpp \
 ../src/Ready.cpp \
-../src/RealTimeLoop.cpp \
-../src/RealTimeLoopState.cpp \
+../src/Simulate.cpp \
+../src/StartCommand.cpp \
 ../src/StateEmbeddedSystemX.cpp \
 ../src/Suspended.cpp \
 ../src/main.cpp 
 
 OBJS += \
+./src/Command.o \
 ./src/Configuration.o \
 ./src/EmbeddedSystemX.o \
 ./src/Failure.o \
@@ -30,13 +32,14 @@ OBJS += \
 ./src/Operational.o \
 ./src/PowerOnSelfTest.o \
 ./src/Ready.o \
-./src/RealTimeLoop.o \
-./src/RealTimeLoopState.o \
+./src/Simulate.o \
+./src/StartCommand.o \
 ./src/StateEmbeddedSystemX.o \
 ./src/Suspended.o \
 ./src/main.o 
 
 CPP_DEPS += \
+./src/Command.d \
 ./src/Configuration.d \
 ./src/EmbeddedSystemX.d \
 ./src/Failure.d \
@@ -45,8 +48,8 @@ CPP_DEPS += \
 ./src/Operational.d \
 ./src/PowerOnSelfTest.d \
 ./src/Ready.d \
-./src/RealTimeLoop.d \
-./src/RealTimeLoopState.d \
+./src/Simulate.d \
+./src/StartCommand.d \
 ./src/StateEmbeddedSystemX.d \
 ./src/Suspended.d \
 ./src/main.d 

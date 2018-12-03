@@ -1,0 +1,16 @@
+#pragma once
+#include <queue>
+#include <thread>
+#include <mutex>
+#include <future>
+
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put();
+	void take();
+	virtual ~QueueScheduler();
+
+private:
+	std::queue<String> cmd_queue;
+};

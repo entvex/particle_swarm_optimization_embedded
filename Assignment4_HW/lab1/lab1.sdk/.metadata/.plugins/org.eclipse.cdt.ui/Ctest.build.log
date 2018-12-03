@@ -1,8 +1,8 @@
-12:41:04 **** Incremental Build of configuration Debug for project Ctest ****
+14:45:01 **** Incremental Build of configuration Debug for project Ctest ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for `main-build'.
 
-12:41:04 Build Finished (took 428ms)
+14:45:02 Build Finished (took 472ms)
 

@@ -1,0 +1,22 @@
+/*
+ * SimulateRealTimeState.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_SIMULATEREALTIMESTATE_H_
+#define SRC_SIMULATEREALTIMESTATE_H_
+
+class SimulateRealTimeState {
+public:
+	SimulateRealTimeState();
+
+	virtual void RunRealTime();
+	virtual void Simulate();
+	virtual void Exit();
+
+	virtual ~SimulateRealTimeState();
+};
+
+#endif /* SRC_SIMULATEREALTIMESTATE_H_ */

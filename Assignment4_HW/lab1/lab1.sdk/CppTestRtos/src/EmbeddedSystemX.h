@@ -21,6 +21,7 @@ public:
 
 	//
 private:
+	void runStartCommand();
 	friend class StateEmbeddedSystemX;
 	void change_state(StateEmbeddedSystemX*);
 

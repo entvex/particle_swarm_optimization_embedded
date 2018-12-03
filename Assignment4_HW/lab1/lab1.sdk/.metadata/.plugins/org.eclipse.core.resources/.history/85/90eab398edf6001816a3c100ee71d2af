@@ -1,0 +1,20 @@
+/*
+ * ApplicationModeSettingThread.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_APPLICATIONMODESETTINGTHREAD_H_
+#define SRC_ACTIVEOBJECT_APPLICATIONMODESETTINGTHREAD_H_
+
+#include <Thread.h>
+
+class ApplicationModeSettingThread: public AbstractOS::Thread {
+public:
+	static simCount = 0;
+	ApplicationModeSettingThread();
+	virtual void run();
+
+};
+#endif /* SRC_ACTIVEOBJECT_APPLICATIONMODESETTINGTHREAD_H_ */

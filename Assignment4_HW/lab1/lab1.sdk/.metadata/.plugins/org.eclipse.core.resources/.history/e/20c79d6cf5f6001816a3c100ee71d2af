@@ -1,0 +1,21 @@
+/*
+ * simCount.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_SIMCOUNT_H_
+#define SRC_ACTIVEOBJECT_SIMCOUNT_H_
+
+class simCount {
+public:
+	static simCount* Instance();
+
+private:
+	simCount();
+	virtual ~simCount();
+	static simCount* _instance;
+};
+
+#endif /* SRC_ACTIVEOBJECT_SIMCOUNT_H_ */

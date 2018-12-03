@@ -1,0 +1,19 @@
+/*
+ * QueueScheduler.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_QUEUESCHEDULER_H_
+#define SRC_ACTIVEOBJECT_QUEUESCHEDULER_H_
+
+class QueueScheduler {
+public:
+	QueueScheduler();
+	void put(Operation op);
+	void Operation take();
+	virtual ~QueueScheduler();
+};
+
+#endif /* SRC_ACTIVEOBJECT_QUEUESCHEDULER_H_ */

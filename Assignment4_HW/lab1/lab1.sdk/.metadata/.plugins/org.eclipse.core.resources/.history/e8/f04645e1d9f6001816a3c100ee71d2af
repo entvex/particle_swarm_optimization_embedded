@@ -1,0 +1,17 @@
+/*
+ * RunTimeExecution.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_OS_RUNTIMEEXECUTION_H_
+#define SRC_OS_RUNTIMEEXECUTION_H_
+
+class RunTimeExecution {
+public:
+	RunTimeExecution();
+	virtual ~RunTimeExecution();
+};
+
+#endif /* SRC_OS_RUNTIMEEXECUTION_H_ */

@@ -1,0 +1,18 @@
+/*
+ * ActiveObject.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "ActiveObject.h"
+
+ActiveObject::ActiveObject() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ActiveObject::~ActiveObject() {
+	// TODO Auto-generated destructor stub
+}
+

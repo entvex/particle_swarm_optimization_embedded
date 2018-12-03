@@ -1,7 +1,6 @@
 #pragma once
 #include "OperatingState.h"
-class Ready :
-	public OperatingState
+class Ready :public OperatingState
 {
 private:
 	static Ready* _instance;

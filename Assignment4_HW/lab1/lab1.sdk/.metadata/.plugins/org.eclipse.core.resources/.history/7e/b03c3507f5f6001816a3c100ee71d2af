@@ -1,0 +1,18 @@
+/*
+ * simCount.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "simCount.h"
+
+simCount::simCount() {
+	// TODO Auto-generated constructor stub
+
+}
+
+simCount::~simCount() {
+	// TODO Auto-generated destructor stub
+}
+

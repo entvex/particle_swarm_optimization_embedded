@@ -1,0 +1,23 @@
+/*
+ * SimulateRealTimeStateThread.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "SimulateRealTimeStateThread.h"
+
+SimulateRealTimeStateThread::SimulateRealTimeStateThread() : Thread()
+{
+
+}
+
+void SimulateRealTimeStateThread::run()
+{
+
+}
+
+void SimulateRealTimeStateThread::RunRealTime()
+{
+
+}

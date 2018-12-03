@@ -1,0 +1,89 @@
+/*
+ * ApplicationModeSettingThread.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "ApplicationModeSettingThread.h"
+
+
+ApplicationModeSettingThread::ApplicationModeSettingThread() : Thread()
+{
+	_mut = Mutex("AppMutex");
+}
+
+void ApplicationModeSettingThread::run()
+{
+	while(true)
+	{
+
+	}
+}
+
+void ApplicationModeSettingThread::chMode()
+{
+	_mut.Acquire();
+	switch (_state) {
+		case 1:
+			_state = 2;
+			break;
+		case 2:
+			_state = 3;
+			break;
+		case 3:
+			_state = 1;
+			break;
+		default:
+			_state = 1;
+			break;
+	}
+	_mut.Release();
+}
+
+void ApplicationModeSettingThread::EventX()
+{
+	_mut.Acquire();
+	switch (_state) {
+		case 1: // EventX happens
+			xil_printf("EventX happened from Mode1");
+			break;
+		case 2: // EventX happens
+			xil_printf("EventX happened from Mode2");
+			break;
+		case 3: // EventX happens
+			xil_printf("EventX happened from Mode3");
+			break;
+		default:
+
+			break;
+	}
+	_mut.Release();
+}
+
+void ApplicationModeSettingThread::EventY()
+{
+	_mut.Acquire();
+	switch (_state) {
+		case 1: // Nothing shall happen
+			xil_printf("EventY called, but can't run from Mode1");
+			break;
+		case 2: // EventY happens
+			xil_printf("EventY happens from Mode2");
+			break;
+		case 3: // Nothing shall happen
+			xil_printf("EventY called, but can't run from Mode3");
+			break;
+		default:
+
+			break;
+	}
+	_mut.Release();
+}
+
+void ApplicationModeSettingThread::reset()
+{
+	_mut.Acquire();
+	_state = 1;
+	_mut.Release();
+}

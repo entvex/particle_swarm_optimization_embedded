@@ -1,0 +1,27 @@
+/*
+ * QueueScheduler.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "QueueScheduler.h"
+
+QueueScheduler::QueueScheduler() {
+	// TODO Auto-generated constructor stub
+
+}
+
+QueueScheduler::~QueueScheduler() {
+	// TODO Auto-generated destructor stub
+}
+
+void QueueScheduler::put( Command cmd )
+{
+
+}
+
+Command QueueScheduler::take()
+{
+
+}

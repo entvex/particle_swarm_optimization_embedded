@@ -1,0 +1,19 @@
+/*
+ * StartCommand.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "StartCommand.h"
+
+StartCommand::StartCommand() {
+	operational = Operational::Instance();
+}
+
+void StartCommand::Execute()
+{
+	std::cout << "Changing to RealTimeLoop" << std::endl;
+	ChangeState(operational, RealTimeLoop::Instance());
+
+}
