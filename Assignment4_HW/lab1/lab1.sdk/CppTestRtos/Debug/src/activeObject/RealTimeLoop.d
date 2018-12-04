@@ -32,7 +32,8 @@ src/activeObject/RealTimeLoop.o src/activeObject/RealTimeLoop.o: \
  ../src/activeObject/SimulateRealTimeStateThread.h \
  ../src/activeObject/QueueScheduler.h \
  ../src/activeObject/SimulationThread.h ../src/activeObject/simCount.h \
- ../src/activeObject/../Ready.h ../src/activeObject/../Suspended.h
+ ../src/activeObject/../Ready.h ../src/activeObject/ThreadManager.h \
+ ../src/activeObject/../Suspended.h
 
 ../src/activeObject/RealTimeLoop.h:
 
@@ -103,5 +104,7 @@ src/activeObject/RealTimeLoop.o src/activeObject/RealTimeLoop.o: \
 ../src/activeObject/simCount.h:
 
 ../src/activeObject/../Ready.h:
+
+../src/activeObject/ThreadManager.h:
 
 ../src/activeObject/../Suspended.h:

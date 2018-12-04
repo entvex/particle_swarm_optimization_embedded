@@ -1,0 +1,18 @@
+/*
+ * mainThread.cpp
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "mainThread.h"
+
+mainThread::mainThread() {
+	// TODO Auto-generated constructor stub
+
+}
+
+mainThread::~mainThread() {
+	// TODO Auto-generated destructor stub
+}
+

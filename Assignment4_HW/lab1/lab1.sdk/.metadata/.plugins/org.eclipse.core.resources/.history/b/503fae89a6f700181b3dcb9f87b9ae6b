@@ -1,0 +1,79 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "UserThread.h"
+#include "EmbeddedSystemX.h"
+#include "FreeRTOS.h"
+#include "activeObject/simCount.h"
+#include <iostream>
+
+int main()
+{
+	EmbeddedSystemX embeddedSystem;
+
+	std::cout << "\nCmd 1: SelfTestFailed" << std::endl;
+	embeddedSystem.SelfTestFailed(404);
+
+	std::cout << "\nCmd 2: Restart" << std::endl;
+	embeddedSystem.Restart();
+
+	std::cout << "\nCmd 3: SelfTestOk" << std::endl;
+	embeddedSystem.SelftestOk();
+
+	std::cout << "\nCmd 4: Initialized" << std::endl;
+	embeddedSystem.Initalized();
+
+	std::cout << "\nCmd 4.1: Configure" << std::endl;
+	embeddedSystem.Configure();
+	embeddedSystem.ConfigX();
+
+	std::cout << "\nCmd 4.2: ConfigurationEnded" << std::endl;
+	embeddedSystem.ConfigurationEnded();
+
+	std::cout << "\nCmd 4.3: Start" << std::endl;
+	embeddedSystem.Start();
+	embeddedSystem.EventX();
+
+	std::cout << "\nCmd 4.3.1: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+	embeddedSystem.Simulate();
+	embeddedSystem.EventY();
+	embeddedSystem.Simulate();
+
+	std::cout << "\nCmd 4.3.2: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+	embeddedSystem.Simulate();
+	embeddedSystem.EventY();
+	embeddedSystem.Simulate();
+
+	std::cout << "\nCmd 4.3.3: chMode" << std::endl;
+	embeddedSystem.chMode();
+	embeddedSystem.EventX();
+	embeddedSystem.Simulate();
+	simCount::Instance()->increment();
+	std::cout << "\nCmd 4.4: Suspend" << std::endl;
+	embeddedSystem.Suspend();
+
+	std::cout << "\nCmd 4.5: Resume" << std::endl;
+	embeddedSystem.Resume();
+
+	std::cout << "\nCmd 5: Restart" << std::endl;
+	embeddedSystem.Restart();
+
+
+	std::cout << "SimCout: " << simCount::Instance()->getCount() << std::endl;
+	//UserThread mUserThread(Thread::PRIORITY_NORMAL, "UserControlThread");
+
+	/* Start FreeRTOS, the tasks running. */
+	vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}

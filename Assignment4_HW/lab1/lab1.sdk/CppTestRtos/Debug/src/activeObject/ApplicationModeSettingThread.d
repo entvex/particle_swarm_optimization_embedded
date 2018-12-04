@@ -26,7 +26,8 @@ src/activeObject/ApplicationModeSettingThread.o \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_printf.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
+ ../src/activeObject/simCount.h
 
 ../src/activeObject/ApplicationModeSettingThread.h:
 
@@ -79,3 +80,5 @@ src/activeObject/ApplicationModeSettingThread.o \
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h:
 
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
+
+../src/activeObject/simCount.h:

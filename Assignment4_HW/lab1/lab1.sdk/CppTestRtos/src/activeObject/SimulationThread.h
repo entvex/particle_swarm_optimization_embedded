@@ -11,7 +11,7 @@
 #include <Thread.h>
 #include "simCount.h"
 
-class SimulationThread: public AbstractOS::Thread {
+class SimulationThread: public AbstractOS::Thread   {
 public:
 	SimulationThread();
 	virtual ~SimulationThread();
@@ -20,3 +20,4 @@ public:
 };
 
 #endif /* SRC_ACTIVEOBJECT_SIMULATIONTHREAD_H_ */
+

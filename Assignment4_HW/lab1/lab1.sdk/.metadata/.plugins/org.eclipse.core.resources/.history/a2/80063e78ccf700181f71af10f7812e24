@@ -1,0 +1,18 @@
+/*
+ * ThreadManager.cpp
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "ThreadManager.h"
+
+ThreadManager::ThreadManager() {
+	// TODO Auto-generated constructor stub
+
+}
+
+ThreadManager::~ThreadManager() {
+	// TODO Auto-generated destructor stub
+}
+

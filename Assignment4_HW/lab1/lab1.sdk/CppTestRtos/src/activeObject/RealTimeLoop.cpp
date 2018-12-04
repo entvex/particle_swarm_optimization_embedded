@@ -1,6 +1,7 @@
 #include "RealTimeLoop.h"
 #include <iostream>
 #include "../Ready.h"
+#include "ThreadManager.h"
 #include "../Suspended.h"
 
 //Singleton
@@ -19,12 +20,9 @@ RealTimeLoop* RealTimeLoop::Instance()
 
 RealTimeLoop::RealTimeLoop()
 {
-	_applicationModeSettingThread = ApplicationModeSettingThread();
-	_simulateRealTimeStateThread = SimulateRealTimeStateThread();
-	_queueScheduler = QueueScheduler();
-	_applicationModeSettingThread.run();
-	_simulateRealTimeStateThread.run();
-	_queueScheduler.run();
+	ThreadManager::Instance()->_applicationModeSettingThread.runThread(Thread::PRIORITY_NORMAL,"ApplicationModeSettingThread");
+	ThreadManager::Instance()->_simulateRealTimeStateThread.runThread(Thread::PRIORITY_NORMAL,"SimulateRealTimeStateThread");
+	ThreadManager::Instance()->_queueScheduler.runThread(Thread::PRIORITY_NORMAL,"QueueScheduler");
 }
 
 void RealTimeLoop::Configure(Operational*)
@@ -61,7 +59,7 @@ void RealTimeLoop::Resume(Operational*)
 
 void RealTimeLoop::chMode(Operational*)
 {
-	_applicationModeSettingThread.chMode();
+	ThreadManager::Instance()->_applicationModeSettingThread.chMode();
 }
 
 void RealTimeLoop::ConfigX()
@@ -71,20 +69,20 @@ void RealTimeLoop::ConfigX()
 
 void RealTimeLoop::EventX()
 {
-	_applicationModeSettingThread.EventX();
+	ThreadManager::Instance()->_applicationModeSettingThread.EventX();
 }
 
 void RealTimeLoop::EventY()
 {
-	_applicationModeSettingThread.EventY();
+	ThreadManager::Instance()->_applicationModeSettingThread.EventY();
 }
 
 void RealTimeLoop::RunRealTime(Operational*)
 {
-	_simulateRealTimeStateThread.RunRealTime();
+	ThreadManager::Instance()->_simulateRealTimeStateThread.RunRealTime();
 }
 
 void RealTimeLoop::Simulate(Operational*)
 {
-	_queueScheduler.put("");
+	ThreadManager::Instance()->_queueScheduler.put("");
 }

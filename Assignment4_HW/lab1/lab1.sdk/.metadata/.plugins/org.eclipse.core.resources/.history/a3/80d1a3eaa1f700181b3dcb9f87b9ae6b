@@ -1,0 +1,22 @@
+/*
+ * SimulationThread.h
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_SIMULATIONTHREAD_H_
+#define SRC_ACTIVEOBJECT_SIMULATIONTHREAD_H_
+
+#include <Thread.h>
+#include "simCount.h"
+
+class SimulationThread(ThreadPriority pri, string name) :public AbstractOS::Thread(pri, name){
+public:
+	SimulationThread();
+	virtual ~SimulationThread();
+
+	void run();
+};
+
+#endif /* SRC_ACTIVEOBJECT_SIMULATIONTHREAD_H_ */

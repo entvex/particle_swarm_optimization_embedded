@@ -15,8 +15,7 @@ class UserThread : public Thread
 {
 public:
 
-	UserThread(ThreadPriority pri, string name) :
-		 Thread(pri, name)
+	UserThread(ThreadPriority pri, string name) :Thread(pri, name)
 	 {
 		 counter = 1000;
 	 }

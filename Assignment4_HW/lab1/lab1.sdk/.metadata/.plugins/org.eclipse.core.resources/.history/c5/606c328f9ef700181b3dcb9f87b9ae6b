@@ -1,0 +1,48 @@
+/*
+ * QueueScheduler.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "QueueScheduler.h"
+
+QueueScheduler::QueueScheduler() : Thread()
+{
+	my_mut = Mutex("QueueScheduler");
+}
+
+QueueScheduler::~QueueScheduler() {
+
+}
+
+void QueueScheduler::run()
+{
+	while(1)
+	{
+		if(!sim_queue.empty())
+		{
+			take();
+			SimulationThread* simthread = new SimulationThread();
+		}
+	}
+}
+
+void QueueScheduler::put(std::string s)
+{
+	my_mut.Acquire();
+	std::cout << "QueueScheduler::put" << std::endl;
+	sim_queue.push(s);
+	my_mut.Release();
+}
+
+std::string QueueScheduler::take()
+{
+	my_mut.Acquire();
+	std::string sim = sim_queue.front();
+	sim_queue.pop();
+	my_mut.Release();
+	return sim;
+}
+
+

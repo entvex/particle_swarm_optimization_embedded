@@ -6,6 +6,8 @@
  */
 
 #include "QueueScheduler.h"
+#include "ThreadManager.h"
+#include <iostream>
 
 QueueScheduler::QueueScheduler() : Thread()
 {
@@ -18,13 +20,10 @@ QueueScheduler::~QueueScheduler() {
 
 void QueueScheduler::run()
 {
-	while(1)
+	if(!sim_queue.empty())
 	{
-		if(!sim_queue.empty())
-		{
-			take();
-			SimulationThread().run();
-		}
+		take();
+		ThreadManager::Instance()->_simulation.runThread(Thread::PRIORITY_LOW, "SimulationThread");
 	}
 }
 
@@ -33,6 +32,7 @@ void QueueScheduler::put(std::string s)
 	my_mut.Acquire();
 	sim_queue.push(s);
 	my_mut.Release();
+	this->run();
 }
 
 std::string QueueScheduler::take()

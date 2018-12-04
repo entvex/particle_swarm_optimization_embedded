@@ -1,0 +1,23 @@
+/*
+ * CommandSimulate.cpp
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "CommandSimulate.h"
+
+
+CommandSimulate::CommandSimulate() {
+	// TODO Auto-generated constructor stub
+
+}
+
+CommandSimulate::~CommandSimulate() {
+	// TODO Auto-generated destructor stub
+}
+
+void CommandSimulate::Execute()() {
+	this->_embeddedSystemX->Simulate();
+}
+

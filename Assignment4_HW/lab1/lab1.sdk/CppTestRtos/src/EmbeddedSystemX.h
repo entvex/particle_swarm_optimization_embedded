@@ -18,6 +18,8 @@ public:
 	void ConfigX();
 	void EventX();
 	void EventY();
+	void Simulate();
+	void RunRealTime();
 
 	//
 private:

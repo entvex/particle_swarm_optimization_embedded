@@ -1,0 +1,25 @@
+/*
+ * SimulationThread.cpp
+ *
+ *  Created on: 3 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "SimulationThread.h"
+#include <iostream>
+
+SimulationThread::SimulationThread(ThreadPriority pri, string name) : Thread(pri, name) {
+	// TODO Auto-generated constructor stub
+
+}
+
+SimulationThread::~SimulationThread() {
+	// TODO Auto-generated destructor stub
+}
+
+void SimulationThread::run()
+{
+	simCount::Instance()->increment();
+	std::cout << "Simulations run: " << simCount::Instance()->getCount() << std::endl;
+	//this->kill();
+}

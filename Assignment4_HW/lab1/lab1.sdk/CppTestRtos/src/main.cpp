@@ -3,19 +3,22 @@
  */
 
 #include "UserThread.h"
-#include "EmbeddedSystemX.h"
+#include "FreeRTOS.h"
+#include "os/Thread.h"
+#include <iostream>
+#include "mainThread.h"
+#include "activeObject/ThreadManager.h"
 
 int main()
 {
+	ThreadManager::Instance();
 
-	EmbeddedSystemX em;
-
-	em.SelfTestFailed(29);
-
-	UserThread mUserThread(Thread::PRIORITY_NORMAL, "UserControlThread");
+	mainThread myMainThread = mainThread();
+	myMainThread.runThread(Thread::PRIORITY_NORMAL, "mainThread");
 
 	/* Start FreeRTOS, the tasks running. */
 	vTaskStartScheduler();
+
 
 	/* If all is well, the scheduler will now be running, and the following line
 	will never be reached.  If the following line does execute, then there was

@@ -1,28 +1,8 @@
-14:46:36 **** Auto Build of configuration Debug for project CppTestRtos ****
+16:05:48 **** Incremental Build of configuration Debug for project CppTestRtos ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/Command.cpp'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/Command.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/Command.d" -MT"src/Command.o" -o "src/Command.o" "../src/Command.cpp"
-'Finished building: ../src/Command.cpp'
-' '
-'Building file: ../src/StartCommand.cpp'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/StartCommand.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/StartCommand.d" -MT"src/StartCommand.o" -o "src/StartCommand.o" "../src/StartCommand.cpp"
-'Finished building: ../src/StartCommand.cpp'
-' '
-'Building target: CppTestRtos.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/lib -o "CppTestRtos.elf"  ./src/os/Mutex.o ./src/os/Semaphore.o ./src/os/Thread.o  ./src/activeObject/ApplicationModeSettingThread.o ./src/activeObject/QueueScheduler.o ./src/activeObject/RealTimeLoop.o ./src/activeObject/SimulateRealTimeStateThread.o ./src/activeObject/SimulationThread.o ./src/activeObject/simCount.o  ./src/Command.o ./src/Configuration.o ./src/EmbeddedSystemX.o ./src/Failure.o ./src/Initializing.o ./src/OperatingState.o ./src/Operational.o ./src/PowerOnSelfTest.o ./src/Ready.o ./src/Simulate.o ./src/StartCommand.o ./src/StateEmbeddedSystemX.o ./src/Suspended.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group
-'Finished building target: CppTestRtos.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size CppTestRtos.elf  |tee "CppTestRtos.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 865515	   4448	  96168	 966131	  ebdf3	CppTestRtos.elf
-'Finished building: CppTestRtos.elf.size'
-' '
+make: Nothing to be done for `main-build'.
 
-14:46:40 Build Finished (took 4s.153ms)
+16:05:48 Build Finished (took 518ms)
 

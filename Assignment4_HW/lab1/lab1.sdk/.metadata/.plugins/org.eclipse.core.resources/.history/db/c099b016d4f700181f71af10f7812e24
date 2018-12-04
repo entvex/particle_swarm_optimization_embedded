@@ -1,0 +1,21 @@
+/*
+ * CommandEventY.cpp
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "CommandEventY.h"
+
+CommandEventY::CommandEventY() {
+	// TODO Auto-generated constructor stub
+
+}
+
+CommandEventY::~CommandEventY() {
+	// TODO Auto-generated destructor stub
+}
+
+void CommandEventY::Execute(){
+
+}

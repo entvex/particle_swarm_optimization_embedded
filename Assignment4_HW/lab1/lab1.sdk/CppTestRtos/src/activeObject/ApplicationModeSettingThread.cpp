@@ -4,36 +4,38 @@
  *  Created on: 3 Dec 2018
  *      Author: Entvex
  */
-
+#include <iostream>
 #include "ApplicationModeSettingThread.h"
-
+#include "simCount.h"
 
 ApplicationModeSettingThread::ApplicationModeSettingThread() : Thread()
 {
 	_mut = Mutex("AppMutex");
+	_state = 1;
 }
 
 void ApplicationModeSettingThread::run()
 {
-	while(true)
-	{
 		if(_newCmd)
 		{
 			_mut.Acquire();
 			switch (_cmdNum) {
 				case 1:
-
+					std::cout << "ApplicationModeSettingThread:: run CASE 1" << std::endl;
 					break;
 				case 2:
 					switch (_state) {
 						case 1: // EventX happens
-							xil_printf("EventX happened from Mode1");
+							//printf("EventX happened from Mode1\n");
+							std::cout << "EventX happened from Mode1" << std::endl;
 							break;
 						case 2: // EventX happens
-							xil_printf("EventX happened from Mode2");
+							//printf("EventX happened from Mode2\n");
+							std::cout << "EventX happened from Mode2" << std::endl;
 							break;
 						case 3: // EventX happens
-							xil_printf("EventX happened from Mode3");
+							//printf("EventX happened from Mode3\n");
+							std::cout << "EventX happened from Mode3" << std::endl;
 							break;
 						default:
 
@@ -43,13 +45,13 @@ void ApplicationModeSettingThread::run()
 				case 3:
 					switch (_state) {
 						case 1: // Nothing shall happen
-							xil_printf("EventY called, but can't run from Mode1");
+							std::cout << "EventY called, but can't run from Mode1" << std::endl;
 							break;
 						case 2: // EventY happens
-							xil_printf("EventY happens from Mode2");
+							std::cout << "EventY happens from Mode2" << std::endl;
 							break;
 						case 3: // Nothing shall happen
-							xil_printf("EventY called, but can't run from Mode3");
+							std::cout << "EventY called, but can't run from Mode3" << std::endl;
 							break;
 						default:
 
@@ -60,14 +62,15 @@ void ApplicationModeSettingThread::run()
 
 					break;
 			}
+			_newCmd = false;
 			_mut.Release();
 		}
-	}
 }
 
 void ApplicationModeSettingThread::chMode()
 {
 	_mut.Acquire();
+
 	switch (_state) {
 		case 1:
 			_state = 2;
@@ -83,7 +86,6 @@ void ApplicationModeSettingThread::chMode()
 			break;
 	}
 	_cmdNum = 1;
-	_newCmd = true;
 	_mut.Release();
 }
 
@@ -93,6 +95,7 @@ void ApplicationModeSettingThread::EventX()
 	_cmdNum = 2;
 	_newCmd = true;
 	_mut.Release();
+	this->run();
 }
 
 void ApplicationModeSettingThread::EventY()
@@ -101,6 +104,7 @@ void ApplicationModeSettingThread::EventY()
 	_cmdNum = 3;
 	_newCmd = true;
 	_mut.Release();
+	this->run();
 }
 
 void ApplicationModeSettingThread::reset()
@@ -109,4 +113,5 @@ void ApplicationModeSettingThread::reset()
 	_state = 1;
 	_newCmd = true;
 	_mut.Release();
+	this->run();
 }

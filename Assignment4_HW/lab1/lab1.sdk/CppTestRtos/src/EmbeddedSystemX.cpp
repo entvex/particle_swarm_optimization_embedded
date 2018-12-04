@@ -78,3 +78,11 @@ void EmbeddedSystemX::EventY()
 EmbeddedSystemX::EmbeddedSystemX() {
 	_state = PowerOnSelfTest::Instance();
 }
+
+void EmbeddedSystemX::Simulate(){
+	_state->Simulate(this);
+}
+
+void EmbeddedSystemX::RunRealTime(){
+	_state->RunRealTime(this);
+}

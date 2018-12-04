@@ -8,11 +8,13 @@
 #include "StartCommand.h"
 
 StartCommand::StartCommand() {
-	// TODO Auto-generated constructor stub
 
 }
 
 StartCommand::~StartCommand() {
-	// TODO Auto-generated destructor stub
+
 }
 
+void StartCommand::Execute() {
+	this->_embeddedSystemX->Start();
+}

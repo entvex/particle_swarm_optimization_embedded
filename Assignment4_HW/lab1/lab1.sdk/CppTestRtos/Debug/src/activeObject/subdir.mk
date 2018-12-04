@@ -9,6 +9,7 @@ CPP_SRCS += \
 ../src/activeObject/RealTimeLoop.cpp \
 ../src/activeObject/SimulateRealTimeStateThread.cpp \
 ../src/activeObject/SimulationThread.cpp \
+../src/activeObject/ThreadManager.cpp \
 ../src/activeObject/simCount.cpp 
 
 OBJS += \
@@ -17,6 +18,7 @@ OBJS += \
 ./src/activeObject/RealTimeLoop.o \
 ./src/activeObject/SimulateRealTimeStateThread.o \
 ./src/activeObject/SimulationThread.o \
+./src/activeObject/ThreadManager.o \
 ./src/activeObject/simCount.o 
 
 CPP_DEPS += \
@@ -25,6 +27,7 @@ CPP_DEPS += \
 ./src/activeObject/RealTimeLoop.d \
 ./src/activeObject/SimulateRealTimeStateThread.d \
 ./src/activeObject/SimulationThread.d \
+./src/activeObject/ThreadManager.d \
 ./src/activeObject/simCount.d 
 
 

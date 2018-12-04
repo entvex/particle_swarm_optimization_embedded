@@ -8,6 +8,10 @@ LD_SRCS += \
 
 CPP_SRCS += \
 ../src/Command.cpp \
+../src/CommandChMode.cpp \
+../src/CommandEventX.cpp \
+../src/CommandEventY.cpp \
+../src/CommandSimulate.cpp \
 ../src/Configuration.cpp \
 ../src/EmbeddedSystemX.cpp \
 ../src/Failure.cpp \
@@ -16,14 +20,20 @@ CPP_SRCS += \
 ../src/Operational.cpp \
 ../src/PowerOnSelfTest.cpp \
 ../src/Ready.cpp \
+../src/ResumeCommand.cpp \
 ../src/Simulate.cpp \
 ../src/StartCommand.cpp \
 ../src/StateEmbeddedSystemX.cpp \
 ../src/Suspended.cpp \
-../src/main.cpp 
+../src/main.cpp \
+../src/mainThread.cpp 
 
 OBJS += \
 ./src/Command.o \
+./src/CommandChMode.o \
+./src/CommandEventX.o \
+./src/CommandEventY.o \
+./src/CommandSimulate.o \
 ./src/Configuration.o \
 ./src/EmbeddedSystemX.o \
 ./src/Failure.o \
@@ -32,14 +42,20 @@ OBJS += \
 ./src/Operational.o \
 ./src/PowerOnSelfTest.o \
 ./src/Ready.o \
+./src/ResumeCommand.o \
 ./src/Simulate.o \
 ./src/StartCommand.o \
 ./src/StateEmbeddedSystemX.o \
 ./src/Suspended.o \
-./src/main.o 
+./src/main.o \
+./src/mainThread.o 
 
 CPP_DEPS += \
 ./src/Command.d \
+./src/CommandChMode.d \
+./src/CommandEventX.d \
+./src/CommandEventY.d \
+./src/CommandSimulate.d \
 ./src/Configuration.d \
 ./src/EmbeddedSystemX.d \
 ./src/Failure.d \
@@ -48,11 +64,13 @@ CPP_DEPS += \
 ./src/Operational.d \
 ./src/PowerOnSelfTest.d \
 ./src/Ready.d \
+./src/ResumeCommand.d \
 ./src/Simulate.d \
 ./src/StartCommand.d \
 ./src/StateEmbeddedSystemX.d \
 ./src/Suspended.d \
-./src/main.d 
+./src/main.d \
+./src/mainThread.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -6,18 +6,19 @@
  */
 
 #include "SimulationThread.h"
+#include <iostream>
 
 SimulationThread::SimulationThread() : Thread() {
-	// TODO Auto-generated constructor stub
+
 
 }
 
 SimulationThread::~SimulationThread() {
-	// TODO Auto-generated destructor stub
+
 }
 
 void SimulationThread::run()
 {
 	simCount::Instance()->increment();
-	this->kill();
+	std::cout << "Simulations run: " << simCount::Instance()->getCount() << std::endl;
 }

@@ -1,0 +1,17 @@
+/*
+ * ThreadManager.h
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_ACTIVEOBJECT_THREADMANAGER_H_
+#define SRC_ACTIVEOBJECT_THREADMANAGER_H_
+
+class ThreadManager {
+public:
+	ThreadManager();
+	virtual ~ThreadManager();
+};
+
+#endif /* SRC_ACTIVEOBJECT_THREADMANAGER_H_ */

@@ -15,7 +15,20 @@ src/activeObject/QueueScheduler.o src/activeObject/QueueScheduler.o: \
  ../src/activeObject/../os/Thread.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/task.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/list.h \
- ../src/activeObject/SimulationThread.h ../src/activeObject/simCount.h
+ ../src/activeObject/SimulationThread.h ../src/activeObject/simCount.h \
+ ../src/activeObject/ThreadManager.h \
+ ../src/activeObject/ApplicationModeSettingThread.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_types.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_assert.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xstatus.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio_l.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_io.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_printf.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h \
+ ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
+ ../src/activeObject/SimulateRealTimeStateThread.h
 
 ../src/activeObject/QueueScheduler.h:
 
@@ -52,3 +65,29 @@ src/activeObject/QueueScheduler.o src/activeObject/QueueScheduler.o: \
 ../src/activeObject/SimulationThread.h:
 
 ../src/activeObject/simCount.h:
+
+../src/activeObject/ThreadManager.h:
+
+../src/activeObject/ApplicationModeSettingThread.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_types.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_assert.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xstatus.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio_l.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_io.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_printf.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h:
+
+../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
+
+../src/activeObject/SimulateRealTimeStateThread.h:
