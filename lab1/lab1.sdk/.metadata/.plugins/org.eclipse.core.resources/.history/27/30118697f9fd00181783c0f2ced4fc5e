@@ -1,0 +1,45 @@
+/*
+ * Setup.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "Setup.h"
+
+
+Setup::Setup() {
+
+}
+
+Setup::~Setup() {
+	// TODO Auto-generated destructor stub
+}
+
+void Setup::ActionUp(Context* c){
+	std::cout << "ActionUp called" << std::endl;
+}
+
+void Setup::ActionDown(Context* c){
+	std::cout << "ActionDown called" << std::endl;
+}
+
+void Setup::ActionNext(Context* c){
+	std::cout << "ActionNext called" << std::endl;
+}
+
+void Setup::ActionStart(Context* c){
+	std::cout << "I am in Setup and can't ActionStart from here" << std::endl;
+}
+
+void Setup::GoMaxima(Context* c){
+	std::cout << "GoMaxima" << std::endl;
+}
+
+void Setup::GoMinima(Context* c){
+	std::cout << "GoMinima" << std::endl;
+}
+
+void Setup::ReturnResult(Context* c){
+	std::cout << "I am in Setup and can't ReturnResult from here" << std::endl;
+}

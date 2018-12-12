@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1536658313">
-  <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1537429809">
   <File Type="PA-TCL" Name="system_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="system_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="system_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="system_wrapper_utilization_synth.pb"/>
@@ -31,28 +31,18 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/lab1/lab1_zybo.xdc">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Xilinx/Assignment_2/EmbeddedSystem_labs/lab1/lab1_zybo.xdc"/>
-        <Attr Name="ImportTime" Val="1416428216"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="system_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_0"/>
 </GenRun>

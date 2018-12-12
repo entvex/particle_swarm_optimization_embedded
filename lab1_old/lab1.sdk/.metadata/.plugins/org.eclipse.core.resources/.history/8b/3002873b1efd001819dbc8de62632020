@@ -1,0 +1,17 @@
+/*
+ * StateMachine.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_H_
+#define SRC_STATEMACHINE_H_
+
+class StateMachine {
+public:
+	StateMachine();
+	virtual ~StateMachine();
+};
+
+#endif /* SRC_STATEMACHINE_H_ */

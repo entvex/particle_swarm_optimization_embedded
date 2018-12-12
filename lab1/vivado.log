@@ -2,30 +2,100 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Tue Dec 11 08:24:52 2018
-# Process ID: 9956
-# Current directory: D:/git/particle_swarm_optimization_embedded/lab1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10804 D:\git\particle_swarm_optimization_embedded\lab1\lab1.xpr
-# Log file: D:/git/particle_swarm_optimization_embedded/lab1/vivado.log
-# Journal file: D:/git/particle_swarm_optimization_embedded/lab1\vivado.jou
+# Start of session at: Wed Dec 12 10:12:24 2018
+# Process ID: 30060
+# Current directory: C:/Users/black/Downloads/lab1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15944 C:\Users\black\Downloads\lab1\lab1.xpr
+# Log file: C:/Users/black/Downloads/lab1/vivado.log
+# Journal file: C:/Users/black/Downloads/lab1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/git/particle_swarm_optimization_embedded/lab1/lab1.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Entvex/lab1' since last save.
+open_project C:/Users/black/Downloads/lab1/lab1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/XilinxProjects/lab1' since last save.
 Scanning sources...
 Finished scanning sources
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:zybo:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.2/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 845.082 ; gain = 117.359
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_axi_gpio_0_0
+system_processing_system7_0_0
+system_rst_ps7_0_100M_0
+system_axi_gpio_0_1
+system_axi_gpio_0_2
+
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 834.547 ; gain = 81.977
 update_compile_order -fileset sources_1
-launch_sdk -workspace D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/system_wrapper.hdf
+open_bd_design {C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - switches
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - leds
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - buttons
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 884.328 ; gain = 48.344
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 12 10:13:38 2018] Launched impl_1...
+Run output will be captured here: C:/Users/black/Downloads/lab1/lab1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/black/Downloads/lab1/.Xil/Vivado-30060-DESKTOP-Q5F4IJT/dcp1/system_wrapper_board.xdc]
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc:3]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc:5]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc:7]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc:9]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc:3]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc:5]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc:7]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_1/system_axi_gpio_0_1_board.xdc:9]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc:3]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc:5]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc:7]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [C:/Users/black/Downloads/lab1/lab1.srcs/sources_1/bd/system/ip/system_axi_gpio_0_2/system_axi_gpio_0_2_board.xdc:9]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+Finished Parsing XDC File [C:/Users/black/Downloads/lab1/.Xil/Vivado-30060-DESKTOP-Q5F4IJT/dcp1/system_wrapper_board.xdc]
+Parsing XDC File [C:/Users/black/Downloads/lab1/.Xil/Vivado-30060-DESKTOP-Q5F4IJT/dcp1/system_wrapper_early.xdc]
+Finished Parsing XDC File [C:/Users/black/Downloads/lab1/.Xil/Vivado-30060-DESKTOP-Q5F4IJT/dcp1/system_wrapper_early.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.299 . Memory (MB): peak = 1144.840 ; gain = 1.004
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.300 . Memory (MB): peak = 1144.840 ; gain = 1.004
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 1248.543 ; gain = 313.793
+launch_sdk -workspace C:/Users/black/Downloads/lab1/lab1.sdk -hwspec C:/Users/black/Downloads/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/black/Downloads/lab1/lab1.sdk -hwspec C:/Users/black/Downloads/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-launch_sdk -workspace D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/system_wrapper.hdf
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Wed Dec 12 10:20:54 2018] Launched impl_1...
+Run output will be captured here: C:/Users/black/Downloads/lab1/lab1.runs/impl_1/runme.log
+launch_sdk -workspace C:/Users/black/Downloads/lab1/lab1.sdk -hwspec C:/Users/black/Downloads/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk -hwspec D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/system_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/black/Downloads/lab1/lab1.sdk -hwspec C:/Users/black/Downloads/lab1/lab1.sdk/system_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 11 12:56:54 2018...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 12 13:13:14 2018...

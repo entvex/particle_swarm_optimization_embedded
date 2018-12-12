@@ -1,0 +1,21 @@
+/*
+ * MainThread.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_MAINTHREAD_H_
+#define SRC_MAINTHREAD_H_
+
+#include <Thread.h>
+
+class MainThread : public Thread
+{
+public:
+	MainThread(ThreadPriority pri, string name);
+	virtual void run();
+
+};
+
+#endif /* SRC_MAINTHREAD_H_ */

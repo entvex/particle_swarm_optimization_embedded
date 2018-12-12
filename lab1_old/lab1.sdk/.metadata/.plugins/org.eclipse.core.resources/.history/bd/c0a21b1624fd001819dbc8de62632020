@@ -1,0 +1,35 @@
+/*
+ * Context.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_CONTEXT_H_
+#define SRC_STATEMACHINE_CONTEXT_H_
+
+class Context {
+public:
+	Context();
+	virtual ~Context();
+
+	//Transitions
+	virtual void GoMaxima(Context*);
+	virtual void GoMinima(Context*);
+	virtual void ReturnResult(Context*);
+
+	//Actions
+	virtual void ActionUp(Context*);
+	virtual void ActionDown(Context*);
+	virtual void ActionNext(Context*);
+	virtual void ActionStart(Context*);
+
+private:
+	void runStartCommand();
+	friend class State;
+	void change_state(Context*);
+
+	State* _state;
+};
+
+#endif /* SRC_STATEMACHINE_CONTEXT_H_ */

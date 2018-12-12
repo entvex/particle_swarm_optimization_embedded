@@ -56,9 +56,6 @@
 `timescale 1ns/1ps
 
 module system_processing_system7_0_0 (
-GPIO_I, 
-GPIO_O, 
-GPIO_T, 
 M_AXI_GP0_ARVALID, 
 M_AXI_GP0_AWVALID, 
 M_AXI_GP0_BREADY, 
@@ -122,9 +119,6 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-input [0 : 0] GPIO_I;
-output [0 : 0] GPIO_O;
-output [0 : 0] GPIO_T;
 output M_AXI_GP0_ARVALID;
 output M_AXI_GP0_AWVALID;
 output M_AXI_GP0_BREADY;

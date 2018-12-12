@@ -13,7 +13,7 @@
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
@@ -22,9 +22,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk"/>
-			<item value="D:\Xilinx\Assignment_2\CppUserThread"/>
-			<item value="D:\Xilinx\Assignment_2\EmbeddedSystem_labs\lab1"/>
+			<item value="C:\Users\black\Downloads\CppUserThread"/>
 		</list>
 	</section>
 </section>

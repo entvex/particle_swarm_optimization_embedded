@@ -2,11 +2,11 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # 
-# Start of session at: Tue Dec 11 12:52:20 2018
-# Process ID: 19580
-# Current directory: D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/webtalk
+# Start of session at: Wed Dec 12 13:12:55 2018
+# Process ID: 32100
+# Current directory: C:/Users/black/Downloads/lab1/lab1.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/webtalk/webtalk.log
-# Journal file: D:/git/particle_swarm_optimization_embedded/lab1/lab1.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/black/Downloads/lab1/lab1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/black/Downloads/lab1/lab1.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

@@ -1,0 +1,18 @@
+/*
+ * FindMinima.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "FindMinima.h"
+
+FindMinima::FindMinima() {
+	// TODO Auto-generated constructor stub
+
+}
+
+FindMinima::~FindMinima() {
+	// TODO Auto-generated destructor stub
+}
+

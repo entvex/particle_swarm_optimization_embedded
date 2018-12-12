@@ -1,0 +1,40 @@
+/*
+ * mainThread.cpp
+ *
+ *  Created on: 4 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "mainThread.h"
+#include <iostream>
+#include "xparameters.h"
+
+mainThread::mainThread() {
+
+}
+
+mainThread::~mainThread() {
+
+}
+
+void mainThread::run() {
+
+	printf("Welcome to Particle Swarm Optimization Embedded \r\n");
+	printf("Use the switches to control the menu \r\n");
+
+	_context = new Context;
+
+	_context->ActionUp();
+	_context->ActionDown();
+	_context->ActionNext();
+
+
+	if (XIosc_Initialize(&ioscHLS, XPAR_IOSC_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+	while(true){
+
+
+	}
+
+}
+

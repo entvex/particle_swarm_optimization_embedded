@@ -1,0 +1,32 @@
+/*
+ * Setup.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_SETUP_H_
+#define SRC_STATEMACHINE_SETUP_H_
+
+#include "State.h"
+#include "Context.h"
+#include <iostream>
+
+class Setup: public State{
+public:
+	Setup();
+	virtual ~Setup();
+
+	//Transitions
+	void GoMaxima(Context*) ;
+	void GoMinima(Context*) ;
+	void ReturnResult(Context*) ;
+
+	//Actions
+	void ActionUp(Context*) ;
+	void ActionDown(Context*) ;
+	void ActionNext(Context*) ;
+	void ActionStart(Context*) ;
+};
+
+#endif /* SRC_STATEMACHINE_SETUP_H_ */

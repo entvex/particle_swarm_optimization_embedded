@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Sep 11 11:31:28 2018
---Host        : DESKTOP-MBD2KSK running 64-bit major release  (build 9200)
+--Date        : Thu Sep 20 09:50:02 2018
+--Host        : D31303 running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -34,7 +34,7 @@ entity system_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    btn_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
+    btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
@@ -66,31 +66,10 @@ architecture STRUCTURE of system_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    btn_tri_i : in STD_LOGIC_VECTOR ( 0 to 0 );
-    btn_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    btn_tri_t : out STD_LOGIC_VECTOR ( 0 to 0 )
+    btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component system;
-  component IOBUF is
-  port (
-    I : in STD_LOGIC;
-    O : out STD_LOGIC;
-    T : in STD_LOGIC;
-    IO : inout STD_LOGIC
-  );
-  end component IOBUF;
-  signal btn_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal btn_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal btn_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal btn_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
 begin
-btn_tri_iobuf_0: component IOBUF
-     port map (
-      I => btn_tri_o_0(0),
-      IO => btn_tri_io(0),
-      O => btn_tri_i_0(0),
-      T => btn_tri_t_0(0)
-    );
 system_i: component system
      port map (
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
@@ -114,9 +93,7 @@ system_i: component system
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      btn_tri_i(0) => btn_tri_i_0(0),
-      btn_tri_o(0) => btn_tri_o_0(0),
-      btn_tri_t(0) => btn_tri_t_0(0),
+      btns_4bits_tri_i(3 downto 0) => btns_4bits_tri_i(3 downto 0),
       leds_4bits_tri_o(3 downto 0) => leds_4bits_tri_o(3 downto 0),
       sws_4bits_tri_i(3 downto 0) => sws_4bits_tri_i(3 downto 0)
     );

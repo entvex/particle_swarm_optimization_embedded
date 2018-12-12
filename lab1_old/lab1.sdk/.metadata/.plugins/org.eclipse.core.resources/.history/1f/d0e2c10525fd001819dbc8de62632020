@@ -1,0 +1,18 @@
+/*
+ * FindMaxima.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "FindMaxima.h"
+
+FindMaxima::FindMaxima() {
+	// TODO Auto-generated constructor stub
+
+}
+
+FindMaxima::~FindMaxima() {
+	// TODO Auto-generated destructor stub
+}
+

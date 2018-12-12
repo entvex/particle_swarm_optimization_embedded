@@ -1,0 +1,33 @@
+/*
+ * State.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_STATE_H_
+#define SRC_STATEMACHINE_STATE_H_
+
+#include "Context.h"
+class Context;
+
+class State {
+public:
+	State();
+
+	//Transitions
+	void GoMaxima(Context*);
+	void GoMinima(Context*);
+	void ReturnResult(Context*);
+
+	//Actions
+	void ActionUp(Context*);
+	void ActionDown(Context*);
+	void ActionNext(Context*);
+	void ActionStart(Context*);
+	virtual ~State();
+protected:
+	static void ChangeState(Context*, State*);
+};
+
+#endif /* SRC_STATEMACHINE_STATE_H_ */

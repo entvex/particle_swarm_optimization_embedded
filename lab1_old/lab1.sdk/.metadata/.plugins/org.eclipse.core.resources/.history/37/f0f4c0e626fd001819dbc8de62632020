@@ -1,0 +1,44 @@
+/*
+ * FindMinima.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "FindMinima.h"
+
+FindMinima::FindMinima() {
+
+}
+
+FindMinima::~FindMinima() {
+
+}
+
+void FindMinima::ActionDown(Context*){
+
+}
+
+void FindMinima::ActionDown(Context*){
+
+}
+
+void FindMinima::ActionNext(Context*){
+
+}
+
+void FindMinima::GoMaxima(Contex*){
+
+}
+
+void FindMinima::GoMinima(Context*){
+
+}
+
+void FindMinima::ReturnResult(Context*){
+
+}
+
+void FindMinima::ChangeState(Context* c, State* s) {
+	c->change_state(s);
+}
