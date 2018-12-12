@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] In file included from C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/.autopilot/db/main.pragma.1.cpp:1:&#xD;&#xA;In file included from particles.prj/main.cpp:1:&#xD;&#xA;In file included from particles.prj/main.cpp:1:&#xD;&#xA;particles.prj/Particles.h:24:7: error: use of undeclared identifier 'rand'&#xD;&#xA;  std:rand();&#xD;&#xA;      ^&#xD;&#xA;1 error generated.&#xD;&#xA;Compilation of the preprocessed source 'main.g' failed&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="particles.prj" solutionName="solution1" date="2018-12-12T15:43:44.583+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] particles.prj/main.cpp:6:1: warning: control reaches end of non-void function [-Wreturn-type]&#xD;&#xA;}&#xD;&#xA;^&#xD;&#xA;1 warning generated." projectName="particles.prj" solutionName="solution1" date="2018-12-12T15:43:44.505+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -4,7 +4,9 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project particles.prj
-add_files particles.prj/particles.cpp
+set_top particles
+add_files particles.prj/Particles.h
+add_files particles.prj/main.cpp
 open_solution "solution1"
 set_part {xc7z010clg400-1} -tool vivado
 create_clock -period 10 -name default

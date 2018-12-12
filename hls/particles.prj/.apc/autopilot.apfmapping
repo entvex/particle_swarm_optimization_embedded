@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="particles.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particles.prj\particles.cpp"/>
+    <originFiles name="Particles.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particles.prj\Particles.h"/>
+    <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particles.prj\main.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>

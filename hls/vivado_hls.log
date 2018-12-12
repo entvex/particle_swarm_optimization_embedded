@@ -1,0 +1,32 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'black' on host 'desktop-q5f4ijt' (Windows NT_amd64 version 6.2) on Wed Dec 12 15:43:09 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Git_Repositories/particle_swarm_optimization_embedded/hls'
+INFO: [HLS 200-10] Opening project 'C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj'.
+INFO: [HLS 200-10] Adding design file 'particles.prj/Particles.h' to the project
+INFO: [HLS 200-10] Adding design file 'particles.prj/main.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [HLS 200-10] Analyzing design file 'particles.prj/main.cpp' ... 
+WARNING: [HLS 200-40] particles.prj/main.cpp:6:1: warning: control reaches end of non-void function [-Wreturn-type]
+}
+^
+1 warning generated.
+WARNING: [HLS 200-40] In file included from C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/.autopilot/db/main.pragma.1.cpp:1:
+In file included from particles.prj/main.cpp:1:
+In file included from particles.prj/main.cpp:1:
+particles.prj/Particles.h:24:7: error: use of undeclared identifier 'rand'
+  std:rand();
+      ^
+1 error generated.
+Compilation of the preprocessed source 'main.g' failed
+    while executing
+"source C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/csynth.tcl"
+    invoked from within
+"hls::main C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particles.prj/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
