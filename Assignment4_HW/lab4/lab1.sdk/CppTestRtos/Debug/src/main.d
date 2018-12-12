@@ -1,5 +1,4 @@
-src/main.o src/main.o: ../src/main.cpp ../src/UserThread.h \
- D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os/Thread.h \
+src/main.o src/main.o: ../src/main.cpp \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/FreeRTOSConfig.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xparameters.h \
@@ -9,30 +8,13 @@ src/main.o src/main.o: ../src/main.cpp ../src/UserThread.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/deprecated_definitions.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/portmacro.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/mpu_wrappers.h \
+ ../src/os/Thread.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/task.h \
  ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/list.h \
- ../src/mainThread.h ../src/activeObject/ThreadManager.h \
- ../src/activeObject/SimulationThread.h ../src/activeObject/simCount.h \
- ../src/activeObject/ApplicationModeSettingThread.h \
- ../src/activeObject/../os/Mutex.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/semphr.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/queue.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_types.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_assert.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xstatus.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio_l.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_io.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_printf.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h \
- ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
- ../src/activeObject/QueueScheduler.h \
- ../src/activeObject/SimulateRealTimeStateThread.h
-
-../src/UserThread.h:
-
-D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTestRtos\src\os/Thread.h:
+ ../src/threads/mainThread.h ../src/threads/../stateMachine/Context.h \
+ ../src/threads/../stateMachine/State.h \
+ ../src/threads/../stateMachine/Context.h \
+ ../src/threads/../stateMachine/Setup.h
 
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/FreeRTOS.h:
 
@@ -52,46 +34,18 @@ D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab1\lab1.sdk\CppTest
 
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/mpu_wrappers.h:
 
+../src/os/Thread.h:
+
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/task.h:
 
 ../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/list.h:
 
-../src/mainThread.h:
+../src/threads/mainThread.h:
 
-../src/activeObject/ThreadManager.h:
+../src/threads/../stateMachine/Context.h:
 
-../src/activeObject/SimulationThread.h:
+../src/threads/../stateMachine/State.h:
 
-../src/activeObject/simCount.h:
+../src/threads/../stateMachine/Context.h:
 
-../src/activeObject/ApplicationModeSettingThread.h:
-
-../src/activeObject/../os/Mutex.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/semphr.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/queue.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_types.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_assert.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xstatus.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xgpio_l.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_io.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xil_printf.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xreg_cortexa9.h:
-
-../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
-
-../src/activeObject/QueueScheduler.h:
-
-../src/activeObject/SimulateRealTimeStateThread.h:
+../src/threads/../stateMachine/Setup.h:

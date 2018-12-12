@@ -1,0 +1,17 @@
+/*
+ * Context.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_CONTEXT_H_
+#define SRC_STATEMACHINE_CONTEXT_H_
+
+class Context {
+public:
+	Context();
+	virtual ~Context();
+};
+
+#endif /* SRC_STATEMACHINE_CONTEXT_H_ */

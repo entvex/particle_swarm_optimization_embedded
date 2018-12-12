@@ -1,30 +1,39 @@
-15:06:56 **** Auto Build of configuration Debug for project UserTread ****
+15:45:41 **** Auto Build of configuration Debug for project UserTread ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
+'Building file: ../src/threads/MainThread.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/threads/MainThread.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/threads/MainThread.d" -MT"src/threads/MainThread.o" -o "src/threads/MainThread.o" "../src/threads/MainThread.cpp"
+'Finished building: ../src/threads/MainThread.cpp'
+' '
+'Building file: ../src/os/Mutex.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/os/Mutex.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/os/Mutex.d" -MT"src/os/Mutex.o" -o "src/os/Mutex.o" "../src/os/Mutex.cpp"
+'Finished building: ../src/os/Mutex.cpp'
+' '
+'Building file: ../src/os/Semaphore.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/os/Semaphore.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/os/Semaphore.d" -MT"src/os/Semaphore.o" -o "src/os/Semaphore.o" "../src/os/Semaphore.cpp"
+'Finished building: ../src/os/Semaphore.cpp'
+' '
+'Building file: ../src/os/Thread.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/os/Thread.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/os/Thread.d" -MT"src/os/Thread.o" -o "src/os/Thread.o" "../src/os/Thread.cpp"
+'Finished building: ../src/os/Thread.cpp'
+' '
 'Building file: ../src/main.cpp'
 'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Entvex\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-../src/main.cpp: In function 'int main()':
-../src/main.cpp:77:7: error: 'gk' was not declared in this scope
-   if (gk == 0 || fk[var] < gk){
-       ^~
-../src/main.cpp:48:9: warning: unused variable 'w' [-Wunused-variable]
-  double w = 0.8; // Inertial constant
-         ^
-../src/main.cpp:49:9: warning: unused variable 'c1' [-Wunused-variable]
-  double c1 = 1.95; // Cognitive component - more spread
-         ^~
-../src/main.cpp:51:9: warning: unused variable 'c2' [-Wunused-variable]
-  double c2 = 1.98; // Social component global best position
-         ^~
-../src/main.cpp:52:6: warning: unused variable 'N' [-Wunused-variable]
-  int N = 60; // Number of iterations
-      ^
-../src/main.cpp:63:9: warning: unused variable 'fgk' [-Wunused-variable]
-  double fgk = 0;  // Value of best position
-         ^~~
-make: *** [src/main.o] Error 1
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+'Finished building: ../src/main.cpp'
+' '
+'Building target: UserTread.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/lib -o "UserTread.elf"  ./src/threads/MainThread.o  ./src/os/Mutex.o ./src/os/Semaphore.o ./src/os/Thread.o  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,-lstdc++,--end-group
+./src/threads/MainThread.o: In function `MainThread::run()':
+D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\Debug/../src/threads/MainThread.cpp:15: undefined reference to `Context::Context()'
+collect2.exe: error: ld returned 1 exit status
+make: *** [UserTread.elf] Error 1
 
-15:06:58 Build Finished (took 1s.389ms)
+15:45:49 Build Finished (took 8s.298ms)
 

@@ -1,0 +1,31 @@
+#include "mainThread.h"
+#include <iostream>
+#include "xparameters.h"
+
+mainThread::mainThread() {
+
+}
+
+mainThread::~mainThread() {
+
+}
+
+void mainThread::run() {
+	//Ready buttons
+
+	//if (XIosc_Initialize(&ioscHLS, XPAR_IOSC_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+	printf("Welcome to Particle Swarm Optimization Embedded \r\n");
+	printf("Use the switches to control the menu \r\n");
+
+	_context = new Context;
+
+	_context->ActionUp();
+	_context->ActionDown();
+	_context->ActionNext();
+
+	while(true){
+
+	}
+
+}

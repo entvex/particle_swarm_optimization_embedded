@@ -26,4 +26,5 @@ ELFSIZE :=
 SUBDIRS := \
 src \
 src/os \
+src/threads \
 

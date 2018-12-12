@@ -1,0 +1,51 @@
+#include "mainThread.h"
+#include <iostream>
+#include "xparameters.h"
+#include "xgpio.h"
+
+mainThread::mainThread() {
+
+}
+
+mainThread::~mainThread() {
+
+}
+
+void mainThread::run() {
+	//Ready buttons
+
+	//if (XIosc_Initialize(&ioscHLS, XPAR_IOSC_0_DEVICE_ID) != XST_SUCCESS) return XST_FAILURE;
+
+
+    XGpio dip, push;
+	int i, psb_check, dip_check;
+	int value, skip, Status;
+
+    XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID); // Modify this
+    XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+
+    XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID); // Modify this
+	XGpio_SetDataDirection(&push, 1, 0xffffffff);
+
+	printf("Welcome to Particle Swarm Optimization Embedded \r\n");
+	printf("Use the switches to control the menu \r\n");
+
+	_context = new Context;
+
+	_context->ActionUp();
+	_context->ActionDown();
+	_context->ActionNext();
+
+
+	value = inbyte();
+
+	while(true){
+		printf("loop \r\n");
+		  psb_check = XGpio_DiscreteRead(&push, 1);
+		  xil_printf("Push Buttons Status %x\r\n", psb_check);
+		  dip_check = XGpio_DiscreteRead(&dip, 1);
+		  xil_printf("DIP Switch Status %x\r\n", dip_check);
+		  for (i=0; i<9999999; i++);
+	}
+
+}

@@ -23,7 +23,7 @@ CPP_DEPS += \
 src/os/%.o: ../src/os/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: ARM v7 g++ compiler'
-	arm-none-eabi-g++ -Wall -O0 -g3 -I"C:\Users\Entvex\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\lab1\lab1.sdk\UserTread\src\os" -c -fmessage-length=0 -MT"$@" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

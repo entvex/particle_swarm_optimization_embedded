@@ -1,0 +1,43 @@
+10:34:16 **** Auto Build of configuration Debug for project CppTestRtos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/threads/mainThread.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab4\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/threads/mainThread.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/threads/mainThread.d" -MT"src/threads/mainThread.o" -o "src/threads/mainThread.o" "../src/threads/mainThread.cpp"
+../src/threads/mainThread.cpp: In member function 'virtual void mainThread::run()':
+../src/threads/mainThread.cpp:22:6: warning: variable 'value' set but not used [-Wunused-but-set-variable]
+  int value, skip, Status;
+      ^~~~~
+../src/threads/mainThread.cpp:22:13: warning: unused variable 'skip' [-Wunused-variable]
+  int value, skip, Status;
+             ^~~~
+../src/threads/mainThread.cpp:22:19: warning: unused variable 'Status' [-Wunused-variable]
+  int value, skip, Status;
+                   ^~~~~~
+'Finished building: ../src/threads/mainThread.cpp'
+' '
+'Building file: ../src/stateMachine/Context.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab4\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/stateMachine/Context.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/stateMachine/Context.d" -MT"src/stateMachine/Context.o" -o "src/stateMachine/Context.o" "../src/stateMachine/Context.cpp"
+'Finished building: ../src/stateMachine/Context.cpp'
+' '
+'Building file: ../src/stateMachine/FindMaxima.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab4\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/stateMachine/FindMaxima.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/stateMachine/FindMaxima.d" -MT"src/stateMachine/FindMaxima.o" -o "src/stateMachine/FindMaxima.o" "../src/stateMachine/FindMaxima.cpp"
+'Finished building: ../src/stateMachine/FindMaxima.cpp'
+' '
+'Building file: ../src/stateMachine/FindMinima.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -Wall -O0 -g3 -I"D:\git\particle_swarm_optimization_embedded\Assignment4_HW\lab4\lab1.sdk\CppTestRtos\src\os" -c -fmessage-length=0 -MT"src/stateMachine/FindMinima.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../freertos901_xilinx_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/stateMachine/FindMinima.d" -MT"src/stateMachine/FindMinima.o" -o "src/stateMachine/FindMinima.o" "../src/stateMachine/FindMinima.cpp"
+In file included from ../src/stateMachine/Context.h:12:0,
+                 from ../src/stateMachine/State.h:11,
+                 from ../src/stateMachine/FindMinima.h:11,
+                 from ../src/stateMachine/FindMinima.cpp:8:
+../src/stateMachine/Setup.h:15:26: error: expected class-name before '{' token
+ class Setup: public State{
+                          ^
+make: *** [src/stateMachine/FindMinima.o] Error 1
+
+10:34:20 Build Finished (took 4s.550ms)
+

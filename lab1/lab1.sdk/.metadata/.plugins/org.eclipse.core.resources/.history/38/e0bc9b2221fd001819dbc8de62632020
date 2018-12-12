@@ -1,0 +1,20 @@
+/*
+ * State.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_STATE_H_
+#define SRC_STATEMACHINE_STATE_H_
+
+#include "Context.h"
+
+class State {
+public:
+	State();
+	ActionUp(Context*);
+	virtual ~State();
+};
+
+#endif /* SRC_STATEMACHINE_STATE_H_ */

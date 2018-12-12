@@ -1,0 +1,18 @@
+/*
+ * FindMaximaState.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "FindMaximaState.h"
+
+FindMaximaState::FindMaximaState() {
+	// TODO Auto-generated constructor stub
+
+}
+
+FindMaximaState::~FindMaximaState() {
+	// TODO Auto-generated destructor stub
+}
+

@@ -1,0 +1,17 @@
+/*
+ * FindMinima.h
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#ifndef SRC_STATEMACHINE_FINDMINIMA_H_
+#define SRC_STATEMACHINE_FINDMINIMA_H_
+
+class FindMinima {
+public:
+	FindMinima();
+	virtual ~FindMinima();
+};
+
+#endif /* SRC_STATEMACHINE_FINDMINIMA_H_ */

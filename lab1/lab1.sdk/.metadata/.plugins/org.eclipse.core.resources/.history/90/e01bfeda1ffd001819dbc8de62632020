@@ -1,0 +1,18 @@
+/*
+ * FindMinimaState.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "FindMinimaState.h"
+
+FindMinimaState::FindMinimaState() {
+	// TODO Auto-generated constructor stub
+
+}
+
+FindMinimaState::~FindMinimaState() {
+	// TODO Auto-generated destructor stub
+}
+

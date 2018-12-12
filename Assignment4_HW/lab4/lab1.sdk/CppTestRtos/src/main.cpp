@@ -1,17 +1,10 @@
-/*
- * Empty C++ Application
- */
-
-#include "UserThread.h"
 #include "FreeRTOS.h"
 #include "os/Thread.h"
 #include <iostream>
-#include "mainThread.h"
-#include "activeObject/ThreadManager.h"
+#include "threads/mainThread.h"
 
 int main()
 {
-	ThreadManager::Instance();
 
 	mainThread myMainThread = mainThread();
 	myMainThread.runThread(Thread::PRIORITY_NORMAL, "mainThread");

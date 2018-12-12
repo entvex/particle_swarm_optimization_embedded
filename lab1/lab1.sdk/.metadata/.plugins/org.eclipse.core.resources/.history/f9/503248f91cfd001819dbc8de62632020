@@ -1,0 +1,18 @@
+/*
+ * StateMachine.cpp
+ *
+ *  Created on: 11 Dec 2018
+ *      Author: Entvex
+ */
+
+#include "StateMachine.h"
+
+StateMachine::StateMachine() {
+	// TODO Auto-generated constructor stub
+
+}
+
+StateMachine::~StateMachine() {
+	// TODO Auto-generated destructor stub
+}
+
