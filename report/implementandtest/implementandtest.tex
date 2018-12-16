@@ -10,7 +10,44 @@
 }\citepawesome{Bjerge2017}{2}
 \\\\
 
-% This description is for the implementation itself
+This description is for the implementation itself and it is split into two subsections. One with Verdado and the other have 
+
+\subsection{Verdado}
+This section will show the Verdado design on the board including console outputs. Our design makes use the GPIO ports to access the hardware buttons and switches. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different states the PSOS can be in Setup, FindMinima and FindMaxima.
+
+INSERT IMAGE OF BLOCK DIAGRAM FROM Verdado!!!!!!
+
+The Software is made using FreeRTOS, where the mainThread controls the application. As it can be seen below it initializes the buttons and switches.
+
+\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
+#include <stdio.h>
+#define N 10
+/* Block
+* comment */
+{
+
+INSERT CODEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+}
+\end{lstlisting}
+
+As menshioned in section \ref{designpatterns} the gof state patteren is used. The context can be seen below.
+\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
+#include <stdio.h>
+#define N 10
+/* Block
+* comment */
+{
+
+INSERT CODEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+}
+\end{lstlisting}
+
+The states is an important part of this patterens therefore an example of the setup state can be seen here. To make the code easier to read it is clearly split into actions and transitions. 
+
+
+\subsection{Vedado HLS}
 
 \subsection{Description}
 
