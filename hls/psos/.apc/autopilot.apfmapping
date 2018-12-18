@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="psos.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psos.h"/>
+    <originFiles name="psos.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psos.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
