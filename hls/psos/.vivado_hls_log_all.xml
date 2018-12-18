@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [SCA 200-203] Found exit operation(s) (psos/psos.cpp:48->psos/psos.cpp:26) in the main loop of SC_CTHREAD 'psosc::Setup'.&#xD;&#xA;command 'sc_get_modules' returned error code&#xD;&#xA;SystemC analyzing failed&#xD;&#xA;    while executing&#xD;&#xA;&quot;source C:/Git_Repositories/particle_swarm_optimization_embedded/hls/psos/psos/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main C:/Git_Repositories/particle_swarm_optimization_embedded/hls/psos/psos/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="psos" solutionName="psos" date="2018-12-18T11:47:21.485+0100"/>
+      </synLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCA 200-202] SC_CTHREAD process 'psosc::Execute' has no reset block." projectName="psos" solutionName="psos" date="2018-12-18T11:47:19.421+0100" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] The reset block of process 'psosc::Setup' contains IO read operations (wire read on port 'psosc_setupDone' (psos/psos.cpp:5)), which is not recommended." projectName="psos" solutionName="psos" date="2018-12-18T11:47:19.413+0100" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] The reset block of process 'psosc::Setup' contains IO read operations (wire read on port 'start' (psos/psos.cpp:5)), which is not recommended." projectName="psos" solutionName="psos" date="2018-12-18T11:47:19.406+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
