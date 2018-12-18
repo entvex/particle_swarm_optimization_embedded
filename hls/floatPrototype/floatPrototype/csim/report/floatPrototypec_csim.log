@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../floatDriver.cpp in debug mode
+   Compiling ../../../main.cpp in debug mode
+   Compiling ../../../floatPrototype.cpp in debug mode
+   Generating csim.exe
+INFO: Simulating
+_float1: 2.500000
+_float2: 2.500000
+_float3: 6.250000
+_result: 6.250000
+Test passed !
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

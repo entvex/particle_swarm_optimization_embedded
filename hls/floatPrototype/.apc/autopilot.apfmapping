@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="floatPrototype.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\floatPrototype.h"/>
+    <originFiles name="floatPrototype.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\floatPrototype.cpp"/>
+    <originFiles name="cpp_math.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\cpp_math.h"/>
+    <originFiles name="cpp_math.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\cpp_math.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="floatDriver.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\floatDriver.cpp"/>
+    <originFiles name="floatDriver.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\floatDriver.h"/>
+    <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\floatPrototype\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
