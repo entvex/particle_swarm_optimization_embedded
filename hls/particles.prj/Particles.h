@@ -1,98 +1,77 @@
 #ifndef _PARTICLES_
 #define _PARTICLES_
 
-#include <systemc.h>
-#include "math.h"
+#include "systemc.h"
+#include <cstdlib>
 
 SC_MODULE(particles) {
 	// Ports
-	sc_in <bool> clk;
-	sc_in <bool> reset;
-	sc_in <bool> maximum;
+	sc_in<bool> clk;
+	sc_in<bool> reset;
+	sc_in<bool> maximum;
+	sc_in<bool> calculate;
+	sc_in<bool> setup;
 
-	double c1; // Cognitive component - more spread
-	double c2; // Social component global best position
+	// Setup parameters
+	sc_in<float> cognitive;
+	sc_in<float> social;
+
+	// Global best position
+	sc_in<float> x1_global;
+	sc_in<float> x2_global;
+
+	// Outputs
+	sc_out<float> x1_out;
+	sc_out<float> x2_out;
+	sc_out<bool> ready;
+
+	// Internal flags
+	bool setupDone = false;
+	bool calculationDone = false;
+	bool negativeFormula; // If maximum is required, make the formula negative
+
+	float c1; // Cognitive component - more spread - Setup part
+	float c2; // Social component global best position - Setup part
+	float w = 0.8; // Old position weight. Hardcoded to 0.8 can eventually become a setup part
+
+	float ax = 10; // Value used to generate coordinates of first position [x1,x2] = (-ax ... ax)
+	float av = 1; // Value used to generate velocity in first position [x1_velocity, x2_velocity] = (-av ... av)
+
+	// Own position
+	float x1;
+	float x2;
+
+	// Own velocity
+	float v1;
+	float v2;
+
+	// Own best position
+	float x1_best;
+	float x2_best;
+
 
 	// Process Declarations
-	void executeCalculation(){
+	void Setup();
 
-	}
+	void Execute();
 
-	double equation(double x1, double x2){
-		return 3*pow((1-x1),2)*exp( -pow(x1,2) - pow( x2+1 ,2 ) ) - 10*( x1*0.2 - pow(x1,3) - pow(x2,5) )*exp( -pow(x1,2) -pow( x2,2 ) ) -exp( -pow(x1+1,2) - pow(x2,2) ) / 3;
-	}
+	// Hardcoded formula of interest
+	float Equation(float x1, float x2);
 
-	void setup(double cognitive, double social){
-		c1 = cognitive;
-		c2 = social;
-	}
+	float Random_position(float xi,float a);
+
+	float Random_velocity(float a);
+
+	float Randval();
 
 	SC_CTOR(particles){
 		//	Process Registration
+		SC_CTHREAD(Setup,clk.pos());
+		reset_signal_is(reset,true);
 
+		SC_CTHREAD(Execute,clk.pos());
+		reset_signal_is(reset,true);
 	}
 };
 
 #endif
-
-/*	double random_position(double xi,double a){
-		double r = ((double) rand() / (RAND_MAX));
-		return ( xi-a ) + 2*a*r;
-	}
-
-	double random_velocity(double a){
-		double r = ((double) rand() / (RAND_MAX));
-		return - a + 2*a*r;
-	}
-
-int main()
-{
-
-	//UserThread mUserThread(Thread::PRIORITY_NORMAL, "UserControlThread");
-
-
-	//vTaskStartScheduler();
-
-
-	//for( ;; );
-
-	int d = 1; //Number of partrices
-
-	int ax = 10; // used to generate random position
-	int av = 1; // used to generate random velocities
-	double w = 0.8; // Inertial constant
-	double c1 = 1.95; // Cognitive component - more spread
-	//c1 = 0.2; // Cognitive component
-	double c2 = 1.98; // Social component global best position
-	int N = 60; // Number of iterations
-
-
-	// Allocating arrays
-	double x_pos[d][2];	// x Position for each particle
-	double x_vel[d][2];	// x Velocitie for each particle
-
-	double fk[d];		// Function value for each particle
-	double pk[d][2];	// Best position for each particle
-
-	double g[2];		// Best position of all particles
-	double fgk = 0;		// Value of best position
-
-	for (int var = 0; var < d; ++var) {
-		x_pos[var][0] = random_position(0,ax);
-		x_pos[var][1] = random_position(0,ax);
-
-		x_vel[var][0] = random_velocity(av);
-		x_vel[var][1] = random_velocity(av);
-
-		pk[var][0] = x_vel[var][0];
-		pk[var][1] = x_vel[var][1];
-
-		fk[var] = equation(x_pos[var][0], x_pos[var][1]);
-
-		if (gk == 0 || fk[var] < gk){
-			gk = fk[var];
-			g[0] = x_pos[var][0];
-			g[1] = x_pos[var][1];
-		}
-	}
-}*/

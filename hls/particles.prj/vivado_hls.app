@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="particles" name="particles.prj" projectType="SystemC">
+<project xmlns="com.autoesl.autopilot.project" name="particles.prj" top="particlemaster" projectType="SystemC">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -8,8 +8,11 @@
         <solution name="solution1" status="active"/>
     </solutions>
     <files xmlns="">
-        <file name="particles.prj/main.cpp" sc="1" tb="false" cflags=""/>
+        <file name="../main.cpp" sc="1" tb="1" cflags=" "/>
         <file name="particles.prj/Particles.h" sc="1" tb="false" cflags=""/>
+        <file name="particles.prj/Particles.cpp" sc="1" tb="false" cflags=""/>
+        <file name="particles.prj/ParticleMaster.h" sc="1" tb="false" cflags=""/>
+        <file name="particles.prj/ParticleMaster.cpp" sc="1" tb="false" cflags=""/>
     </files>
 </project>
 
