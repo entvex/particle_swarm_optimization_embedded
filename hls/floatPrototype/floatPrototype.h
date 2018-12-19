@@ -2,7 +2,6 @@
 #define _FLOATPROTOTYPE_
 
 #include "systemc.h"
-#include "cpp_math.h"
 
 SC_MODULE(floatPrototypec){
 

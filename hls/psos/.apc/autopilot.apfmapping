@@ -6,5 +6,7 @@
   </source>
   <testbench>
     <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\main.cpp"/>
+    <originFiles name="psosDriver.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psosDriver.h"/>
+    <originFiles name="psosDriver.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psosDriver.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

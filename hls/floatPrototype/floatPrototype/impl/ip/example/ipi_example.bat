@@ -8,4 +8,4 @@
 
 @echo off
 
-C:/Xilinx/Vivado_HLS/2017.2/../../Vivado/2017.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7z010clg400-1 ../xilinx_com_hls_floatPrototypec_1_0.zip
+C:/Xilinx/Vivado_HLS/2017.2/../../Vivado/2017.2/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7z010clg400-1 ../xilinx_com_hls_floatPrototypec_3_0.zip

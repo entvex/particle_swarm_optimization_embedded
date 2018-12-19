@@ -1,4 +1,11 @@
-<project xmlns="com.autoesl.autopilot.project" top="psosc" name="psos" projectType="SystemC">
+<project xmlns="com.autoesl.autopilot.project" name="psos" top="psosc" projectType="SystemC">
+    <files>
+        <file name="psos/psos.cpp" sc="1" tb="false" cflags=""/>
+        <file name="psos/psos.h" sc="1" tb="false" cflags=""/>
+        <file name="../main.cpp" sc="1" tb="1" cflags=" "/>
+        <file name="../psosDriver.cpp" sc="1" tb="1" cflags=""/>
+        <file name="../psosDriver.h" sc="1" tb="1" cflags=""/>
+    </files>
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -7,10 +14,5 @@
     <solutions xmlns="">
         <solution name="psos" status="active"/>
     </solutions>
-    <files xmlns="">
-        <file name="../main.cpp" sc="1" tb="1" cflags=" "/>
-        <file name="psos/psos.h" sc="1" tb="false" cflags=""/>
-        <file name="psos/psos.cpp" sc="1" tb="false" cflags=""/>
-    </files>
 </project>
 

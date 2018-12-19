@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vivado HLS Report for 'psosc_Setup'
+================================================================
+* Date:           Wed Dec 19 14:11:03 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        psos
+* Solution:       psos
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      3.66|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   44|   44|   44|   44|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |   42|   42|        42|          -|          -|  inf |    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      -|      -|      -|
+|Expression       |        -|      -|      0|      2|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |        -|      -|      -|      -|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    598|
+|Register         |        -|      -|     44|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |        0|      0|     44|    600|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        0|      0|   ~0  |      3|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------+----------+-------+---+----+------------+------------+
+    |   Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------+----------+-------+---+----+------------+------------+
+    |phitmp_fu_876_p2  |    xor   |      0|  0|   2|           1|           2|
+    +------------------+----------+-------+---+----+------------+------------+
+    |Total             |          |      0|  0|   2|           1|           2|
+    +------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------+-----+-----------+-----+-----------+
+    |           Name           | LUT | Input Size| Bits| Total Bits|
+    +--------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  193|         44|    1|         44|
+    |psosc_p_v1_address0       |   65|         13|    2|         26|
+    |psosc_p_v2_address0       |   65|         13|    2|         26|
+    |psosc_p_x1_address0       |   65|         13|    2|         26|
+    |psosc_p_x1_best_address0  |   65|         13|    2|         26|
+    |psosc_p_x2_address0       |   65|         13|    2|         26|
+    |psosc_p_x2_best_address0  |   65|         13|    2|         26|
+    |tmp_1_phi_fu_869_p4       |   15|          3|    1|          3|
+    +--------------------------+-----+-----------+-----+-----------+
+    |Total                     |  598|        125|   14|        203|
+    +--------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+----+----+-----+-----------+
+    |    Name   | FF | LUT| Bits| Const Bits|
+    +-----------+----+----+-----+-----------+
+    |ap_CS_fsm  |  44|   0|   44|          0|
+    +-----------+----+----+-----+-----------+
+    |Total      |  44|   0|   44|          0|
+    +-----------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs |   psosc::Setup   | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs |   psosc::Setup   | return value |
+|start                     |  in |    1|   ap_none  |       start      |    pointer   |
+|negativeFormula           |  in |    1|   ap_none  |  negativeFormula |    pointer   |
+|c1                        |  in |   32|   ap_none  |        c1        |    pointer   |
+|c2                        |  in |   32|   ap_none  |        c2        |    pointer   |
+|complete                  | out |    1|   ap_vld   |     complete     |    pointer   |
+|complete_ap_vld           | out |    1|   ap_vld   |     complete     |    pointer   |
+|psosc_setupDone_i         |  in |    1|   ap_ovld  |  psosc_setupDone |    pointer   |
+|psosc_setupDone_o         | out |    1|   ap_ovld  |  psosc_setupDone |    pointer   |
+|psosc_setupDone_o_ap_vld  | out |    1|   ap_ovld  |  psosc_setupDone |    pointer   |
+|psosc_negFormula          | out |    1|   ap_vld   | psosc_negFormula |    pointer   |
+|psosc_negFormula_ap_vld   | out |    1|   ap_vld   | psosc_negFormula |    pointer   |
+|psosc_c1_cog              | out |   32|   ap_vld   |   psosc_c1_cog   |    pointer   |
+|psosc_c1_cog_ap_vld       | out |    1|   ap_vld   |   psosc_c1_cog   |    pointer   |
+|psosc_c2_soc              | out |   32|   ap_vld   |   psosc_c2_soc   |    pointer   |
+|psosc_c2_soc_ap_vld       | out |    1|   ap_vld   |   psosc_c2_soc   |    pointer   |
+|psosc_w                   | out |   32|   ap_vld   |      psosc_w     |    pointer   |
+|psosc_w_ap_vld            | out |    1|   ap_vld   |      psosc_w     |    pointer   |
+|psosc_ax                  | out |   32|   ap_vld   |     psosc_ax     |    pointer   |
+|psosc_ax_ap_vld           | out |    1|   ap_vld   |     psosc_ax     |    pointer   |
+|psosc_av                  | out |   32|   ap_vld   |     psosc_av     |    pointer   |
+|psosc_av_ap_vld           | out |    1|   ap_vld   |     psosc_av     |    pointer   |
+|psosc_x1_global           | out |   32|   ap_vld   |  psosc_x1_global |    pointer   |
+|psosc_x1_global_ap_vld    | out |    1|   ap_vld   |  psosc_x1_global |    pointer   |
+|psosc_x2_global           | out |   32|   ap_vld   |  psosc_x2_global |    pointer   |
+|psosc_x2_global_ap_vld    | out |    1|   ap_vld   |  psosc_x2_global |    pointer   |
+|psosc_p_x1_address0       | out |    2|  ap_memory |    psosc_p_x1    |     array    |
+|psosc_p_x1_ce0            | out |    1|  ap_memory |    psosc_p_x1    |     array    |
+|psosc_p_x1_we0            | out |    1|  ap_memory |    psosc_p_x1    |     array    |
+|psosc_p_x1_d0             | out |   32|  ap_memory |    psosc_p_x1    |     array    |
+|psosc_p_x2_address0       | out |    2|  ap_memory |    psosc_p_x2    |     array    |
+|psosc_p_x2_ce0            | out |    1|  ap_memory |    psosc_p_x2    |     array    |
+|psosc_p_x2_we0            | out |    1|  ap_memory |    psosc_p_x2    |     array    |
+|psosc_p_x2_d0             | out |   32|  ap_memory |    psosc_p_x2    |     array    |
+|psosc_p_v1_address0       | out |    2|  ap_memory |    psosc_p_v1    |     array    |
+|psosc_p_v1_ce0            | out |    1|  ap_memory |    psosc_p_v1    |     array    |
+|psosc_p_v1_we0            | out |    1|  ap_memory |    psosc_p_v1    |     array    |
+|psosc_p_v1_d0             | out |   32|  ap_memory |    psosc_p_v1    |     array    |
+|psosc_p_v2_address0       | out |    2|  ap_memory |    psosc_p_v2    |     array    |
+|psosc_p_v2_ce0            | out |    1|  ap_memory |    psosc_p_v2    |     array    |
+|psosc_p_v2_we0            | out |    1|  ap_memory |    psosc_p_v2    |     array    |
+|psosc_p_v2_d0             | out |   32|  ap_memory |    psosc_p_v2    |     array    |
+|psosc_p_x1_best_address0  | out |    2|  ap_memory |  psosc_p_x1_best |     array    |
+|psosc_p_x1_best_ce0       | out |    1|  ap_memory |  psosc_p_x1_best |     array    |
+|psosc_p_x1_best_we0       | out |    1|  ap_memory |  psosc_p_x1_best |     array    |
+|psosc_p_x1_best_d0        | out |   32|  ap_memory |  psosc_p_x1_best |     array    |
+|psosc_p_x2_best_address0  | out |    2|  ap_memory |  psosc_p_x2_best |     array    |
+|psosc_p_x2_best_ce0       | out |    1|  ap_memory |  psosc_p_x2_best |     array    |
+|psosc_p_x2_best_we0       | out |    1|  ap_memory |  psosc_p_x2_best |     array    |
+|psosc_p_x2_best_d0        | out |   32|  ap_memory |  psosc_p_x2_best |     array    |
++--------------------------+-----+-----+------------+------------------+--------------+
+

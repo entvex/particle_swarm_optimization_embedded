@@ -1,4 +1,4 @@
-#define PARTICLE_NUM 2
+#define PARTICLE_NUM 3
 
 #ifndef _PSOS_
 #define _PSOS_

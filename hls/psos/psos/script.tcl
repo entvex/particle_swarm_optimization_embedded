@@ -8,6 +8,8 @@ set_top psosc
 add_files psos/psos.cpp
 add_files psos/psos.h
 add_files -tb psos/main.cpp
+add_files -tb psos/psosDriver.cpp
+add_files -tb psos/psosDriver.h
 open_solution "psos"
 set_part {xc7z010clg400-1} -tool vivado
 create_clock -period 10 -name default
