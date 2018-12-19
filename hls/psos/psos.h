@@ -1,7 +1,7 @@
+#define PARTICLE_NUM 2
+
 #ifndef _PSOS_
 #define _PSOS_
-
-#define PARTICLE_NUM 2
 
 #include "systemc.h"
 #include <cstdlib>
@@ -22,6 +22,7 @@ SC_MODULE(psosc) {
 
 	// Internal flags
 	bool setupDone;
+	bool calculationDone;
 
 	// Internal variables for calculations
 	bool negFormula;
@@ -34,18 +35,21 @@ SC_MODULE(psosc) {
 
 	int iterations;
 
+	float x1_global;
+	float x2_global;
+
 	// Particle specific knowledge
 	// Own position
-	float x1[PARTICLE_NUM];
-	float x2[PARTICLE_NUM];
+	float p_x1[PARTICLE_NUM];
+	float p_x2[PARTICLE_NUM];
 
 	// Own velocity
-	float v1[PARTICLE_NUM];
-	float v2[PARTICLE_NUM];
+	float p_v1[PARTICLE_NUM];
+	float p_v2[PARTICLE_NUM];
 
 	// Own best position
-	float x1_best[PARTICLE_NUM];
-	float x2_best[PARTICLE_NUM];
+	float p_x1_best[PARTICLE_NUM];
+	float p_x2_best[PARTICLE_NUM];
 
 	// Setup
 	void Setup();
