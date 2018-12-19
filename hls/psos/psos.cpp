@@ -1,11 +1,27 @@
 #include "psos.h"
 
 void psosc::Setup(){
+	//#pragma HLS unroll factor=PARTICLE_NUM region skip_exit_check
+	//#pragma HLS INLINE off
 	while(!start.read() || setupDone){
 		wait();
 	}
 
 	complete.write(false);
+	wait();
+
+	iterations = 60;
+	w = 0.8;
+	ax = 10;
+	av = 1;
+
+	// set best position to ( 0 ; 0 )
+	x1_global = 0;
+	x2_global = 0;
+
+	// Setup first positions of particles
+	ParticleSetup();
+
 	wait();
 
 	// reading and setting up c1 and c2
@@ -16,14 +32,8 @@ void psosc::Setup(){
 	// Checking if we are looking for maximum or minimum
 	negFormula = negativeFormula.read();
 
-	iterations = 60;
-	w = 0.8;
-	ax = 10;
-	av = 1;
 
 	wait();
-
-	ParticleSetup();
 
 	setupDone = true;
 
@@ -32,7 +42,54 @@ void psosc::Setup(){
 }
 
 void psosc::Execute(){
+	while(!(setupDone && start.read()) || calculationDone){
+		wait();
+		if(!start.read())
+		{
+			calculationDone = false;
+		}
+		wait();
+	}
 
+	wait();
+	LoopExecute: for (int i = 0; i < sizeof(p_v1); i++) {
+		#pragma HLS INLINE
+		p_v1[i] = w*p_v1[i] + c1*Randval()*(p_x1_best[i]-p_x1[i]) + c2*Randval()*(x1_global-p_x1[i]);
+		p_v2[i] = w*p_v2[i] + c1*Randval()*(p_x2_best[i]-p_x2[i]) + c2*Randval()*(x2_global-p_x2[i]);
+
+		wait();
+
+		p_x1[i] = p_x1[i] + p_v1[i];
+		p_x2[i] = p_x2[i] + p_v2[i];
+
+		wait();
+
+		if(Equation(p_x1_best[i], p_x2_best[i]) > Equation(p_x1[i],p_x2[i]))
+		{
+			wait();
+
+			p_x1_best[i] = p_x1[i];
+			p_x2_best[i] = p_x2[i];
+
+			wait();
+
+			#pragma HLS INLINE
+			if(Equation(x1_global, x2_global) > Equation(p_x1[i],p_x2[i]))
+			{
+				wait();
+
+				x1_global = p_x1[i];
+				x2_global = p_x2[i];
+
+				wait();
+			}
+		}
+	}
+
+	calculationDone = true;
+
+	complete.write(true);
+	wait();
 }
 
 float psosc::Equation(float x1, float x2){
@@ -43,20 +100,31 @@ float psosc::Equation(float x1, float x2){
 }
 
 void psosc::ParticleSetup(){
-	float randPos1;
-	float randPos2;
-	for (int i = 0; i < PARTICLE_NUM; i++) {
-		randPos1 = RandomPosition(0,ax);
-		randPos2 = RandomPosition(0,ax);
+	LoopSetup: for (int i = 0; i < sizeof(p_x1); i++) {
+		#pragma HLS unroll skip_exit_check
+		// Wait after every two operations since RAM only have two ports to work with at a time
+		p_x1[i] = RandomPosition(0,ax);
+		p_x2[i] = RandomPosition(0,ax);
 
-		x1[i] = randPos1;
-		x2[i] = randPos2;
+		wait();
 
-		v1[i] = RandomVelocity(av);
-		v2[i] = RandomVelocity(av);
+		p_v1[i] = RandomVelocity(av);
+		p_v2[i] = RandomVelocity(av);
 
-		x1_best[i] = randPos1;
-		x2_best[i] = randPos1;
+		wait();
+
+		p_x1_best[i] = p_x1[i];
+		p_x2_best[i] = p_x2[i];
+
+		wait();
+
+		if(Equation(x1_global, x2_global) > Equation(p_x1[i],p_x2[i]))
+		{
+			wait();
+			x1_global = p_x1[i];
+			x2_global = p_x2[i];
+			wait();
+		}
 	}
 }
 
