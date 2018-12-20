@@ -26,16 +26,16 @@ SC_MODULE(particles) {
 	sc_out<bool> ready;
 
 	// Internal flags
-	bool setupDone = false;
-	bool calculationDone = false;
+	bool setupDone;
+	bool calculationDone;
 	bool negativeFormula; // If maximum is required, make the formula negative
 
 	float c1; // Cognitive component - more spread - Setup part
 	float c2; // Social component global best position - Setup part
-	float w = 0.8; // Old position weight. Hardcoded to 0.8 can eventually become a setup part
+	float w; // Old position weight. Hardcoded to 0.8 can eventually become a setup part
 
-	float ax = 10; // Value used to generate coordinates of first position [x1,x2] = (-ax ... ax)
-	float av = 1; // Value used to generate velocity in first position [x1_velocity, x2_velocity] = (-av ... av)
+	float ax; // Value used to generate coordinates of first position [x1,x2] = (-ax ... ax)
+	float av; // Value used to generate velocity in first position [x1_velocity, x2_velocity] = (-av ... av)
 
 	// Own position
 	float x1;

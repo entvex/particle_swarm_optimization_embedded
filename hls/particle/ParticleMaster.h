@@ -72,7 +72,7 @@ SC_MODULE(particlemaster) {
 	sc_in<bool> ready_p10;
 
 	// Internal flags
-	bool setupDone = false;
+	bool setupDone;
 
 	// Global best position
 	float x1_best;

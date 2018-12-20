@@ -8,6 +8,7 @@ void particlemaster::Setup(){
 		}
 
 		setup.write(false);
+		setupDone = false;
 		wait();
 
 		// reading and setting up c1 and c2

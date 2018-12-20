@@ -59,16 +59,21 @@ A simulation of the code is constructed and conducted in the Vivado HLS tools. T
 \end{figure}
 
 
-To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL from the Vivado HLS tool, and included into a simple program in which tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly.\\
+To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL from the Vivado HLS tool, and included into a simple program in which tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly. The open block design in Vivado can be seen on Figure \ref{fig:vivadoblockdesignwithipcore}.\\
 
-%TODO indsæt Vivado test af floatPrototype her!!!
+\begin{figure}[H]
+	\centering
+	\includegraphics[trim={0 240 0 240},clip,width=1\linewidth]{diagram/VivadoBlockDesign_with_ip_core}
+	\caption{Vivado open block design with floatPrototype as an IP core.}
+	\label{fig:vivadoblockdesignwithipcore}
+\end{figure}
 
-At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's. Since a float use 32bits like an unsigned integer it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is, but by testing the input with the output show that the IP core does indeed use floats.\\
+At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's in it's Axi Lite interface. Since a float use 32bits like an unsigned integer it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is, but by testing the input with the output show that the IP core does indeed use floats. Results of a testprogram can be seen on Figure \ref{fig:floatmultiply}.\\
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[trim={0 2 0 0},clip,width=0.8\linewidth]{diagram/floatMultiply}
-	\caption{}
+	\caption{Result of floatPrototype IP core test, run on Zybo Board.}
 	\label{fig:floatmultiply}
 \end{figure}
 
