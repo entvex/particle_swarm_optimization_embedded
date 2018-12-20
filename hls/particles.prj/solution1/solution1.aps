@@ -1,6 +1,6 @@
 <solution AutoPilot="com.autoesl.autopilot.solution">
     <config>
-        <schedule model="particles"/>
+        <schedule model="particlemaster::ReadCalculations"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

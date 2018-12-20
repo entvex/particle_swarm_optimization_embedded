@@ -5026,4 +5026,44 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (particles.prj
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:630:25) in function 'particlemaster::ReadCalculations'... converting 7 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:630:25) in function 'particlemaster::ReadCalculations'... converting 7 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:630:25) in function 'particlemaster::ReadCalculations'... converting 7 basic blocks.
+<<<<<<< Updated upstream
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/prod
+=======
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:630:25) in function 'particlemaster::ReadCalculations'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:467:26) to (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:630:25) in function 'particlemaster::ReadCalculations'... converting 7 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'particles::Execute' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:42:12)...196 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'particlemaster::ReadCalculations' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_pow.h:34:12)...294 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:17:57 ; elapsed = 00:20:25 . Memory (MB): peak = 2553.102 ; gain = 2503.496
+WARNING: [XFORM 203-561] 'Loop-1' (particles.prj/Particles.cpp:6:38) in function 'particles::Setup' is an infinite loop.
+WARNING: [XFORM 203-561] 'Loop-1' (particles.prj/Particles.cpp:43:3) in function 'particles::Execute' is an infinite loop.
+WARNING: [XFORM 203-561] 'Loop-1' (particles.prj/ParticleMaster.cpp:7:38) in function 'particlemaster::Setup' is an infinite loop.
+WARNING: [XFORM 203-561] 'Loop-1' (particles.prj/ParticleMaster.cpp:36:39) in function 'particlemaster::ReadCalculations' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:18:29 ; elapsed = 00:21:01 . Memory (MB): peak = 2553.102 ; gain = 2503.496
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [SCA 200-201] Elaborating SystemC module 'particlemaster'.
+INFO: [SCA 200-201] Performing SystemC synthesis linting.
+INFO: [SCA 200-201] Analyzing ports and processes.
+INFO: [SCA 200-201] Found the clock port of process 'particlemaster::Setup': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'particlemaster::Setup': 'reset'.
+INFO: [SCA 200-201] Found the clock port of process 'particlemaster::ReadCalculations': 'clk'.
+INFO: [SCA 200-201] Found the reset port of process 'particlemaster::ReadCalculations': 'reset'.
+WARNING: [SCA 200-202] Non-channel variable 'particlemaster_negFormula' of module 'particlemaster' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+WARNING: [SCA 200-202] Non-channel variable 'particlemaster_iterations' of module 'particlemaster' is used for inter-process communications which may result in nondeterministic simulation behavior. Please consider changing it to an sc_signal.
+WARNING: [SCA 200-202] Found 2 SC_CTHREAD writers to variable 'particlemaster_iterations', there should have handshakings among the writers.
+                     Process writer(1): 'particlemaster_Setup' (SC_CTHREAD)
+                     Process writer(2): 'particlemaster_ReadCalculations' (SC_CTHREAD)
+WARNING: [SCA 200-202] Port 'maximum' has no reset.
+WARNING: [SCA 200-202] Port 'calculate' has no reset.
+WARNING: [SCA 200-202] Port 'setup' has no reset.
+WARNING: [SCA 200-202] Port 'finalx1' has no reset.
+WARNING: [SCA 200-202] Port 'finalx2' has no reset.
+WARNING: [SCA 200-202] Port 'complete' has no reset.
+WARNING: [SCA 200-202] Port 'cognitive' has no reset.
+WARNING: [SCA 200-202] Port 'social' has no reset.
+WARNING: [SCA 200-202] Port 'x1_global' has no reset.
+WARNING: [SCA 200-202] Port 'x2_global' has no reset.
+WARNING: [SCA 200-202] Signal 'particlemaster_setupDone' has no reset.
+WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'particlemaster_setupDone'('particlemaster_setup', particles.prj/ParticleMaster.cpp:7), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch.
+WARNING: [SCA 200-202] Signal 'particlemaster_x1_best' has no reset.
+WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'particlema
+>>>>>>> Stashed changes
