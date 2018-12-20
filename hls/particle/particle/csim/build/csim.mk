@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../main.cpp ../../../ParticleMaster.cpp ../../../Particles.cpp
+HLS_SOURCES = ../../../main.cpp ../../../Particles.cpp ../../../ParticleMaster.cpp
 
 TARGET := csim.exe
 
@@ -76,14 +76,14 @@ $(ObjDir)/main.o: ../../../main.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/main.d
 
-$(ObjDir)/ParticleMaster.o: ../../../ParticleMaster.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../ParticleMaster.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/ParticleMaster.d
-
 $(ObjDir)/Particles.o: ../../../Particles.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../Particles.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Particles.d
+
+$(ObjDir)/ParticleMaster.o: ../../../ParticleMaster.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../ParticleMaster.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/ParticleMaster.d

@@ -14,91 +14,90 @@ namespace ap_rtl {
 
 const sc_logic particlemaster::ap_const_logic_1 = sc_dt::Log_1;
 const sc_lv<1> particlemaster::ap_const_lv1_0 = "0";
-const sc_lv<32> particlemaster::ap_const_lv32_0 = "00000000000000000000000000000000";
-const sc_lv<32> particlemaster::ap_const_lv32_2 = "10";
+const sc_lv<32> particlemaster::ap_const_lv32_1 = "1";
 const sc_lv<1> particlemaster::ap_const_lv1_1 = "1";
-const sc_lv<4> particlemaster::ap_const_lv4_0 = "0000";
+const sc_lv<2> particlemaster::ap_const_lv2_0 = "00";
 const sc_logic particlemaster::ap_const_logic_0 = sc_dt::Log_0;
 const bool particlemaster::ap_const_boolean_1 = true;
 
 particlemaster::particlemaster(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    grp_particlemaster_ReadCalculations_fu_266 = new particlemaster_ReadCalculations("grp_particlemaster_ReadCalculations_fu_266");
-    grp_particlemaster_ReadCalculations_fu_266->ap_clk(clk);
-    grp_particlemaster_ReadCalculations_fu_266->ap_rst(reset);
-    grp_particlemaster_ReadCalculations_fu_266->calculate(grp_particlemaster_ReadCalculations_fu_266_calculate);
-    grp_particlemaster_ReadCalculations_fu_266->calculate_ap_vld(grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->finalx1(grp_particlemaster_ReadCalculations_fu_266_finalx1);
-    grp_particlemaster_ReadCalculations_fu_266->finalx1_ap_vld(grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->finalx2(grp_particlemaster_ReadCalculations_fu_266_finalx2);
-    grp_particlemaster_ReadCalculations_fu_266->finalx2_ap_vld(grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->complete(grp_particlemaster_ReadCalculations_fu_266_complete);
-    grp_particlemaster_ReadCalculations_fu_266->complete_ap_vld(grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->x1_global(grp_particlemaster_ReadCalculations_fu_266_x1_global);
-    grp_particlemaster_ReadCalculations_fu_266->x1_global_ap_vld(grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->x2_global(grp_particlemaster_ReadCalculations_fu_266_x2_global);
-    grp_particlemaster_ReadCalculations_fu_266->x2_global_ap_vld(grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p1(x1_p1);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p1(x2_p1);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p1(ready_p1);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p2(x1_p2);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p2(x2_p2);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p2(ready_p2);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p3(x1_p3);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p3(x2_p3);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p3(ready_p3);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p4(x1_p4);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p4(x2_p4);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p4(ready_p4);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p5(x1_p5);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p5(x2_p5);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p5(ready_p5);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p6(x1_p6);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p6(x2_p6);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p6(ready_p6);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p7(x1_p7);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p7(x2_p7);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p7(ready_p7);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p8(x1_p8);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p8(x2_p8);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p8(ready_p8);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p9(x1_p9);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p9(x2_p9);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p9(ready_p9);
-    grp_particlemaster_ReadCalculations_fu_266->x1_p10(x1_p10);
-    grp_particlemaster_ReadCalculations_fu_266->x2_p10(x2_p10);
-    grp_particlemaster_ReadCalculations_fu_266->ready_p10(ready_p10);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x1_best_i(particlemaster_x1_best);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x1_best_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x1_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x2_best_i(particlemaster_x2_best);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x2_best_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_x2_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_negFormula(grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_iterations_i(particlemaster_iterations);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_iterations_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o);
-    grp_particlemaster_ReadCalculations_fu_266->particlemaster_iterations_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld);
-    grp_particlemaster_Setup_fu_396 = new particlemaster_Setup("grp_particlemaster_Setup_fu_396");
-    grp_particlemaster_Setup_fu_396->ap_clk(clk);
-    grp_particlemaster_Setup_fu_396->ap_rst(reset);
-    grp_particlemaster_Setup_fu_396->start(start);
-    grp_particlemaster_Setup_fu_396->maximum(grp_particlemaster_Setup_fu_396_maximum);
-    grp_particlemaster_Setup_fu_396->maximum_ap_vld(grp_particlemaster_Setup_fu_396_maximum_ap_vld);
-    grp_particlemaster_Setup_fu_396->setup(grp_particlemaster_Setup_fu_396_setup);
-    grp_particlemaster_Setup_fu_396->setup_ap_vld(grp_particlemaster_Setup_fu_396_setup_ap_vld);
-    grp_particlemaster_Setup_fu_396->negativeFormula(negativeFormula);
-    grp_particlemaster_Setup_fu_396->c1(c1);
-    grp_particlemaster_Setup_fu_396->c2(c2);
-    grp_particlemaster_Setup_fu_396->cognitive(grp_particlemaster_Setup_fu_396_cognitive);
-    grp_particlemaster_Setup_fu_396->cognitive_ap_vld(grp_particlemaster_Setup_fu_396_cognitive_ap_vld);
-    grp_particlemaster_Setup_fu_396->social(grp_particlemaster_Setup_fu_396_social);
-    grp_particlemaster_Setup_fu_396->social_ap_vld(grp_particlemaster_Setup_fu_396_social_ap_vld);
-    grp_particlemaster_Setup_fu_396->particlemaster_setupDone_i(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i);
-    grp_particlemaster_Setup_fu_396->particlemaster_setupDone_o(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o);
-    grp_particlemaster_Setup_fu_396->particlemaster_setupDone_o_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld);
-    grp_particlemaster_Setup_fu_396->particlemaster_negFormula(grp_particlemaster_Setup_fu_396_particlemaster_negFormula);
-    grp_particlemaster_Setup_fu_396->particlemaster_negFormula_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld);
-    grp_particlemaster_Setup_fu_396->particlemaster_iterations(grp_particlemaster_Setup_fu_396_particlemaster_iterations);
-    grp_particlemaster_Setup_fu_396->particlemaster_iterations_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254 = new particlemaster_ReadCalculations("grp_particlemaster_ReadCalculations_fu_254");
+    grp_particlemaster_ReadCalculations_fu_254->ap_clk(clk);
+    grp_particlemaster_ReadCalculations_fu_254->ap_rst(reset);
+    grp_particlemaster_ReadCalculations_fu_254->calculate(grp_particlemaster_ReadCalculations_fu_254_calculate);
+    grp_particlemaster_ReadCalculations_fu_254->calculate_ap_vld(grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->finalx1(grp_particlemaster_ReadCalculations_fu_254_finalx1);
+    grp_particlemaster_ReadCalculations_fu_254->finalx1_ap_vld(grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->finalx2(grp_particlemaster_ReadCalculations_fu_254_finalx2);
+    grp_particlemaster_ReadCalculations_fu_254->finalx2_ap_vld(grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->complete(grp_particlemaster_ReadCalculations_fu_254_complete);
+    grp_particlemaster_ReadCalculations_fu_254->complete_ap_vld(grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->x1_global(grp_particlemaster_ReadCalculations_fu_254_x1_global);
+    grp_particlemaster_ReadCalculations_fu_254->x1_global_ap_vld(grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->x2_global(grp_particlemaster_ReadCalculations_fu_254_x2_global);
+    grp_particlemaster_ReadCalculations_fu_254->x2_global_ap_vld(grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p1(x1_p1);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p1(x2_p1);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p1(ready_p1);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p2(x1_p2);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p2(x2_p2);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p2(ready_p2);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p3(x1_p3);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p3(x2_p3);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p3(ready_p3);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p4(x1_p4);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p4(x2_p4);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p4(ready_p4);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p5(x1_p5);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p5(x2_p5);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p5(ready_p5);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p6(x1_p6);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p6(x2_p6);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p6(ready_p6);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p7(x1_p7);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p7(x2_p7);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p7(ready_p7);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p8(x1_p8);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p8(x2_p8);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p8(ready_p8);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p9(x1_p9);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p9(x2_p9);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p9(ready_p9);
+    grp_particlemaster_ReadCalculations_fu_254->x1_p10(x1_p10);
+    grp_particlemaster_ReadCalculations_fu_254->x2_p10(x2_p10);
+    grp_particlemaster_ReadCalculations_fu_254->ready_p10(ready_p10);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x1_best_i(particlemaster_x1_best);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x1_best_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x1_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x2_best_i(particlemaster_x2_best);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x2_best_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_x2_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_negFormula(grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_iterations_i(particlemaster_iterations);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_iterations_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o);
+    grp_particlemaster_ReadCalculations_fu_254->particlemaster_iterations_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld);
+    grp_particlemaster_Setup_fu_384 = new particlemaster_Setup("grp_particlemaster_Setup_fu_384");
+    grp_particlemaster_Setup_fu_384->ap_clk(clk);
+    grp_particlemaster_Setup_fu_384->ap_rst(reset);
+    grp_particlemaster_Setup_fu_384->start(start);
+    grp_particlemaster_Setup_fu_384->maximum(grp_particlemaster_Setup_fu_384_maximum);
+    grp_particlemaster_Setup_fu_384->maximum_ap_vld(grp_particlemaster_Setup_fu_384_maximum_ap_vld);
+    grp_particlemaster_Setup_fu_384->setup(grp_particlemaster_Setup_fu_384_setup);
+    grp_particlemaster_Setup_fu_384->setup_ap_vld(grp_particlemaster_Setup_fu_384_setup_ap_vld);
+    grp_particlemaster_Setup_fu_384->negativeFormula(negativeFormula);
+    grp_particlemaster_Setup_fu_384->c1(c1);
+    grp_particlemaster_Setup_fu_384->c2(c2);
+    grp_particlemaster_Setup_fu_384->cognitive(grp_particlemaster_Setup_fu_384_cognitive);
+    grp_particlemaster_Setup_fu_384->cognitive_ap_vld(grp_particlemaster_Setup_fu_384_cognitive_ap_vld);
+    grp_particlemaster_Setup_fu_384->social(grp_particlemaster_Setup_fu_384_social);
+    grp_particlemaster_Setup_fu_384->social_ap_vld(grp_particlemaster_Setup_fu_384_social_ap_vld);
+    grp_particlemaster_Setup_fu_384->particlemaster_setupDone_i(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i);
+    grp_particlemaster_Setup_fu_384->particlemaster_setupDone_o(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o);
+    grp_particlemaster_Setup_fu_384->particlemaster_setupDone_o_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld);
+    grp_particlemaster_Setup_fu_384->particlemaster_negFormula(grp_particlemaster_Setup_fu_384_particlemaster_negFormula);
+    grp_particlemaster_Setup_fu_384->particlemaster_negFormula_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld);
+    grp_particlemaster_Setup_fu_384->particlemaster_iterations(grp_particlemaster_Setup_fu_384_particlemaster_iterations);
+    grp_particlemaster_Setup_fu_384->particlemaster_iterations_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld);
 
     SC_METHOD(thread_calculate);
     dont_initialize();
@@ -162,23 +161,20 @@ particlemaster::particlemaster(sc_module_name name) : sc_module(name), mVcdFile(
 
     SC_METHOD(thread_ap_CS_fsm);
 
-    SC_METHOD(thread_ap_CS_fsm_state1);
+    SC_METHOD(thread_ap_CS_fsm_state2);
     sensitive << ( ap_CS_fsm );
 
-    SC_METHOD(thread_ap_CS_fsm_state3);
-    sensitive << ( ap_CS_fsm );
-
-    SC_METHOD(thread_grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula);
-    sensitive << ( particlemaster_ss_load_fu_502_p1 );
-    sensitive << ( ap_CS_fsm_state3 );
+    SC_METHOD(thread_grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula);
+    sensitive << ( particlemaster_ss_load_fu_490_p1 );
+    sensitive << ( ap_CS_fsm_state2 );
     sensitive << ( particlemaster_negFormula );
 
-    SC_METHOD(thread_grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i);
-    sensitive << ( particlemaster_ss_load_fu_502_p1 );
-    sensitive << ( ap_CS_fsm_state3 );
+    SC_METHOD(thread_grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i);
+    sensitive << ( particlemaster_ss_load_fu_490_p1 );
+    sensitive << ( ap_CS_fsm_state2 );
     sensitive << ( particlemaster_setupDone );
 
-    SC_METHOD(thread_particlemaster_ss_load_fu_502_p1);
+    SC_METHOD(thread_particlemaster_ss_load_fu_490_p1);
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( clk.pos() );
@@ -239,44 +235,43 @@ particlemaster::particlemaster(sc_module_name name) : sc_module(name), mVcdFile(
     sc_trace(mVcdFile, ready_p10, "(port)ready_p10");
 #endif
 #ifdef __HLS_TRACE_LEVEL_INT__
-    sc_trace(mVcdFile, particlemaster_ss_load_fu_502_p1, "particlemaster_ss_load_fu_502_p1");
+    sc_trace(mVcdFile, particlemaster_ss_load_fu_490_p1, "particlemaster_ss_load_fu_490_p1");
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
-    sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_calculate, "grp_particlemaster_ReadCalculations_fu_266_calculate");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_finalx1, "grp_particlemaster_ReadCalculations_fu_266_finalx1");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_finalx2, "grp_particlemaster_ReadCalculations_fu_266_finalx2");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_complete, "grp_particlemaster_ReadCalculations_fu_266_complete");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_x1_global, "grp_particlemaster_ReadCalculations_fu_266_x1_global");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_x2_global, "grp_particlemaster_ReadCalculations_fu_266_x2_global");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o");
-    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_maximum, "grp_particlemaster_Setup_fu_396_maximum");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_maximum_ap_vld, "grp_particlemaster_Setup_fu_396_maximum_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_setup, "grp_particlemaster_Setup_fu_396_setup");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_setup_ap_vld, "grp_particlemaster_Setup_fu_396_setup_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_cognitive, "grp_particlemaster_Setup_fu_396_cognitive");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_cognitive_ap_vld, "grp_particlemaster_Setup_fu_396_cognitive_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_social, "grp_particlemaster_Setup_fu_396_social");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_social_ap_vld, "grp_particlemaster_Setup_fu_396_social_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i, "grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o, "grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld, "grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_negFormula, "grp_particlemaster_Setup_fu_396_particlemaster_negFormula");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld, "grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_iterations, "grp_particlemaster_Setup_fu_396_particlemaster_iterations");
-    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld, "grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld");
-    sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_calculate, "grp_particlemaster_ReadCalculations_fu_254_calculate");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_finalx1, "grp_particlemaster_ReadCalculations_fu_254_finalx1");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_finalx2, "grp_particlemaster_ReadCalculations_fu_254_finalx2");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_complete, "grp_particlemaster_ReadCalculations_fu_254_complete");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_x1_global, "grp_particlemaster_ReadCalculations_fu_254_x1_global");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_x2_global, "grp_particlemaster_ReadCalculations_fu_254_x2_global");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o");
+    sc_trace(mVcdFile, grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld, "grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_maximum, "grp_particlemaster_Setup_fu_384_maximum");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_maximum_ap_vld, "grp_particlemaster_Setup_fu_384_maximum_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_setup, "grp_particlemaster_Setup_fu_384_setup");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_setup_ap_vld, "grp_particlemaster_Setup_fu_384_setup_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_cognitive, "grp_particlemaster_Setup_fu_384_cognitive");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_cognitive_ap_vld, "grp_particlemaster_Setup_fu_384_cognitive_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_social, "grp_particlemaster_Setup_fu_384_social");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_social_ap_vld, "grp_particlemaster_Setup_fu_384_social_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i, "grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o, "grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld, "grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_negFormula, "grp_particlemaster_Setup_fu_384_particlemaster_negFormula");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld, "grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_iterations, "grp_particlemaster_Setup_fu_384_particlemaster_iterations");
+    sc_trace(mVcdFile, grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld, "grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld");
+    sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
     sc_trace(mVcdFile, particlemaster_setupDone, "particlemaster_setupDone");
     sc_trace(mVcdFile, particlemaster_x1_best, "particlemaster_x1_best");
     sc_trace(mVcdFile, particlemaster_x2_best, "particlemaster_x2_best");
@@ -297,126 +292,120 @@ particlemaster::~particlemaster() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete grp_particlemaster_ReadCalculations_fu_266;
-    delete grp_particlemaster_Setup_fu_396;
+    delete grp_particlemaster_ReadCalculations_fu_254;
+    delete grp_particlemaster_Setup_fu_384;
 }
 
 void particlemaster::thread_calculate() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld.read())) {
-        calculate = grp_particlemaster_ReadCalculations_fu_266_calculate.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld.read())) {
+        calculate = grp_particlemaster_ReadCalculations_fu_254_calculate.read();
     }
 }
 
 void particlemaster::thread_cognitive() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_cognitive_ap_vld.read())) {
-        cognitive = grp_particlemaster_Setup_fu_396_cognitive.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_cognitive_ap_vld.read())) {
+        cognitive = grp_particlemaster_Setup_fu_384_cognitive.read();
     }
 }
 
 void particlemaster::thread_complete() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld.read())) {
-        complete = grp_particlemaster_ReadCalculations_fu_266_complete.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld.read())) {
+        complete = grp_particlemaster_ReadCalculations_fu_254_complete.read();
     }
 }
 
 void particlemaster::thread_finalx1() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld.read())) {
-        finalx1 = grp_particlemaster_ReadCalculations_fu_266_finalx1.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld.read())) {
+        finalx1 = grp_particlemaster_ReadCalculations_fu_254_finalx1.read();
     }
 }
 
 void particlemaster::thread_finalx2() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld.read())) {
-        finalx2 = grp_particlemaster_ReadCalculations_fu_266_finalx2.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld.read())) {
+        finalx2 = grp_particlemaster_ReadCalculations_fu_254_finalx2.read();
     }
 }
 
 void particlemaster::thread_maximum() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_maximum_ap_vld.read())) {
-        maximum = grp_particlemaster_Setup_fu_396_maximum.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_maximum_ap_vld.read())) {
+        maximum = grp_particlemaster_Setup_fu_384_maximum.read();
     }
 }
 
 void particlemaster::thread_particlemaster_iterations() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld.read())) {
-        particlemaster_iterations = grp_particlemaster_Setup_fu_396_particlemaster_iterations.read();
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld.read())) {
-        particlemaster_iterations = grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld.read())) {
+        particlemaster_iterations = grp_particlemaster_Setup_fu_384_particlemaster_iterations.read();
+    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld.read())) {
+        particlemaster_iterations = grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o.read();
     }
 }
 
 void particlemaster::thread_particlemaster_negFormula() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld.read())) {
-        particlemaster_negFormula =  (sc_lv<1>) (grp_particlemaster_Setup_fu_396_particlemaster_negFormula.read());
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld.read())) {
+        particlemaster_negFormula =  (sc_lv<1>) (grp_particlemaster_Setup_fu_384_particlemaster_negFormula.read());
     }
 }
 
 void particlemaster::thread_particlemaster_setupDone() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read())) {
-        particlemaster_setupDone = ap_const_lv1_0;
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld.read())) {
-        particlemaster_setupDone =  (sc_lv<1>) (grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o.read());
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld.read())) {
+        particlemaster_setupDone =  (sc_lv<1>) (grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o.read());
     }
 }
 
 void particlemaster::thread_particlemaster_x1_best() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld.read())) {
-        particlemaster_x1_best = grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld.read())) {
+        particlemaster_x1_best = grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o.read();
     }
 }
 
 void particlemaster::thread_particlemaster_x2_best() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld.read())) {
-        particlemaster_x2_best = grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld.read())) {
+        particlemaster_x2_best = grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o.read();
     }
 }
 
 void particlemaster::thread_setup() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_setup_ap_vld.read())) {
-        setup = grp_particlemaster_Setup_fu_396_setup.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_setup_ap_vld.read())) {
+        setup = grp_particlemaster_Setup_fu_384_setup.read();
     }
 }
 
 void particlemaster::thread_social() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_396_social_ap_vld.read())) {
-        social = grp_particlemaster_Setup_fu_396_social.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_Setup_fu_384_social_ap_vld.read())) {
+        social = grp_particlemaster_Setup_fu_384_social.read();
     }
 }
 
 void particlemaster::thread_x1_global() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld.read())) {
-        x1_global = grp_particlemaster_ReadCalculations_fu_266_x1_global.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld.read())) {
+        x1_global = grp_particlemaster_ReadCalculations_fu_254_x1_global.read();
     }
 }
 
 void particlemaster::thread_x2_global() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld.read())) {
-        x2_global = grp_particlemaster_ReadCalculations_fu_266_x2_global.read();
+    if (esl_seteq<1,1,1>(ap_const_logic_1, grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld.read())) {
+        x2_global = grp_particlemaster_ReadCalculations_fu_254_x2_global.read();
     }
 }
 
 void particlemaster::thread_ap_CS_fsm() {
-    ap_CS_fsm = ap_const_lv4_0;
+    ap_CS_fsm = ap_const_lv2_0;
 }
 
-void particlemaster::thread_ap_CS_fsm_state1() {
-    ap_CS_fsm_state1 = ap_CS_fsm.read()[0];
+void particlemaster::thread_ap_CS_fsm_state2() {
+    ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
 }
 
-void particlemaster::thread_ap_CS_fsm_state3() {
-    ap_CS_fsm_state3 = ap_CS_fsm.read()[2];
+void particlemaster::thread_grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula() {
+    grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula =  (sc_logic) (particlemaster_negFormula.read()[0]);
 }
 
-void particlemaster::thread_grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula() {
-    grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula =  (sc_logic) (particlemaster_negFormula.read()[0]);
+void particlemaster::thread_grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i() {
+    grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i =  (sc_logic) (particlemaster_setupDone.read()[0]);
 }
 
-void particlemaster::thread_grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i() {
-    grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i =  (sc_logic) (particlemaster_setupDone.read()[0]);
-}
-
-void particlemaster::thread_particlemaster_ss_load_fu_502_p1() {
-    particlemaster_ss_load_fu_502_p1 = ap_const_lv1_0;
+void particlemaster::thread_particlemaster_ss_load_fu_490_p1() {
+    particlemaster_ss_load_fu_490_p1 = ap_const_lv1_0;
 }
 
 void particlemaster::thread_hdltv_gen() {

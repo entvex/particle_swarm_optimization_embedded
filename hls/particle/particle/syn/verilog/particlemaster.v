@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="particlemaster,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=10.470600,HLS_SYN_LAT=7404,HLS_SYN_TPT=none,HLS_SYN_MEM=30,HLS_SYN_DSP=7873,HLS_SYN_FF=758258,HLS_SYN_LUT=305298}" *)
+(* CORE_GENERATION_INFO="particlemaster,hls_ip_2017_2,{HLS_INPUT_TYPE=sc,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z010clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=10.470600,HLS_SYN_LAT=7404,HLS_SYN_TPT=none,HLS_SYN_MEM=30,HLS_SYN_DSP=7873,HLS_SYN_FF=758258,HLS_SYN_LUT=305289}" *)
 
 module particlemaster (
         clk,
@@ -117,65 +117,64 @@ reg[31:0] social;
 reg[31:0] x1_global;
 reg[31:0] x2_global;
 
-wire   [0:0] particlemaster_ss_load_fu_502_p1;
-wire   [3:0] ap_CS_fsm;
-wire    ap_CS_fsm_state1;
-wire    grp_particlemaster_ReadCalculations_fu_266_calculate;
-wire    grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_finalx1;
-wire    grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_finalx2;
-wire    grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld;
-wire    grp_particlemaster_ReadCalculations_fu_266_complete;
-wire    grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_x1_global;
-wire    grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_x2_global;
-wire    grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o;
-wire    grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o;
-wire    grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld;
-wire    grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula;
-wire   [31:0] grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o;
-wire    grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld;
-wire    grp_particlemaster_Setup_fu_396_maximum;
-wire    grp_particlemaster_Setup_fu_396_maximum_ap_vld;
-wire    grp_particlemaster_Setup_fu_396_setup;
-wire    grp_particlemaster_Setup_fu_396_setup_ap_vld;
-wire   [31:0] grp_particlemaster_Setup_fu_396_cognitive;
-wire    grp_particlemaster_Setup_fu_396_cognitive_ap_vld;
-wire   [31:0] grp_particlemaster_Setup_fu_396_social;
-wire    grp_particlemaster_Setup_fu_396_social_ap_vld;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_negFormula;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld;
-wire   [31:0] grp_particlemaster_Setup_fu_396_particlemaster_iterations;
-wire    grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld;
-wire    ap_CS_fsm_state3;
+wire   [0:0] particlemaster_ss_load_fu_490_p1;
+wire   [1:0] ap_CS_fsm;
+wire    grp_particlemaster_ReadCalculations_fu_254_calculate;
+wire    grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_finalx1;
+wire    grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_finalx2;
+wire    grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld;
+wire    grp_particlemaster_ReadCalculations_fu_254_complete;
+wire    grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_x1_global;
+wire    grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_x2_global;
+wire    grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o;
+wire    grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o;
+wire    grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld;
+wire    grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula;
+wire   [31:0] grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o;
+wire    grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld;
+wire    grp_particlemaster_Setup_fu_384_maximum;
+wire    grp_particlemaster_Setup_fu_384_maximum_ap_vld;
+wire    grp_particlemaster_Setup_fu_384_setup;
+wire    grp_particlemaster_Setup_fu_384_setup_ap_vld;
+wire   [31:0] grp_particlemaster_Setup_fu_384_cognitive;
+wire    grp_particlemaster_Setup_fu_384_cognitive_ap_vld;
+wire   [31:0] grp_particlemaster_Setup_fu_384_social;
+wire    grp_particlemaster_Setup_fu_384_social_ap_vld;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_negFormula;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld;
+wire   [31:0] grp_particlemaster_Setup_fu_384_particlemaster_iterations;
+wire    grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld;
+wire    ap_CS_fsm_state2;
 reg   [0:0] particlemaster_setupDone;
 reg   [31:0] particlemaster_x1_best;
 reg   [31:0] particlemaster_x2_best;
 reg   [0:0] particlemaster_negFormula;
 reg   [31:0] particlemaster_iterations;
 
-particlemaster_ReadCalculations grp_particlemaster_ReadCalculations_fu_266(
+particlemaster_ReadCalculations grp_particlemaster_ReadCalculations_fu_254(
     .ap_clk(clk),
     .ap_rst(reset),
-    .calculate(grp_particlemaster_ReadCalculations_fu_266_calculate),
-    .calculate_ap_vld(grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld),
-    .finalx1(grp_particlemaster_ReadCalculations_fu_266_finalx1),
-    .finalx1_ap_vld(grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld),
-    .finalx2(grp_particlemaster_ReadCalculations_fu_266_finalx2),
-    .finalx2_ap_vld(grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld),
-    .complete(grp_particlemaster_ReadCalculations_fu_266_complete),
-    .complete_ap_vld(grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld),
-    .x1_global(grp_particlemaster_ReadCalculations_fu_266_x1_global),
-    .x1_global_ap_vld(grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld),
-    .x2_global(grp_particlemaster_ReadCalculations_fu_266_x2_global),
-    .x2_global_ap_vld(grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld),
+    .calculate(grp_particlemaster_ReadCalculations_fu_254_calculate),
+    .calculate_ap_vld(grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld),
+    .finalx1(grp_particlemaster_ReadCalculations_fu_254_finalx1),
+    .finalx1_ap_vld(grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld),
+    .finalx2(grp_particlemaster_ReadCalculations_fu_254_finalx2),
+    .finalx2_ap_vld(grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld),
+    .complete(grp_particlemaster_ReadCalculations_fu_254_complete),
+    .complete_ap_vld(grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld),
+    .x1_global(grp_particlemaster_ReadCalculations_fu_254_x1_global),
+    .x1_global_ap_vld(grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld),
+    .x2_global(grp_particlemaster_ReadCalculations_fu_254_x2_global),
+    .x2_global_ap_vld(grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld),
     .x1_p1(x1_p1),
     .x2_p1(x2_p1),
     .ready_p1(ready_p1),
@@ -207,145 +206,141 @@ particlemaster_ReadCalculations grp_particlemaster_ReadCalculations_fu_266(
     .x2_p10(x2_p10),
     .ready_p10(ready_p10),
     .particlemaster_x1_best_i(particlemaster_x1_best),
-    .particlemaster_x1_best_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o),
-    .particlemaster_x1_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld),
+    .particlemaster_x1_best_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o),
+    .particlemaster_x1_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld),
     .particlemaster_x2_best_i(particlemaster_x2_best),
-    .particlemaster_x2_best_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o),
-    .particlemaster_x2_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld),
-    .particlemaster_negFormula(grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula),
+    .particlemaster_x2_best_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o),
+    .particlemaster_x2_best_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld),
+    .particlemaster_negFormula(grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula),
     .particlemaster_iterations_i(particlemaster_iterations),
-    .particlemaster_iterations_o(grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o),
-    .particlemaster_iterations_o_ap_vld(grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld)
+    .particlemaster_iterations_o(grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o),
+    .particlemaster_iterations_o_ap_vld(grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld)
 );
 
-particlemaster_Setup grp_particlemaster_Setup_fu_396(
+particlemaster_Setup grp_particlemaster_Setup_fu_384(
     .ap_clk(clk),
     .ap_rst(reset),
     .start(start),
-    .maximum(grp_particlemaster_Setup_fu_396_maximum),
-    .maximum_ap_vld(grp_particlemaster_Setup_fu_396_maximum_ap_vld),
-    .setup(grp_particlemaster_Setup_fu_396_setup),
-    .setup_ap_vld(grp_particlemaster_Setup_fu_396_setup_ap_vld),
+    .maximum(grp_particlemaster_Setup_fu_384_maximum),
+    .maximum_ap_vld(grp_particlemaster_Setup_fu_384_maximum_ap_vld),
+    .setup(grp_particlemaster_Setup_fu_384_setup),
+    .setup_ap_vld(grp_particlemaster_Setup_fu_384_setup_ap_vld),
     .negativeFormula(negativeFormula),
     .c1(c1),
     .c2(c2),
-    .cognitive(grp_particlemaster_Setup_fu_396_cognitive),
-    .cognitive_ap_vld(grp_particlemaster_Setup_fu_396_cognitive_ap_vld),
-    .social(grp_particlemaster_Setup_fu_396_social),
-    .social_ap_vld(grp_particlemaster_Setup_fu_396_social_ap_vld),
-    .particlemaster_setupDone_i(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i),
-    .particlemaster_setupDone_o(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o),
-    .particlemaster_setupDone_o_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld),
-    .particlemaster_negFormula(grp_particlemaster_Setup_fu_396_particlemaster_negFormula),
-    .particlemaster_negFormula_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld),
-    .particlemaster_iterations(grp_particlemaster_Setup_fu_396_particlemaster_iterations),
-    .particlemaster_iterations_ap_vld(grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld)
+    .cognitive(grp_particlemaster_Setup_fu_384_cognitive),
+    .cognitive_ap_vld(grp_particlemaster_Setup_fu_384_cognitive_ap_vld),
+    .social(grp_particlemaster_Setup_fu_384_social),
+    .social_ap_vld(grp_particlemaster_Setup_fu_384_social_ap_vld),
+    .particlemaster_setupDone_i(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i),
+    .particlemaster_setupDone_o(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o),
+    .particlemaster_setupDone_o_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld),
+    .particlemaster_negFormula(grp_particlemaster_Setup_fu_384_particlemaster_negFormula),
+    .particlemaster_negFormula_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld),
+    .particlemaster_iterations(grp_particlemaster_Setup_fu_384_particlemaster_iterations),
+    .particlemaster_iterations_ap_vld(grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld)
 );
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_calculate_ap_vld)) begin
-        calculate <= grp_particlemaster_ReadCalculations_fu_266_calculate;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_calculate_ap_vld)) begin
+        calculate <= grp_particlemaster_ReadCalculations_fu_254_calculate;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_cognitive_ap_vld)) begin
-        cognitive <= grp_particlemaster_Setup_fu_396_cognitive;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_cognitive_ap_vld)) begin
+        cognitive <= grp_particlemaster_Setup_fu_384_cognitive;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_complete_ap_vld)) begin
-        complete <= grp_particlemaster_ReadCalculations_fu_266_complete;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_complete_ap_vld)) begin
+        complete <= grp_particlemaster_ReadCalculations_fu_254_complete;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_finalx1_ap_vld)) begin
-        finalx1 <= grp_particlemaster_ReadCalculations_fu_266_finalx1;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_finalx1_ap_vld)) begin
+        finalx1 <= grp_particlemaster_ReadCalculations_fu_254_finalx1;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_finalx2_ap_vld)) begin
-        finalx2 <= grp_particlemaster_ReadCalculations_fu_266_finalx2;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_finalx2_ap_vld)) begin
+        finalx2 <= grp_particlemaster_ReadCalculations_fu_254_finalx2;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_maximum_ap_vld)) begin
-        maximum <= grp_particlemaster_Setup_fu_396_maximum;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_maximum_ap_vld)) begin
+        maximum <= grp_particlemaster_Setup_fu_384_maximum;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_particlemaster_iterations_ap_vld)) begin
-        particlemaster_iterations <= grp_particlemaster_Setup_fu_396_particlemaster_iterations;
-    end else if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o_ap_vld)) begin
-        particlemaster_iterations <= grp_particlemaster_ReadCalculations_fu_266_particlemaster_iterations_o;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_particlemaster_iterations_ap_vld)) begin
+        particlemaster_iterations <= grp_particlemaster_Setup_fu_384_particlemaster_iterations;
+    end else if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o_ap_vld)) begin
+        particlemaster_iterations <= grp_particlemaster_ReadCalculations_fu_254_particlemaster_iterations_o;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_particlemaster_negFormula_ap_vld)) begin
-        particlemaster_negFormula <= grp_particlemaster_Setup_fu_396_particlemaster_negFormula;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_particlemaster_negFormula_ap_vld)) begin
+        particlemaster_negFormula <= grp_particlemaster_Setup_fu_384_particlemaster_negFormula;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == ap_CS_fsm_state1)) begin
-        particlemaster_setupDone <= 1'd0;
-    end else if ((1'b1 == grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o_ap_vld)) begin
-        particlemaster_setupDone <= grp_particlemaster_Setup_fu_396_particlemaster_setupDone_o;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o_ap_vld)) begin
+        particlemaster_setupDone <= grp_particlemaster_Setup_fu_384_particlemaster_setupDone_o;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o_ap_vld)) begin
-        particlemaster_x1_best <= grp_particlemaster_ReadCalculations_fu_266_particlemaster_x1_best_o;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o_ap_vld)) begin
+        particlemaster_x1_best <= grp_particlemaster_ReadCalculations_fu_254_particlemaster_x1_best_o;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o_ap_vld)) begin
-        particlemaster_x2_best <= grp_particlemaster_ReadCalculations_fu_266_particlemaster_x2_best_o;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o_ap_vld)) begin
+        particlemaster_x2_best <= grp_particlemaster_ReadCalculations_fu_254_particlemaster_x2_best_o;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_setup_ap_vld)) begin
-        setup <= grp_particlemaster_Setup_fu_396_setup;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_setup_ap_vld)) begin
+        setup <= grp_particlemaster_Setup_fu_384_setup;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_Setup_fu_396_social_ap_vld)) begin
-        social <= grp_particlemaster_Setup_fu_396_social;
+    if ((1'b1 == grp_particlemaster_Setup_fu_384_social_ap_vld)) begin
+        social <= grp_particlemaster_Setup_fu_384_social;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_x1_global_ap_vld)) begin
-        x1_global <= grp_particlemaster_ReadCalculations_fu_266_x1_global;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_x1_global_ap_vld)) begin
+        x1_global <= grp_particlemaster_ReadCalculations_fu_254_x1_global;
     end
 end
 
 always @ (posedge clk) begin
-    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_266_x2_global_ap_vld)) begin
-        x2_global <= grp_particlemaster_ReadCalculations_fu_266_x2_global;
+    if ((1'b1 == grp_particlemaster_ReadCalculations_fu_254_x2_global_ap_vld)) begin
+        x2_global <= grp_particlemaster_ReadCalculations_fu_254_x2_global;
     end
 end
 
-assign ap_CS_fsm = 4'd0;
+assign ap_CS_fsm = 2'd0;
 
-assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
+assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
-assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
+assign grp_particlemaster_ReadCalculations_fu_254_particlemaster_negFormula = particlemaster_negFormula;
 
-assign grp_particlemaster_ReadCalculations_fu_266_particlemaster_negFormula = particlemaster_negFormula;
+assign grp_particlemaster_Setup_fu_384_particlemaster_setupDone_i = particlemaster_setupDone;
 
-assign grp_particlemaster_Setup_fu_396_particlemaster_setupDone_i = particlemaster_setupDone;
-
-assign particlemaster_ss_load_fu_502_p1 = 1'd0;
+assign particlemaster_ss_load_fu_490_p1 = 1'd0;
 
 endmodule //particlemaster
