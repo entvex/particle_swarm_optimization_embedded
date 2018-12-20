@@ -65,55 +65,24 @@ To further elaborate upon the float as a datatype test, the floatPrototype is ex
 
 At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's. Since a float use 32bits like an unsigned integer it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is, but by testing the input with the output show that the IP core does indeed use floats.\\
 
+\begin{figure}
+	\centering
+	\includegraphics[trim={0 2 0 0},clip,width=0.8\linewidth]{diagram/floatMultiply}
+	\caption{}
+	\label{fig:floatmultiply}
+\end{figure}
+
 
 With these tests conducted, it can be verified that it is indeed possible to hardware accelerate mathematical expressions in hardware.
 
 \subsection{Vivado HLS}
 With the knowledge acquired from section \ref{imp:floatprototype} \nameref{imp:floatprototype} the creation of a Particle Swarm Optimization algorithm on hardware seems possible, however dependent on the problem to solve it may be incredibly demanding. The problem that was chosen to use as a test is the "peaks" function\citepawesome{Chong2013}{290} and the algorithm that was implemented was first tested and verified in matlab and can be found in the appendix folder.\\ %TODO add matlab as appendix
 
-Because of the complexity of the code written in SystemC, most of the code won't be shown here and the reader is referred to the appendix where the complete code can be found.\\ %TODO code appendix
+To see the complete code, the reader is referred to the appendix where the complete HLS code can be found.\\ %TODO code appendix
 
-In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of 
+In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of the Zynq CPU to create a random value or another interface is needed. This feature is abstracted away in this concept to simplify the project, but it is a known bottleneck that can slow the particles down. The second bottleneck is the global best solution after each iteration of movement of the particles, a central or master unit needs to check which solution of all the particles are the best solution, a simple version of this is implemented however this is a part of the system that can be heavily optimized in future versions of the system.\\
 
-\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
-void particles::Execute(){
-  while(true){ 
-    while(!(setupDone && calculate.read()) || calculationDone){
-      if(!calculate.read())
-      {
-        calculationDone = false;
-      }
-      wait();
-    }
 
-    ready.write(false);
-
-    wait();
-
-    v1 = w*v1 + c1*Randval()*(x1_best-x1) + c2*Randval()*(x1_global.read()-x1);
-    v2 = w*v2 + c1*Randval()*(x2_best-x2) + c2*Randval()*(x2_global.read()-x2);
-    wait();
-
-    x1 = x1+v1;
-    x2 = x2+v2;
-
-    if (Equation(x1,x2) < Equation(x1_best,x2_best))
-    {
-      x1_best = x1;
-      x2_best = x2;
-    }
-
-    x1_out.write(x1);
-    x2_out.write(x2);
-
-    calculationDone = true;
-
-    ready.write(true);
-    wait();
-  }
-
-}
-\end{lstlisting}
 \subsection{Vivado}
 This section show the implementation of different software patterns onto the Zynq CPU. The design makes use of the GPIO ports to access the hardware buttons and switches, to control the state of the PSOS, as shown on Figure \ref{fig:smdguistate}, on page \pageref{fig:smdguistate}. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different of the PSOS; Setup, FindMinima and FindMaxima.
 

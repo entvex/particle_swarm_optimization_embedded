@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../main.cpp in debug mode
+In file included from ../../../main.cpp:10:0:
+../../../Particles.h:29:19: error: ISO C++ forbids initialization of member 'setupDone' [-fpermissive]
+../../../Particles.h:29:19: error: making 'setupDone' static [-fpermissive]
+../../../Particles.h:29:19: error: ISO C++ forbids in-class initialization of non-const static member 'setupDone'
+../../../Particles.h:30:25: error: ISO C++ forbids initialization of member 'calculationDone' [-fpermissive]
+../../../Particles.h:30:25: error: making 'calculationDone' static [-fpermissive]
+../../../Particles.h:30:25: error: ISO C++ forbids in-class initialization of non-const static member 'calculationDone'
+../../../Particles.h:35:12: error: ISO C++ forbids initialization of member 'w' [-fpermissive]
+../../../Particles.h:35:12: error: making 'w' static [-fpermissive]
+../../../Particles.h:35:12: error: ISO C++ forbids in-class initialization of non-const static member 'w'
+../../../Particles.h:37:13: error: ISO C++ forbids initialization of member 'ax' [-fpermissive]
+../../../Particles.h:37:13: error: making 'ax' static [-fpermissive]
+../../../Particles.h:37:13: error: ISO C++ forbids in-class initialization of non-const static member 'ax'
+../../../Particles.h:38:13: error: ISO C++ forbids initialization of member 'av' [-fpermissive]
+../../../Particles.h:38:13: error: making 'av' static [-fpermissive]
+../../../Particles.h:38:13: error: ISO C++ forbids in-class initialization of non-const static member 'av'
+In file included from ../../../main.cpp:11:0:
+../../../ParticleMaster.h:75:19: error: ISO C++ forbids initialization of member 'setupDone' [-fpermissive]
+../../../ParticleMaster.h:75:19: error: making 'setupDone' static [-fpermissive]
+../../../ParticleMaster.h:75:19: error: ISO C++ forbids in-class initialization of non-const static member 'setupDone'
+make: *** [obj/main.o] Error 1
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

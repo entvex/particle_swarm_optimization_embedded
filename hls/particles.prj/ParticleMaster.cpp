@@ -88,6 +88,7 @@ void particlemaster::ReadCalculations(){
 		float bestValue = Equation(x1_best, x2_best);
 
 		for (int i = 0; i < sizeof(x1s); i++) {
+			#pragma HLS INLINE
 			if(Equation(x1s[i],x2s[i]) < bestValue)
 			{
 				bestValue = Equation(x1s[i],x2s[i]);

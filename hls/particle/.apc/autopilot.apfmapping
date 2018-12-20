@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ParticleMaster.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\ParticleMaster.cpp"/>
+    <originFiles name="ParticleMaster.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\ParticleMaster.h"/>
+    <originFiles name="Particles.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\Particles.cpp"/>
+    <originFiles name="Particles.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\Particles.h"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\main.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
