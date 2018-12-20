@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="psos.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psos.h"/>
     <originFiles name="psos.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psos.cpp"/>
+    <originFiles name="psos.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psos.h"/>
   </source>
   <testbench>
     <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\main.cpp"/>
-    <originFiles name="psosDriver.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psosDriver.h"/>
     <originFiles name="psosDriver.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psosDriver.cpp"/>
+    <originFiles name="psosDriver.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\psos\psosDriver.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

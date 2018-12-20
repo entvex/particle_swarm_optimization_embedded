@@ -10,7 +10,7 @@
 }\citepawesome{Bjerge2017}{2}
 \\\\
 
-\subsection{Float as a Datatype}
+\subsection{Float as a Datatype}\label{imp:floatprototype}
 Throughout this project, it has not been stated how essential it is that the data worked on is as close to real values as possible. Using long double as the used datatype both for calculation and evaluation for the particle swarm optimization algorithm is preferred. This is the floating point with most precision supported in SystemC. Working with Vivado  however, it is known that only fix point as a datatype is supported. To keep it simple the students have created a test program in the Vivado HLS tool that uses floats as a datatype both for calculations and in data transfers, to check if it is possible to use floating point, without conversion, when trying to hardware accelerate. The program that will be introduced in this section is floatPrototype.\\
 
 The minimal design of floatPrototype is a IP core that take in two inputs, of type float, make a simple calculation with the data and returns it as a float. This will show that all the basic building blocks of the desired functionality in the PSOS can be achieved. On Figure \ref{fig:floatprototype} is a basic drawing of the desired flow of the floatPrototype IP core.\\
@@ -18,7 +18,7 @@ The minimal design of floatPrototype is a IP core that take in two inputs, of ty
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{diagram/floatPrototype}
-	\caption{Figure showing the flow of floatPrototype.}
+	\caption{Figure showing the dataflow of floatPrototype.}
 	\label{fig:floatprototype}
 \end{figure}
 
@@ -59,12 +59,63 @@ A simulation of the code is constructed and conducted in the Vivado HLS tools. T
 \end{figure}
 
 
-To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL from the Vivado HLS tool, and included into a simple program in which tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly.
+To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL from the Vivado HLS tool, and included into a simple program in which tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly.\\
 
 %TODO indsæt Vivado test af floatPrototype her!!!
 
-\subsection{Vivado}%TODO find ud af om det er den rigtige chip der er stated
-This section show the implementation of different software patterns onto the Zynq chip. The design makes use of the GPIO ports to access the hardware buttons and switches, to control the state of the PSOS, as shown on Figure \ref{fig:smdguistate}, on page \pageref{fig:smdguistate}. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different of the PSOS; Setup, FindMinima and FindMaxima.
+At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's. Since a float use 32bits like an unsigned integer it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is, but by testing the input with the output show that the IP core does indeed use floats.\\
+
+
+With these tests conducted, it can be verified that it is indeed possible to hardware accelerate mathematical expressions in hardware.
+
+\subsection{Vivado HLS}
+With the knowledge acquired from section \ref{imp:floatprototype} \nameref{imp:floatprototype} the creation of a Particle Swarm Optimization algorithm on hardware seems possible, however dependent on the problem to solve it may be incredibly demanding. The problem that was chosen to use as a test is the "peaks" function\citepawesome{Chong2013}{290} and the algorithm that was implemented was first tested and verified in matlab and can be found in the appendix folder.\\ %TODO add matlab as appendix
+
+Because of the complexity of the code written in SystemC, most of the code won't be shown here and the reader is referred to the appendix where the complete code can be found.\\ %TODO code appendix
+
+In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of 
+
+\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
+void particles::Execute(){
+  while(true){ 
+    while(!(setupDone && calculate.read()) || calculationDone){
+      if(!calculate.read())
+      {
+        calculationDone = false;
+      }
+      wait();
+    }
+
+    ready.write(false);
+
+    wait();
+
+    v1 = w*v1 + c1*Randval()*(x1_best-x1) + c2*Randval()*(x1_global.read()-x1);
+    v2 = w*v2 + c1*Randval()*(x2_best-x2) + c2*Randval()*(x2_global.read()-x2);
+    wait();
+
+    x1 = x1+v1;
+    x2 = x2+v2;
+
+    if (Equation(x1,x2) < Equation(x1_best,x2_best))
+    {
+      x1_best = x1;
+      x2_best = x2;
+    }
+
+    x1_out.write(x1);
+    x2_out.write(x2);
+
+    calculationDone = true;
+
+    ready.write(true);
+    wait();
+  }
+
+}
+\end{lstlisting}
+\subsection{Vivado}
+This section show the implementation of different software patterns onto the Zynq CPU. The design makes use of the GPIO ports to access the hardware buttons and switches, to control the state of the PSOS, as shown on Figure \ref{fig:smdguistate}, on page \pageref{fig:smdguistate}. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different of the PSOS; Setup, FindMinima and FindMaxima.
 
 INSERT IMAGE OF BLOCK DIAGRAM FROM Verdado!!!!!!
 
@@ -97,8 +148,6 @@ INSERT CODEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 The states is an important part of this patterens therefore an example of the setup state can be seen here. To make the code easier to read it is clearly split into actions and transitions. 
 
-
-\subsection{Vivado HLS}
 
 \subsection{Description}
 
