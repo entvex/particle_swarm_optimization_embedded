@@ -20,7 +20,7 @@ In this project it made sense to implement the State Pattern, Singletons and Com
 \subsection{GOF State Pattern}
 The intent of the state pattern is to grant an object the ability to change its behavior when it's internal state changes hence the object will therefore change its class. Consider a the state machine digram in figure \ref{fig:smdguistate} that represents the gui of the PSOS. The PSOS can be in one of the distinct states: Setup, FindMinima, FindMaxima. \\
 
-When the application starts we enter the Setup state. This receives actions from other classes such as ActionUp, ActionDown, ActionNext and it's responds will differ base on the action. For example, the result of an StartAction depends on what the current state is in, the FindMinima or FindMaxima state can both use it, but the setup does not accept it. The choice to include the GOF State Pattern was made because it is a easy way to model an existing state machine from a digram into fully working software. \\
+When the Zynq CPU starts we enter the Setup state. This receives actions from other classes such as ActionUp, ActionDown, ActionNext and it's responds will differ base on the action. For example, the result of an StartAction depends on what the current state is in, the FindMinima or FindMaxima state can both use it, but the setup does not accept it. The choice to include the GOF State Pattern was made because it is a easy way to model an existing state machine from a digram into fully working software. \\
 
 As seen in Figure \ref{fig:statemachine}, is the state machine in the project. It was a good choice to use the GOF State Pattern because of the ease to model a state machine and bring it into code. 
 
