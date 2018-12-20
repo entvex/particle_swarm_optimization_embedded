@@ -9,6 +9,14 @@ void particles::Setup(){
 		ready.write(false);
 		wait();
 
+		setupDone = false;
+		calculationDone = false;
+
+
+		w = 0.8;
+		ax = 10;
+		av = 1;
+
 		negativeFormula = maximum.read();
 		c1 = cognitive.read();
 		c2 = social.read();
