@@ -8,5 +8,7 @@
   </source>
   <testbench>
     <originFiles name="main.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\main.cpp"/>
+    <originFiles name="psosDriver.cpp" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\psosDriver.cpp"/>
+    <originFiles name="psosDriver.h" path="C:\Git_Repositories\particle_swarm_optimization_embedded\hls\particle\psosDriver.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

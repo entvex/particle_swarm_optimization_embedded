@@ -114,4 +114,4 @@ obj/main.o: ../../../main.cpp \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/config/platform/win32.hpp \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/config/suffix.hpp \
  C:/Xilinx/Vivado_HLS/2017.2/win64/tools/systemc/include/sysc/packages/boost/utility/enable_if.hpp \
- ../../../Particles.h ../../../ParticleMaster.h
+ ../../../Particles.h ../../../ParticleMaster.h ../../../psosDriver.h

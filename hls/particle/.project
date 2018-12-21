@@ -67,6 +67,16 @@
 			<location>C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particle/main.cpp</location>
 		</link>
 		<link>
+			<name>testbench/psosDriver.cpp</name>
+			<type>1</type>
+			<location>C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particle/psosDriver.cpp</location>
+		</link>
+		<link>
+			<name>testbench/psosDriver.h</name>
+			<type>1</type>
+			<location>C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particle/psosDriver.h</location>
+		</link>
+		<link>
 			<name>particle/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/Git_Repositories/particle_swarm_optimization_embedded/hls/particle/particle/particle.directive</location>

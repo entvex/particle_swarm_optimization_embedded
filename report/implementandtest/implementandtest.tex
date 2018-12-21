@@ -87,6 +87,128 @@ To see the complete code, the reader is referred to the appendix where the compl
 
 In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of the Zynq CPU to create a random value or another interface is needed. This feature is abstracted away in this concept to simplify the project, but it is a known bottleneck that can slow the particles down. The second bottleneck is the global best solution after each iteration of movement of the particles, a central or master unit needs to check which solution of all the particles are the best solution, a simple version of this is implemented however this is a part of the system that can be heavily optimized in future versions of the system.\\
 
+The PSOS HLS is divided into two different classes, a Particle and a ParticleMaster class. The Particles are doing the individual particle calculations while the master is the global calculation and is the communication to and from the Zynq CPU. On Figure \ref{fig:psoshlsconnections} the connections of the HLS component are shown.\\
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{diagram/psos_hls_connections}
+	\caption{Diagram showing the connections of the HLS program. Normal text indicate that the datatype transfered is a boolean. Italic text indicate that the datatype transfered is a float.}
+	\label{fig:psoshlsconnections}
+\end{figure}
+
+\subsubsection{ParticleMaster}
+
+The ParticleMaster has two threads running. \texttt{Setup} and \texttt{ReadCalculations}. \texttt{Setup} awaits the \textit{start} connection to go high. When this event occurs it will start to setup the ten particles that is attached to it with the different variables that are used in the particle swarm optimization algorithm. When this has been done it starts the particles by letting the \textit{setup} connection go high. The code of the \texttt{Setup} can be seen in Listing \ref{lst:particlemaster_setup}.\\
+
+\begin{lstlisting}[style=customc++, label={lst:particlemaster_setup}, caption={Setup thread of ParticleMaster.}]
+void particlemaster::Setup(){
+  while(true){
+    while(!start.read() || setupDone){
+      wait();
+    }
+
+    setup.write(false);
+    setupDone = false;
+    wait();
+
+    // reading and setting up c1 and c2
+    cognitive.write(c1.read());
+    social.write(c2.read());
+    wait();
+
+    // Checking if we are looking for maximum or minimum and writing it
+    negFormula = negativeFormula.read();
+    wait();
+    maximum.write(negFormula);
+    wait();
+
+    iterations = 60;
+    setupDone = true;
+
+    setup.write(true);
+    wait();
+  }
+}
+\end{lstlisting}
+
+\texttt{ReadCalculations} awaits that all the particles are done with their calculation of each iteration before checking which of the particle has the best global position. If it has not run all the iterations through it will continue to make the particles calculate a new position after giving them the global best position. After the last iteration it will send the best position found back through the \textit{finalx1} and \textit{finalx2} connections and end with setting the \textit{complete} connection high as well. The code can be seen on Listing \ref{lst:particlemaster_readcalculations}.\\
+
+\begin{lstlisting}[style=customc++, label={lst:particlemaster_readcalculations}, caption={ReadCalculations thread of ParticleMaster.}]
+void particlemaster::ReadCalculations(){
+  while(true){
+    while(!(ready_p1.read() && ready_p2.read() && ready_p3.read() && ready_p4.read() && ready_p5.read() && ready_p6.read() && ready_p7.read() && ready_p8.read() && ready_p9.read() && ready_p10.read())){
+      wait();
+    }
+
+    // Read values
+    float x1s[10];
+    float x2s[10];
+
+    x1s[0] = x1_p1.read();
+    x2s[0] = x2_p1.read();
+    wait();
+[...]
+    x1s[9] = x1_p10.read();
+    x2s[9] = x2_p10.read();
+    wait();
+
+    calculate.write(false);
+    wait();
+
+    float bestValue = Equation(x1_best, x2_best);
+
+    for (int i = 0; i < sizeof(x1s); i++) {
+      #pragma HLS INLINE
+      if(Equation(x1s[i],x2s[i]) < bestValue)
+      {
+        bestValue = Equation(x1s[i],x2s[i]);
+        x1_best = x1s[i];
+        x2_best = x2s[i];
+        wait();
+      }
+    }
+
+    iterations--;
+
+    if(iterations > 0)
+    {
+      x1_global.write(x1_best);
+      x2_global.write(x2_best);
+      wait();
+
+      calculate.write(true);
+      wait();
+    }
+    else
+    {
+      finalx1.write(x1_best);
+      finalx2.write(x2_best);
+      wait();
+
+      complete.write(true);
+      wait();
+    }
+  }
+}
+\end{lstlisting}
+
+\subsubsection{Particle}
+
+
+
+\begin{lstlisting}[style=customc++, label={lst:particle_readcalculations}, caption={ReadCalculations thread of ParticleMaster.}]
+
+\end{lstlisting}
+
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\linewidth]{diagram/psos_synthesis_summary}
+	\caption{Autogenerated summary after synthesis of PSOS HLS.}
+	\label{fig:psossynthesissummary}
+\end{figure}
+
 
 \subsection{Vivado}
 This section show the implementation of different software patterns onto the Zynq CPU. The design makes use of the GPIO ports to access the hardware buttons and switches, to control the state of the PSOS, as shown on Figure \ref{fig:smdguistate}, on page \pageref{fig:smdguistate}. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different of the PSOS; Setup, FindMinima and FindMaxima.

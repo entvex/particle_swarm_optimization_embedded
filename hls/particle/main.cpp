@@ -13,6 +13,7 @@
 
 #include "Particles.h"
 #include "ParticleMaster.h"
+#include "psosDriver.h"
 
 int sc_main (int argc , char *argv[])
 {
@@ -305,13 +306,27 @@ int sc_main (int argc , char *argv[])
 	U_particles_10.x2_out(s_x2_p10);
 	U_particles_10.ready(s_ready_p10);
 
+	//Setting up Driver
+	psosdriverc U_psosdriverc("U_psosdriverc");
+
+	U_psosdriverc.clk(s_clk);
+	U_psosdriverc.reset(s_reset);
+	U_psosdriverc.start(s_start);
+
+	U_psosdriverc.negativeFormula(s_negativeFormula);
+	U_psosdriverc.c1(s_c1);
+	U_psosdriverc.c2(s_c2);
+	U_psosdriverc.finalx1(s_x1final);
+	U_psosdriverc.finalx2(s_x2final);
+	U_psosdriverc.complete(s_complete);
+
     // Sim for 200
-    int end_time = 200;
+    int end_time = 2147483647;
     std::cout << "INFO: Simulating" << std::endl;
     // start simulation
     sc_start(end_time, SC_NS);
 
-    if (0 == 0) {
+    if (U_psosdriverc.retval == 1) {
         printf("Test passed !\n");
     } else {
         printf("Test failed !!!\n");

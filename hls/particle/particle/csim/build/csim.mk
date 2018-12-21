@@ -19,7 +19,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../main.cpp ../../../Particles.cpp ../../../ParticleMaster.cpp
+HLS_SOURCES = ../../../main.cpp ../../../psosDriver.cpp ../../../Particles.cpp ../../../ParticleMaster.cpp
 
 TARGET := csim.exe
 
@@ -75,6 +75,12 @@ $(ObjDir)/main.o: ../../../main.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/main.d
+
+$(ObjDir)/psosDriver.o: ../../../psosDriver.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../psosDriver.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/psosDriver.d
 
 $(ObjDir)/Particles.o: ../../../Particles.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../Particles.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

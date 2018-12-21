@@ -10,6 +10,8 @@ add_files particle/Particles.cpp
 add_files particle/ParticleMaster.h
 add_files particle/ParticleMaster.cpp
 add_files -tb particle/main.cpp
+add_files -tb particle/psosDriver.cpp
+add_files -tb particle/psosDriver.h
 open_solution "particle"
 set_part {xc7z010clg400-1} -tool vivado
 create_clock -period 10 -name default
