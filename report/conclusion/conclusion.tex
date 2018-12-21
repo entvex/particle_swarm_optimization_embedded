@@ -1,5 +1,9 @@
-\section{Conclusion}
-In the project we tried to make particle swarm optimization faster using hardware acceleration. A key part here was also the use of 
+\section{Conclusion}\label{sc:conclusion}
+In the project we tried to make particle swarm optimization faster using hardware acceleration. 
+The entire algorithm is implemented in hardware, this could be the reason why so many hardware components are used. A possible way to reduce the hardware requirements would be to only move part of the algorithm to hardware. Some of parts of particle swarm would be better suited for the Central Processing Unit, such as the generation of random values. But this would also bring trade-offs because of the incensed communication between the hardware and cpu. As for having a random generator in hardware the students didn't know of method to achieve this, though as an afterthought it could properly be implemented by getting random noise from the environment.
+The math function that was done optimization is the peaks function therefore no general functions was used. The peaks function is a rather large, hence hardware requirements would be less if a simpler function was used. Another way to enhance performance would be to have utilized bit wise operations and thereby making the calculations faster.
 
+The high level synthesis tools, proved to be very slow, using 2 hours to compile and do synthesis. The code in HLS would need to be optimized to get a more manageable experience. Due to the excessive synthesis time, the choice was made to stop the development of more designs.
 
-As shown in the synthesizer we need quite a many lookup table (LUT), Digital Signal Processor (DSP) and flip-flops. But it is indeed still a design that would possible to run on a bigger FPGA. The ultrascale+ VU37P\citepawesome{XilinxInc.2017}{3} can handle the designs shown in Figure \ref{fig:psossynthesissummary} that was the
+A key part here was also the use of floating point precision in the search algorithm. As shown in the synthesizer we need quite a many lookup table (LUT), Digital Signal Processor (DSP) and flip-flops. But it is indeed still a design that would possible to run on a bigger FPGA. The ultrascale+ VU37P\citepawesome{XilinxInc.2017}{3} can handle the designs shown in Figure \ref{fig:psossynthesissummary}, but the VU37P was not available in the university lab hence it was not possible to test the real scenario. 
+
