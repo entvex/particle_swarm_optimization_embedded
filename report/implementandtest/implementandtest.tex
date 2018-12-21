@@ -5,7 +5,8 @@
 \noindent\fbox{
 	\parbox{\textwidth}{
 		\textbf{5.} Select the SysML/UML model for your preferred architecture suggestions in \textbf{3.} Choose a part of the functionality including both hardware and software components to create a model and a testbench in HLS using SystemC or C-code. Simulate and validate your design model. \\\\
-		Argue for your choice of modeling language and abstraction level of modeling. Use the reports from the HLS tool to evaluate performance of the design. Assess whether the design is able to fulfill your requirements and constraints.
+		Argue for your choice of modeling language and abstraction level of modeling. Use the reports from the HLS tool to evaluate performance of the design. Assess whether the design is able to fulfill your requirements and constraints.\\\\
+		\textbf{6.} Implement and test a part of your system using the ZYBO platform including at least one IP core written and verified with the HLS tool.
 	}
 }\citepawesome{Bjerge2017}{2}
 \\\\
@@ -13,7 +14,7 @@
 \subsection{Float as a Datatype}\label{imp:floatprototype}
 Throughout this project, it has not been stated how essential it is that the data worked on is as close to real values as possible. Using long double as the used datatype both for calculation and evaluation for the particle swarm optimization algorithm is preferred. This is the floating point with most precision supported in SystemC. Working with Vivado  however, it is known that only fix point as a datatype is supported. To keep it simple the students have created a test program in the Vivado HLS tool that uses floats as a datatype both for calculations and in data transfers, to check if it is possible to use floating point, without conversion, when trying to hardware accelerate. The program that will be introduced in this section is floatPrototype.\\
 
-The minimal design of floatPrototype is a IP core that take in two inputs, of type float, make a simple calculation with the data and returns it as a float. This will show that all the basic building blocks of the desired functionality in the PSOS can be achieved. On Figure \ref{fig:floatprototype} is a basic drawing of the desired flow of the floatPrototype IP core.\\
+The minimal design of floatPrototype is a IP core that take in two inputs, of type float, make a simple calculation with the data and returns it as a float. This will show that all the basic building blocks of the desired functionality in the PSOS can be achieved. On Figure \ref{fig:floatprototype} is a basic drawing of the desired flow of the floatPrototype IP core.
 
 \begin{figure}[H]
 	\centering
@@ -314,7 +315,6 @@ The implementation of the PSO through the HLS tool have shown that the Zybo boar
 
 This section show the implementation of the different software patterns mentioned in section \ref{designpatterns} \nameref{designpatterns}, page \pageref{designpatterns}, on the Zynq CPU. The design makes use of the GPIO ports to access the hardware buttons and switches, to control the state of the PSOS, as shown on Figure \ref{fig:smdguistate}, on page \pageref{fig:smdguistate}. The buttons are used to control the actions in the application ActionUp, ActionDown, ActionNext and ActionStart. The switches are used to control the different of the PSOS; Setup, FindMinima and FindMaxima. The open block design used to test the GUI software can be seen on Figure \ref{fig:vivadoblockdesign}.
 
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[trim={0 260 0 260},clip,width=1\linewidth]{diagram/VivadoBlockDesign}
@@ -322,17 +322,50 @@ This section show the implementation of the different software patterns mentione
 	\label{fig:vivadoblockdesign}
 \end{figure}
 
-The Software is made using FreeRTOS, where the mainThread controls the application. As it can be seen below it initializes the buttons and switches.
+The Software is made using FreeRTOS, where the mainThread controls the application. As it can be seen in Listing \ref{lst:mainthread_run} it initializes the buttons and switches, and starts checking on button and switch events. In the case a new event occurs, it sends a command via command pattern to the current state.
 
-\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
-#include <stdio.h>
-#define N 10
-/* Block
-* comment */
+\begin{lstlisting}[style=customc++, label={lst:mainthread_run}, caption={MainThread run thread.}]
+void MainThread::run()
 {
+  xil_printf("Welcome to Particle Swarm Optimization Embedded \r\n");
 
-INSERT CODEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+  XGpio dip, push;
 
+  XGpio_Initialize(&dip, XPAR_SWITCHES_DEVICE_ID);
+  XGpio_SetDataDirection(&dip, 1, 0xffffffff);
+
+  XGpio_Initialize(&push, XPAR_BUTTONS_DEVICE_ID);
+  XGpio_SetDataDirection(&push, 1, 0xffffffff);
+
+  xil_printf("Use the switches to control the menu \r\n");
+
+  _context = new Context;
+  //Transitions
+  FindMinimaCommand findMinimaCommand = FindMinimaCommand(_context);
+  FindMaximaCommand findMaximaCommand = FindMaximaCommand(_context);
+  ReturnResultCommand returnResultCommand = ReturnResultCommand(_context);
+
+  while (true){
+
+    switch (XGpio_DiscreteRead(&dip, 1)) {
+      case 0:
+        returnResultCommand.returnedResult = 10;
+        returnResultCommand.Execute();
+        buttonCommand(_context, XGpio_DiscreteRead(&push, 1));
+        break;
+      case 1:
+        findMinimaCommand.Execute();
+        buttonCommand(_context, XGpio_DiscreteRead(&push, 1));
+        break;
+      case 2:
+        findMaximaCommand.Execute();
+        buttonCommand(_context, XGpio_DiscreteRead(&push, 1));
+        break;
+      default:
+        break;
+    }
+    for (int i = 0; i < 9999; ++i);
+  }
 }
 \end{lstlisting}
 
