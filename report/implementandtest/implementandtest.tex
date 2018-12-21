@@ -74,7 +74,7 @@ At first glance it doesn't seem possible to send floats directly to and from the
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[trim={0 2 0 0},clip,width=0.8\linewidth]{diagram/floatMultiply}
+	\includegraphics[trim={0 4 0 0},clip,width=0.8\linewidth]{diagram/floatMultiply}
 	\caption{Result of floatPrototype IP core test, run on Zybo Board.}
 	\label{fig:floatmultiply}
 \end{figure}
@@ -325,8 +325,8 @@ This section show the implementation of the different software patterns mentione
 The Software is made using FreeRTOS, where the mainThread controls the application. As it can be seen in Listing \ref{lst:mainthread_run} it initializes the buttons and switches, and starts checking on button and switch events. In the case a new event occurs, it sends a command via command pattern to the current state.
 
 \begin{lstlisting}[style=customc++, label={lst:mainthread_run}, caption={MainThread run thread.}]
-void MainThread::run()
-{
+[...]
+void MainThread::run(){
   xil_printf("Welcome to Particle Swarm Optimization Embedded \r\n");
 
   XGpio dip, push;
@@ -346,7 +346,6 @@ void MainThread::run()
   ReturnResultCommand returnResultCommand = ReturnResultCommand(_context);
 
   while (true){
-
     switch (XGpio_DiscreteRead(&dip, 1)) {
       case 0:
         returnResultCommand.returnedResult = 10;
@@ -367,28 +366,68 @@ void MainThread::run()
     for (int i = 0; i < 9999; ++i);
   }
 }
+[...]
 \end{lstlisting}
 
-As menshioned in section \ref{designpatterns} the gof state patteren is used. The context can be seen below.
-\begin{lstlisting}[style=customc++, label={lst:listingExample}, caption={Example listing.}]
-#include <stdio.h>
-#define N 10
-/* Block
-* comment */
-{
+As mentioned in section \ref{dp:command} \nameref{dp:command}, on page \pageref{dp:command}, the usage of the GOF Command Pattern will be used to execute commands on the state pattern. An example of an implemented command can be seen on Listing \ref{lst:findmaxima_command}.
 
-INSERT CODEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
+\begin{lstlisting}[style=customc++, label={lst:findmaxima_command}, caption={FindMaxima command implementation.}]
+[...]
+FindMaximaCommand::FindMaximaCommand(Context* c) {
+  _context = c;
+}
+void FindMaximaCommand::Execute(){
+  _context->GoMaxima();
 }
 \end{lstlisting}
 
-The states is an important part of this patterens therefore an example of the setup state can be seen here. To make the code easier to read it is clearly split into actions and transitions. 
+In section \ref{dp:state} \nameref{dp:state}, on page \pageref{dp:state}, it is decided that the usage of GOF State Pattern shall be utilized to maintain the states of the GUI. On Listing \ref{lst:setup_state} the implementation of an action and a transition can be seen as an example from the Setup state. \texttt{ActionUp()} changes the internal value $c1$, \texttt{GoMaxima(context*)} changes the state from \textit{Setup} to \textit{FindMaxima}.
 
+\begin{lstlisting}[style=customc++, label={lst:setup_state}, caption={Actions implemented in the Setup state.}]
+[...]
+void Setup::ActionUp(){
+  if(toggle == true)
+  {
+    std::cout << "ActionUp called c1: " << ++c1 << std::endl;
+  } else {
+    std::cout << "ActionUp called c2: " << ++c2 << std::endl;
+  }
+}
+void Setup::GoMaxima(Context* c){
+  std::cout << "GoMaxima" << std::endl;
+  ChangeState(c, new FindMaxima());
+}
+[...]
+\end{lstlisting}
 
-\subsection{Description}
+Because of the need to remember the values $c1$ and $c2$ inside the Setup state, the Setup state is implemented as a singleton. This implements deep history into the class as stated in section \ref{dp:singleton} \nameref{dp:singleton}, on page \pageref{dp:singleton}. The implementation of the singleton pattern can be seen on Listing \ref{lst:setup_singleton}.
 
-\noindent\fbox{
-	\parbox{\textwidth}{
-		\textbf{6.} Implement and test a part of your system using the ZYBO platform including at least one IP core written and verified with the HLS tool.
-	}
-}\citepawesome{Bjerge2017}{2}
+\begin{lstlisting}[style=customc++, label={lst:setup_singleton}, caption={Singleton implementation in the Setup state.}]
+[...]
+Setup* Setup::_instance = 0;
+
+Setup* Setup::Instance() {
+  if (_instance == 0) {
+    _instance = new Setup();
+  }
+
+  std::cout << "Please set c1 and c2" << std::endl;
+  return _instance;
+}
+
+Setup::Setup() {
+  toggle = true;
+  c1 = 1;
+  c2 = 1;
+}
+[...]
+\end{lstlisting}
+
+Testing the functionality of the software on the Zybo Board gives the expected result and the output from the console can be seen in Figure \ref{fig:particleswarmoptimizationembedded}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[trim={0 0 0 4},clip,width=0.45\linewidth]{diagram/ParticleSwarmOptimizationEmbedded}
+	\caption{Console output of Vivado test program.}
+	\label{fig:particleswarmoptimizationembedded}
+\end{figure}

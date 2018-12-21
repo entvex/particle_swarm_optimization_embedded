@@ -17,7 +17,7 @@ In the following solution the patterns \citeawesome{RalphJohnsonErichGammaJohnVl
 
 In this project it made sense to implement the State Pattern, Singletons and Command Pattern. Each of the patterens is covered in the sections below.
 
-\subsection{GOF State Pattern}
+\subsection{GOF State Pattern}\label{dp:state}
 The intent of the state pattern is to grant an object the ability to change its behavior when it's internal state changes hence the object will therefore change its class. Consider a the state machine digram in figure \ref{fig:smdguistate} that represents the gui of the PSOS. The PSOS can be in one of the distinct states: Setup, FindMinima, FindMaxima. \\
 
 When the Zynq CPU starts we enter the Setup state. This receives actions from other classes such as ActionUp, ActionDown, ActionNext and it's responds will differ base on the action. For example, the result of an StartAction depends on what the current state is in, the FindMinima or FindMaxima state can both use it, but the setup does not accept it. The choice to include the GOF State Pattern was made because it is a easy way to model an existing state machine from a digram into fully working software. \\
@@ -31,7 +31,7 @@ As seen in Figure \ref{fig:statemachine}, is the state machine in the project. I
 	\label{fig:statemachine}
 \end{figure}
 
-\subsection{GOF Singleton}
+\subsection{GOF Singleton}\label{dp:singleton}
 The intent of the singleton is to guarantee that a class only has one instance therefor provide a single global point of access to it. By making the class itself responsible for keeping track of its instance. The class can guarantee that no other instance can be constructed and therefore it can only have a single way access the instance.
 \\
 In the project the GOF Singleton, was used to keep the researcher settings so when he goes back to. It can be seen in the class diagram in Figure \ref{fig:singleton}, where the constructor is private and the only way to get access to the instance of the class is using it's instance method. This guarantees we always get the same instance returned.
@@ -43,7 +43,7 @@ In the project the GOF Singleton, was used to keep the researcher settings so wh
 	\label{fig:singleton}
 \end{figure}
 
-\subsection{GOF Command Pattern}
+\subsection{GOF Command Pattern}\label{dp:command}
 The intent of GOF Command Pattern is to Encapsulate a request and therefore letting one set different parameters for clients with different requests types. An example could be a message ,log requests or other requests. It has support undoable operations( operations that can't be undone ).\\
 
 This allows software engineers to create objects that can interact with the application in a parameterize manner. The command can be stored and moved around like other objects. The main thing about this pattern is the abstract Command class which other commands inherit from. The abstract Command has a interface for executing operations hence an abstract Execute method. Concrete Command subclasses specify a Execute method with the needs for the specific Command. \\
