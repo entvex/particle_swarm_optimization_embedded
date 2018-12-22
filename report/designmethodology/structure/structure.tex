@@ -1,7 +1,7 @@
 \subsection{Structure} \label{requirementspecification:Structure}
 
 \subsubsection{Block Definition Diagram}
-The system consist of three parts, a random generator, an user interface and the particle swarm logic. on Figure \ref{fig:bdd} the block definition diagram can be seen with these three parts, as part of the overall Particle Swarm Optimization System.
+The system consist of three parts, a random generator, an user interface and the particle swarm logic. on Figure \ref{fig:bdd} the block definition diagram can be seen including these three parts, as part of the overall Particle Swarm Optimization System.
 
 \begin{figure}[!h]
 	\centering
@@ -11,13 +11,13 @@ The system consist of three parts, a random generator, an user interface and the
 \end{figure}
 
 \textbf{Random Generator:}\\
-The Random Generator block is needed, to generate random seeds for use in the particle swarm algorithm.\\
+The Random Generator block is needed, to generate random seeds or values for use in the particle swarm algorithm.\\
 
 \textbf{User Interface:}\\
 The User Interface block needs core functionality to communicate with the system. It needs to be able to take inputs regarding the particle swarm algorithms variables and create a graphical representation of the results to the user, after a successful particle swarm analysis.\\
 
 \textbf{Particle Accelerator:}\\
-The Particle Accelerator block has the functionality to perform the particle swarm optimization algorithm. Variables for the algorithm, given by the user, are communicated via the User Interface block. The random seed for the algorithm is given by the Random Generator block.
+The Particle Accelerator block has the functionality to perform the particle swarm optimization algorithm. Variables for the algorithm, given by the user, are communicated via the User Interface block. The random aspects for the algorithm is given by the Random Generator block.
 
 \subsubsection{Internal Block Diagram}
 Continuing with the data from the Block Definition Diagram, an Internal Block Definition Diagram (ibd) is created. Showing connections and dataflows with the ibd as seen on Figure \ref{fig:ibd}.
@@ -29,27 +29,32 @@ Continuing with the data from the Block Definition Diagram, an Internal Block De
 	\label{fig:ibd}
 \end{figure}
 
-The researcher uses the User Interface block, as a medium to interact with the system. The User input data to be used as variables in the particle swarm algorithm through the User Interface via a GUI. When the particle swarm algorithm has been performed by the system, the output is given to the researcher by the User Interface Block via a GUI.\\
+The researcher uses the User Interface block, as a medium to interact with the system. The User input data to be used as variables in the particle swarm algorithm through the User Interface via a GUI. When the particle swarm algorithm has been performed by the system, the output is given to the researcher by the User Interface Block via the GUI.\\
 
 The User Interface block communicates the desired variables to be used in the particle swarm algorithm to the Particle Accelerator block. When the Particle Accelerator block has performed the particle swarm algorithm, it sends the data to the User Interface block.\\
 
-The Random Generator delivers a random seed, when needed, to the Particle Accelerator block, to be used in the particle swarm algorithm.\\
+The Random Generator delivers a random seed or value, when needed, to the Particle Accelerator block, to be used in the particle swarm algorithm.\\
 
+Two different designs of the Particle Accelerator have been created. Both designs are designed as IP Cores in mind. The first design, shown on Figure \ref{fig:ibdpsosarchitecture2}, is a simplistic design, in which all functionality is formed inside a single instance of a Particle Accelerator.
 
-The design in Figure \ref{fig:ibdpsosarchitecture1} contains the Particle Master and up to n particles. The Particle Master controls the particles and gets each particles individual results. The Particle Master also gets random values and talks to the Zynq CPU.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{diagram/ibd_psos_architecture2}
+	\caption{Simple IP Core design of the Particle Accelerator}
+	\label{fig:ibdpsosarchitecture2}
+\end{figure}
+
+\clearpage
+
+The second design, shown on Figure \ref{fig:ibdpsosarchitecture1}, contains the Particle Master and up to n particles. The Particle Master controls the particles and acquire each particle's result. This is the design that will be further elaborated upon.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{diagram/ibd_psos_architecture1}
-	\caption{}
+	\caption{IP Core design of the Particle Accelerator with }
 	\label{fig:ibdpsosarchitecture1}
 \end{figure}
 
 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{diagram/ibd_psos_architecture2}
-	\caption{}
-	\label{fig:ibdpsosarchitecture2}
-\end{figure}
 

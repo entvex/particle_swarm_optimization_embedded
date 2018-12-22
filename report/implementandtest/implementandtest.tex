@@ -84,9 +84,9 @@ With these tests conducted, it can be verified that it is indeed possible to har
 
 \clearpage
 \subsection{Vivado HLS}
-With the knowledge acquired from section \ref{imp:floatprototype} \nameref{imp:floatprototype} the creation of a Particle Swarm Optimization algorithm on hardware seems possible, however dependent on the problem to solve it may be incredibly demanding. The problem that was chosen to use as a test is the "peaks" function\citepawesome{Chong2013}{290} and the algorithm that was implemented was first tested and verified in matlab and can be found in the appendix folder.\\ %TODO add matlab as appendix
+With the knowledge acquired from section \ref{imp:floatprototype} \nameref{imp:floatprototype} the creation of a Particle Swarm Optimization algorithm on hardware seems possible, however dependent on the problem to solve it may be incredibly demanding. The problem that was chosen to use as a test is the "peaks" function\citepawesome{Chong2013}{290} and the algorithm that was implemented was first tested and verified in matlab and can be found in the appendix folder.\\
 
-To see the complete code, the reader is referred to the appendix where the complete HLS code can be found.\\ %TODO code appendix
+To see the complete code, the reader is referred to the appendix where the complete HLS code can be found.\\
 
 In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of the Zynq CPU to create a random value or another interface is needed. This feature is abstracted away in this concept to simplify the project, but it is a known bottleneck that can slow the particles down. The second bottleneck is the global best solution after each iteration of movement of the particles, a central or master unit needs to check which solution of all the particles are the best solution, a simple version of this is implemented however this is a part of the system that can be heavily optimized in future versions of the system.\\
 
