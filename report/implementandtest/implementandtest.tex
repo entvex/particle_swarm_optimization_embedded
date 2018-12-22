@@ -14,7 +14,7 @@
 \subsection{Float as a Datatype}\label{imp:floatprototype}
 Throughout this project, it has not been stated how essential it is that the data worked on is as close to real values as possible. Using long double as the used datatype both for calculation and evaluation for the particle swarm optimization algorithm is preferred. This is the floating point with most precision supported in SystemC. Working with Vivado  however, it is known that only fix point as a datatype is supported. To keep it simple the students have created a test program in the Vivado HLS tool that uses floats as a datatype both for calculations and in data transfers, to check if it is possible to use floating point, without conversion, when trying to hardware accelerate. The program that will be introduced in this section is floatPrototype.\\
 
-The minimal design of floatPrototype is a IP core that take in two inputs, of type float, make a simple calculation with the data and returns it as a float. This will show that all the basic building blocks of the desired functionality in the PSOS can be achieved. On Figure \ref{fig:floatprototype} is a basic drawing of the desired flow of the floatPrototype IP core.
+The minimal design of floatPrototype is a IP core that take in two inputs, of type float, make a simple calculation with the data and returns it as a float. The outcome will conclude whether all the basic building blocks of the desired functionality in the PSOS can be achieved or not. On Figure \ref{fig:floatprototype} is a basic drawing of the desired flow of the floatPrototype IP core.
 
 \begin{figure}[H]
 	\centering
