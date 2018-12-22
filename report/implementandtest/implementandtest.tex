@@ -70,7 +70,7 @@ To further elaborate upon the float as a datatype test, the floatPrototype is ex
 	\label{fig:vivadoblockdesignwithipcore}
 \end{figure}
 
-At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's in it's Axi Lite interface. Since a float use 32bits like an unsigned integer it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is, but by testing the input with the output show that the IP core does indeed use floats. Results of a testprogram can be seen on Figure \ref{fig:floatmultiply}.\\
+At first glance it doesn't seem possible to send floats directly to and from the IP core, instead the core communicates using u32's in it's Axi Lite interface. Since a float use 32bits like an u32 it is possible to cheat the system to think that the datatype send is a u32, by making a u32 pointer point at a float object, when in fact it is a float. This is a bit of a hack, telling the system that it is of another datatype than what it is. By testing the IP core with a specific input values the output show that the IP core does indeed use floats. Results of a testprogram, performed on the Zybo board, can be seen on Figure \ref{fig:floatmultiply}.\\
 
 \begin{figure}[H]
 	\centering
