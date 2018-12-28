@@ -61,7 +61,7 @@ A simulation of the code is constructed and conducted in the Vivado HLS tools. T
 \end{figure}
 
 
-To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL from the Vivado HLS tool, and included into a simple program in which tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly. The open block design in Vivado can be seen on Figure \ref{fig:vivadoblockdesignwithipcore}.\\
+To further elaborate upon the float as a datatype test, the floatPrototype is exported as an RTL(Register-transfer level) from the Vivado HLS tool, and included into a simple program. The program has tests are conducted to check whether it is possible to utilize floats in an IP core with the datatype being transferred directly. The open block design in Vivado can be seen on Figure \ref{fig:vivadoblockdesignwithipcore}.\\
 
 \begin{figure}[H]
 	\centering
@@ -88,9 +88,9 @@ With the knowledge acquired from section \ref{imp:floatprototype} \nameref{imp:f
 
 To see the complete code, the reader is referred to the appendix where the complete HLS code can be found.\\
 
-In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. to do so the need of the Zynq CPU to create a random value or another interface is needed. This feature is abstracted away in this concept to simplify the project, but it is a known bottleneck that can slow the particles down. The second bottleneck is the global best solution after each iteration of movement of the particles, a central or master unit needs to check which solution of all the particles are the best solution, a simple version of this is implemented however this is a part of the system that can be heavily optimized in future versions of the system.\\
+In the design of the particles it is known that there will be two bottlenecks in which data can be problematic to handle. The first is the construction of a random value, it is not possible to create a random value inside an IP core with the HLS tools. Therefore the used of Zynq CPU is needed to create a random value or another interface is needed. This feature is abstracted away in this concept to simplify the project, but it is a known bottleneck that can slow the particles down. The second bottleneck is the global best solution after each iteration of movement of the particles. A central or master unit needs to check which solution of all the particles are the best solution, a simple version of this is implemented however this is a part of the system that can be heavily optimized in future versions of the system.\\
 
-The PSOS HLS is divided into two different classes, a Particle and a ParticleMaster class. The Particles are doing the individual particle calculations while the master is the global calculation and is the communication to and from the Zynq CPU. On Figure \ref{fig:psoshlsconnections} the connections of the HLS component are shown.\\
+The PSOS HLS is divided into two different classes, a Particle and a ParticleMaster class. The Particles are doing the individual particle calculations while the master is the global calculation. The master also handles the communication to and from the Zynq CPU. On Figure \ref{fig:psoshlsconnections} the connections of the HLS component are shown.\\
 
 \begin{figure}[H]
 	\centering
